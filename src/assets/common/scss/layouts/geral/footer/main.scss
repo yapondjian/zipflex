@@ -3,75 +3,65 @@
     width: 100%;
     height: auto;
 
-    &::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 6px;
-        background-image: linear-gradient(90deg,$color-main 0,$color-main 16%,$color-yellow 0,$color-yellow 32%, $color-blue 0, $color-blue 48%,$color-pink 0,$color-pink 64%,$color-orange 0,$color-orange 80%,$color-green 0,$color-green 100%);
-    }
-
     &__top {
         width: 100%;
-        padding: 60px 0 5px;
+        padding: 31px 0 36px;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
 
         &--item {
-            max-width: 200px;
 
             h6 {
-                @include h6;
-                color: $color-main;
+                font-family: $font-asap;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 20px;
+                color: $color-gray-8;
+                margin-bottom: 20px;
             }
+
             ul {
                 li {
-                    margin: 12px 0;
-
-                    a {
-                        display: block;
-                        @include t2;
+                    span {
+                        font-size: 11px;
+                        line-height: 20px;
                         color: $color-gray-8;
                     }
-                }
-            }
 
-            &-social {
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
+                    a,
+                    p {
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: $color-gray-8;
 
-                li {
-                    a {
-                        display: block;
-                        margin: 12px 10px;
-                    }
-    
-                    &:first-child {
-                        a {
-                            margin-left: 0;
+                        &:hover {
+                            color: $color-main;
                         }
                     }
                 }
             }
 
-            &-pago {
+            &-secguranca {
                 display: flex;
                 align-items: center;
-                justify-content: flex-start;
-                flex-wrap: wrap;
+                justify-content: space-between;
 
                 li {
+                    margin-right: 18px;
 
-                    a {
-                        display: block;
-                        margin: 12px 10px;
+                    img {
+                        width: auto;
+                        min-height: 38px;
                     }
-    
-                    &:first-child {
-                        a {
-                            margin-left: 0;
+
+                    &:last-child {
+                        &::before {
+                            content: "by ";
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 23px;
+                            font-family: $font-main;
                         }
                     }
                 }
@@ -81,28 +71,40 @@
 
     &__bottom {
         width: 100%;
-        padding: 50px 0;
+        background-color: $color-gray-8;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        &--left {
-            p {
-                @include t2;
-                color: $color-gray-8;
-                text-align: left;
-            }
+        &--selos {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px 0;
+            border-bottom: 1px solid $color-white;
         }
 
-        &--right {
+        &--social {
             ul {
                 display: flex;
                 align-items: center;
-                justify-content: flex-end;
-
-                li:last-child {
-                    margin-left: 20px;
+                justify-content: flex-start;
+                
+                li {
+                    margin-right: 20px;
                 }
+            }
+        }
+
+        &--copy {
+            text-align: center;
+            padding: 18px 0 20px;
+
+            p {
+                color: $color-white;
+                font-size: 12px;
+                line-height: 20px;
+                font-weight: 400;
             }
         }
     }
