@@ -5,116 +5,112 @@
     <title>
         <vtex:contentPlaceHolder id="Title Page - Tab" />
     </title>
-    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Head" />
     <vtex:template id="Store-Common-Styles" />
-    <link rel="stylesheet" href="/arquivos/store-desktop-home.css" />
+    <link rel="stylesheet" href="/arquivos/store-home.css" />
 </head>
 
 <body>
-    <vtex:template id="Store-Desktop-Header" />
+    <vtex:template id="Store-Header" />
 
     <main>
         <section class="y-banner__main">
             <vtex:contentPlaceHolder id="Banners Slider Principal" />
         </section>
 
-        <div class="container">
-            <vtex.cmc:ybenefits />
-        </div>
-        
-        <section class="j-newsletter">
+        <section class="y-benefits">
             <div class="container">
-                <div class="j-news__left">
-                    <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M26 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585787C0.210714 0.96086 0 1.46957 0 2V18C0 18.5304 0.210714 19.0391 0.585786 19.4142C0.960859 19.7893 1.46957 20 2 20H26C26.5304 20 27.0391 19.7893 27.4142 19.4142C27.7893 19.0391 28 18.5304 28 18V2C28 1.46957 27.7893 0.96086 27.4142 0.585787C27.0391 0.210714 26.5304 0 26 0ZM14.93 9.07C14.663 9.27436 14.3362 9.38509 14 9.38509C13.6638 9.38509 13.337 9.27436 13.07 9.07L4.09 2H23.91L14.93 9.07ZM2 18V2.9L10.49 9.58L6.11 14C6.01742 14.0932 5.94411 14.2038 5.89425 14.3254C5.8444 14.4469 5.81898 14.5771 5.81944 14.7085C5.81991 14.8399 5.84625 14.9699 5.89696 15.0912C5.94767 15.2124 6.02176 15.3224 6.115 15.415C6.20824 15.5076 6.3188 15.5809 6.44037 15.6307C6.56194 15.6806 6.69214 15.706 6.82354 15.7056C6.95493 15.7051 7.08495 15.6788 7.20616 15.628C7.32738 15.5773 7.43742 15.5032 7.53 15.41L12.09 10.85C12.6578 11.2213 13.3216 11.419 14 11.419C14.6784 11.419 15.3422 11.2213 15.91 10.85L20.47 15.41C20.657 15.5983 20.9111 15.7046 21.1765 15.7056C21.4418 15.7065 21.6967 15.602 21.885 15.415C22.0733 15.228 22.1796 14.9739 22.1806 14.7085C22.1815 14.4432 22.077 14.1883 21.89 14L17.51 9.62L26 2.9V18H2Z" fill="#EE3524"/>
-                    </svg>    
-                    <p class="j-news__title">¿Querés recibir las mejores ofertas?</p>
-                </div>
-
-                <div class="j-news__right">
-                    <form id="j-form-news">
-                        <fieldset>
-                            <input type="email" id="email-newsletter" class="input-newsletter" placeholder="Ingresá tu email" required="required"/>
-                        </fieldset>
-                        <button class="btn-newsletter" id="btn-newsletter">Inscrever</button>
-                    </form>
-                    <div class="j-newsletter__success">
-                        <p>Cadastrado com sucesso!</p>
+                <div class="y-benefits__content">
+                    <div class="y-benefits__item">
+                        <vtex.cmc:iconboleto />
+                        <p><strong>5% de desconto</strong> no boleto</p>
+                    </div>
+                    <div class="y-benefits__item">
+                        <vtex.cmc:iconcard />
+                        <p>DIVIDIMOS EM ATÉ <strong>10x sem juros</strong></p>
+                    </div>
+                    <div class="y-benefits__item">
+                        <vtex.cmc:iconbarcode />
+                        <p><strong>28DDL</strong> para empresas</p>
+                    </div>
+                    <div class="y-benefits__item">
+                        <vtex.cmc:iconiso />
+                        <p>CERTIFICAÇÃO <strong>ISO 9001</strong></p>
+                    </div>
+                    <div class="y-benefits__item">
+                        <vtex.cmc:iconmap />
+                        <p>COMPRE ONLINE <strong>&amp; RETIRE AQUI</strong></p>
                     </div>
                 </div>
             </div>
         </section>
 
         <div class="container">
-
             <section class="y-home__shelfs">
-                <div class="has--line">
-                    <h3 class="y-shelf__title">OFERTAS</h3>
-                    <span></span>
-                </div>
+                <h4 class="y-title">Nossos <strong>Destaques</strong></h4>
                 <vtex:contentPlaceHolder id="Vitrine 1" />
             </section>
-
-            <section class="y-mosaico">
-                <div class="y-mosaico--item">
-                    <vtex:contentPlaceHolder id="Banner Principal" />
-                </div>
-                <div class="y-mosaico--item">
-                    <vtex:contentPlaceHolder id="Banner menores" />
-                </div>
-            </section>
-
-            <section class="y-home__shelfs">
-                <div class="has--line">
-                    <h3 class="y-shelf__title">Herramientas</h3>
-                    <span></span>
-                </div>
-                <vtex:contentPlaceHolder id="Vitrine 2" />
-            </section>
-
-            <section class="y-mosaico__separate">
-                <div class="y-left">
-                    <vtex:contentPlaceHolder id="Banner Mosaico esquerda" />
-                </div>
-                <div class="y-right">
-                    <vtex:contentPlaceHolder id="Banners mosaico direita" />
-                </div>
-            </section>
-
-            <section class="y-home__shelfs">
-                <div class="has--line">
-                    <h3 class="y-shelf__title">Pinturas</h3>
-                    <span></span>
-                </div>
-                <vtex:contentPlaceHolder id="Vitrine 3" />
-            </section>
-
-
-            <section class="y-home__store">
-                <div class="y-home__store--banner">
-                    <vtex:contentPlaceHolder id="Store Banner" />
-                </div>
-
-                <div class="y-home__store--list">
-                    <h2>Retirá tus productos en<br />nuestras sucursales</h2>
-
-                    <div class="y-home__store--list-item">
-                        <vtex:contentPlaceHolder id="Store list" />
-                    </div>
-
-                    <a href="/sucursales" class="y-home__store--list-link">Ver todas</a>
-                </div>
-            </section>
-
-            <vtex.cmc:ybrands />
-            
         </div>
+    
+        <section class="y-sac">
+            <div class="y-sac__title">
+                <h1>Atendimento <strong>Diferenciado</strong></h1>
+                <p>Não tem certeza se o produto te atende? Tem dúvidas técnicas?</p>
+                <p>Conte com nossos consultores para te auxiliar.</p>
+            </div>
+            <div class="container">
+                <div class="y-sac__option">
+                    <div class="y-sac__option--item">
+                        <div class="y-sac__option--item-img">
+                            <img src="/arquivos/sac-1.png" alt="SAC" />
+                        </div>
+                        <div class="y-sac__option--item-info">
+                            <h3 class="y-sac__option--item-title">Suporte na Compra</h3>
+                            <p class="y-sac__option--item-description">Não sabe qual o melhor produto para sua necessidade? Nosso consultor está aqui para te ajudar!</p>
+                            <a href="#">
+                                <vtex.cmc:iconwhatsapp /> EU QUERO
+                            </a>
+                        </div>
+                    </div>
+                    <div class="y-sac__option--item">
+                        <div class="y-sac__option--item-img">
+                            <img src="/arquivos/sac-2.png" alt="SAC" />
+                        </div>
+                        <div class="y-sac__option--item-info">
+                            <h3 class="y-sac__option--item-title">SAC</h3>
+                            <p class="y-sac__option--item-description">Dúvidas com seu pedido ou orçamento? Estamos aqui para te ajudar!</p>
+                            <a href="#">
+                                <vtex.cmc:iconwhatsapp /> EU QUERO
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <vtex:template id="Store-Desktop-Footer" />
-    <vtex:template id="Store-Common-Scripts" />
-    <vtex:template id="Store-Desktop-Scripts" />
-    <script type="text/javascript" src="/arquivos/store-desktop-home.js"></script>
+    <div class="container">
+        <section class="y-find">
+            <h4 class="y-title">O que você <strong>procura?</strong></h4>
 
+            <div class="y-find__slick">
+                <vtex:contentPlaceHolder id="O que vc procura" />
+            </div>
+        </section>
+
+        <section class="y-brand">
+            <h4 class="y-title">Nossas <strong>Marcas</strong></h4>
+
+            <div class="y-brand__slick">
+                <vtex:contentPlaceHolder id="Marcas" />
+            </div>
+        </section>
+
+    </div>
+
+    <vtex:template id="Store-Footer" />
+    <vtex:template id="Store-Common-Scripts" />
+    <vtex:template id="Store-Scripts" />
+    <script type="text/javascript" src="/arquivos/store-home.js"></script>
 </body>
 </html>

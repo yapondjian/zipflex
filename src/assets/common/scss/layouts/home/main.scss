@@ -1,84 +1,113 @@
 @import "../../../../common/scss/layouts/geral/benefits/main.scss";
 
-.y-home {
-    &__store {
+main {
+    background-color: #F5F5F5;
+}
+
+.y-sac {
+    width: 100%;
+    margin: 90px auto 125px;
+    padding: 60px 0 0;
+    background: url("/arquivos/sac-bg.jpg") no-repeat center top #FFF;
+
+    &__title {
+        text-align: center;
+        color: $color-white;
+
+        h1 {
+            font-family: $font-asap;
+            font-size: 24px;
+            line-height: 27px;
+            color: $color-white;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+
+            strong {
+                font-weight: 700;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 26px;
+        }
+    }
+
+    &__option {
         display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 60px;
 
-        &--list {
-            background-color: $color-main;
-            width: 40%;
-            padding: 24px 57px;
+        &--item {
+            max-width: 536px;
 
-            h2 {
-                color: $color-white;
-                @include h2;
-                display: block;
-                margin-bottom: 24px;
+            background-color: $color-white;
+            border: 1px solid $color-white;
+            border-radius: 5px;
+            box-shadow: 0 3px 6px #000000;
+            
+            padding: 22px 20px 27px;
+            
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            &:last-child {
+                margin-left: 16px;
             }
 
-            &-item {
-                &-info {
-                    background-color: $color-white;
-                    border: 1px solid $color-main;
-                    border-radius: 6px;
-                    max-width: 223px;
-                    margin: 0 12px;
-                    
-                    img {
-                        border-radius: 6px 6px 0 0;
-                    }
-
-                    &-title {
-                        @include t1-btn;
-                        color: $color-gray-8;
-                        display: block;
-                        text-align: left;
-                        padding: 0 12px;
-                        margin: 12px 0 18px;
-                    }
-
-                    &-list {
-                        padding: 0 12px;
-                        display: block;
-
-                        li {
-                            margin: 10px 0;
-                            display: flex;
-                            align-items: flex-start;
-                            justify-content: flex-start;
-
-                            p {
-                                @include t3;
-                                color: $color-gray-8;
-                                margin-left: 8px;
-                                word-break: break-all;
-                            }
-                        }
-                    }
+            &-img {
+                width: 72px;
+                img {
+                    width: 72px;
                 }
             }
 
-            &-link {
-                margin: 24px 0;
+            &-info {
+                padding-left: 20px;
+            }
+            
+            &-title {
+                text-transform: uppercase;
+                color: $color-gray-8;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 20px;
+                margin-bottom: 9px;
+            }
+            
+            &-description {
+                margin: 9px 0 15px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: $color-gray-8;
+            }
+
+            a {
+                color: $color-gray-8;
+                border: 1px solid $color-gray-8;
+                border-radius: 50px;
+                padding: 0 17px;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 35px;
+                height: 35px;
                 display: inline-block;
-                background-color: $color-yellow;
-                color: $color-main;
-                border: 1px solid $color-yellow;
-                border-radius: 6px;
-                text-align: center;
-                @include t1-btn;
-                width: 130px;
-                height: 55px;
-                line-height: 55px;
+                
+                svg {
+                    margin-right: 6px;
+                }
             }
         }
     }
 }
 
-.y-marcas {
+.y-brand {
     width: 100%;
     display: block;
-    margin: 96px 0 120px;
+    margin: 103px 0 69px;
 }

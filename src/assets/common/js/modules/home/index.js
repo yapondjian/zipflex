@@ -2,33 +2,30 @@ const Methods = {
     init() {
         Methods.bannerMain();
         Methods.sliderShelf();
-        Methods.sliderStore();
+        Methods.oqueProcura();
     },
 
     bannerMain() {
-
         $(".y-banner__main").slick({
             arrows: false,
-            dots: true
+            dots: false
         });
     },
 
     sliderShelf() {
         $('.helperComplement').remove();
 
-        $(".y-shelf > ul").slick({
+        $(".y-home__shelfs ul").slick({
             arrows: true,
-            dots: true,
-            infinite: true,
-            slidesToShow: 5
+            dots: false,
+            infinite: false,
+            slidesToShow: 4
         });
     },
 
-    sliderStore() {
-        $('.y-home__store--list-item').slick({
-            centerMode: true,
-            centerPadding: '60px',
-            slidesToShow: 1
+    oqueProcura() {
+        $('.y-find__slick').slick({
+            slidesToShow: 3
         });
     }
 };
