@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.5" height="25" viewBox="0 0 32.5 25">
+  <g id="Grupo_193" data-name="Grupo 193" transform="translate(-915 -607)">
+    <g id="Grupo_107" data-name="Grupo 107" transform="translate(56.25 0.5)">
+      <text id="ISO" transform="translate(865.75 623.5)" fill="#333" font-size="12" font-family="Roboto-Bold, Roboto" font-weight="700" letter-spacing="0.003em"><tspan x="0" y="0">ISO</tspan></text>
+    </g>
+    <g id="Icon_ionic-ios-barcode" data-name="Icon ionic-ios-barcode" transform="translate(911.25 599.5)">
+      <path id="Caminho_1" data-name="Caminho 1" d="M9.5,30.313H6.313A.313.313,0,0,1,6,30V10a.313.313,0,0,1,.313-.312H9.477a1.151,1.151,0,0,0,1.148-1.094,1.026,1.026,0,0,0-.32-.781,1.4,1.4,0,0,0-.93-.312H5.156A1.276,1.276,0,0,0,3.75,8.75v22.5A1.211,1.211,0,0,0,5.078,32.5h4.4a1.052,1.052,0,0,0,.828-1.8A1.158,1.158,0,0,0,9.5,30.313Z" fill="#333"/>
+      <path id="Caminho_2" data-name="Caminho 2" d="M34.922,7.5h-4.4A1.1,1.1,0,0,0,29.43,8.93a.847.847,0,0,0,.063.148,1.106,1.106,0,0,0,1.008.609h3.188A.313.313,0,0,1,34,10V29.992a.313.313,0,0,1-.312.313H30.523a1.139,1.139,0,0,0-1.148,1.086,1.1,1.1,0,0,0,.32.813,1.076,1.076,0,0,0,.8.3h4.422a1.218,1.218,0,0,0,1.328-1.281V8.75A1.211,1.211,0,0,0,34.922,7.5Z" fill="#333"/>
+    </g>
+  </g>
+</svg>
