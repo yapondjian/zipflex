@@ -65,14 +65,14 @@ ul, ol {
 }
 
 a {
-	color: #333;
+	color: $color-black;
 	text-decoration: none;
 }
 
 body {
 	font-family: $font-main;
 	color: $color-black;
-	background: #fff;
+	background: #FFF;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
@@ -101,7 +101,7 @@ body {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 1200px;
+	width: 1000px;
 	max-width: 90vw;
 }
 
@@ -120,40 +120,6 @@ section#vtex-callcenter__toolbar {
     top: unset !important;
     bottom: 0;
 }
-#impersonationForm{
-	bottom: 340px;
-    width: 100%;
-    position: absolute;
-}
-li.j-contact {
-    display: flex !important;
-}
-li.j-contact a {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px !important;
-}
-
-.j-shelf__item {
-	position: relative;
-	span.j-shelf_discount {
-		position: absolute;
-		top: 20px;
-		right: -10px;
-		background: #005EB8;
-		color: #fff;
-		width: 96px;
-		height: 28px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 19px;
-		font-weight: bold;
-		text-transform: uppercase;
-	}
-}
 
 .slick-arrow {
 	font-size: 0px;
@@ -164,44 +130,35 @@ li.j-contact a {
     z-index: 20;
     cursor: pointer;
     border: none;
-    border: 1px solid $color-gray-3;
-    background: $color-white;
-    border-radius: 6px;
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
-	transform: translateY(-50%);
+    transform: translateY(-50%);
 
 	&::after{
-		content: "\f060";
+		content: "\f053";
 		font-family: FontAwesome;
 		display: inline-block;
-		font-size: 17px;
-		color: $color-gray-6;
+		font-size: 31px;
+		color: $color-gray-8;
 	}
 
 	&.slick-next{
-		right: -30px;
+		right: -20px;
 
 		@include breakpoint('mobile') {
 			right: 0;
 		}
 
 		&::after {
-			content: "\f061";
+			content: "\f054";
 		}
 	}
 	&.slick-prev{
-		left: -30px;
+		left: -20px;
 
 		@include breakpoint('mobile') {
 			left: 0;
 		}
 	}
 }
-
-
-
 
 .slick-dots {
 	margin-top: 27px;
@@ -230,5 +187,20 @@ li.j-contact a {
 				background-color: $color-main;
 			}
 		}
+	}
+}
+
+.y-title {
+	margin: 65px auto 34px;
+	text-align: center;
+	font-family: $font-asap;
+	font-size: 24px;
+	line-height: 27px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: $color-gray-8;
+
+	strong {
+		font-weight: 700;
 	}
 }

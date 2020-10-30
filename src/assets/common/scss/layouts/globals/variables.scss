@@ -1,6 +1,8 @@
-$font-main: 'Open Sans', sans-serif;
+$font-main: 'Source Sans Pro', sans-serif;
+$font-asap: 'Asap', sans-serif;
 
-$color-main: #BF7E58;
+
+$color-main: #C21F26;
 $color-yellow: #F7EC00;
 $color-blue: #00AEEF;
 $color-pink: #D60C8C;
@@ -12,13 +14,13 @@ $color-gradiente: linear-gradient(270deg, #F7EC00 -10.05%, #EE3524 100%);
 $color-white: #FFFFFF;
 $color-black: #1A1818;
 
-    $color-gray-1: #F9F9F9;
-    $color-gray-2: #E4E3E3;
+$color-gray-1: #EEEEEE;
+$color-gray-2: #E4E3E3;
 $color-gray-3: #DFDFDF;
 $color-gray-4: #C8C8C8;
 $color-gray-6: #858585;
-    $color-gray-7: #6D6D6D;
-    $color-gray-8: #7D7D7D;
+$color-gray-7: #6D6D6D;
+$color-gray-8: #333333;
 
 @mixin yBorder {
     content: "";
