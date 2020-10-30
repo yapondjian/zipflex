@@ -1,9 +1,26 @@
 <header class="y-header">
+    <div class="y-header__topbar">
+        <div class="container">
+            <div class="y-header__topbar--left">
+                <vtex.cmc:iconphone />
+                +55 11 2081-7160
+            </div>
+            <ul class="y-header__topbar--right">
+                <li class="y-header__topbar--right-item">
+                    <a href="/quem-somos">Quem Somos</a>
+                </li>
+                <li class="y-header__topbar--right-middle"> | </li>
+                <li class="y-header__topbar--right-item">
+                    <a href="/fale-conosco">Fale Conosco</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="container">
         <div class="y-header__top">
             <div class="y-header__top--left">
                 <a href="/">
-                    <vtex.cmc:logohighmed />
+                    <vtex.cmc:logo />
                 </a>
             </div>
             <div class="y-header__top--middle">
@@ -11,33 +28,18 @@
             </div>
             <div class="y-header__top--right">
                 <div class="y-header__account">
-                    <div class="y-header__account-icon">
+                    <a href="/account" class="y-header__account-icon">
                         <span class="icon">        
-                            <vtex.cmc:iconuser />
+                            <vtex.cmc:iconaccount />
                         </span>
-                        <span>Entrar</span>
-                    </div>
-                    <ul class="y-header__account-subs">
-                        <li>Olá, seja bem-vindo!</li>
-                        <li>
-                            <a href="/account/ordes/">Meus Pedidos</a>
-                        </li>
-                        <li>
-                            <a href="/account/">Minha Conta</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="y-header__top--right-wishlist">
-                    <a href="/account/wishlist/">
-                        <span class="icon">
-                            <vtex.cmc:iconwishlist />
-                        </span>
+                        <span>Entre ou Cadastre-se</span>
                     </a>
                 </div>
                 <div class="y-header__top--right-minicart">
                     <div class="y-minicart">
                         <span class='y-minicart--icon js--open-minicart'>
                             <vtex.cmc:iconminicart />
+                            <span>Carrinho</span>
                             <vtex.cmc:AmountItemsInCart />
                         </span>
                         <div class="y-minicart__content">
@@ -63,22 +65,3 @@
         </div>
     </div>
 </header>
-
-<section class="y-benefits">
-    <div class="container">
-        <div class="y-benefits__content">
-            <div class="y-benefits__item">
-                <vtex.cmc:iconparcelamento />
-                <p>Parcele em até 6x sem juros*</p>
-            </div>
-            <div class="y-benefits__item">
-                <vtex.cmc:icondelivery />
-                <p>Frete grátis acima de R$ 250*</p>
-            </div>
-            <div class="y-benefits__item">
-                <vtex.cmc:icontroca />
-                <p>Troca grátis por 30 dias*</p>
-            </div>
-        </div>
-    </div>
-</section>

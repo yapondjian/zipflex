@@ -16,7 +16,7 @@
                 .amount-products {
                     position: absolute;
                     top: -7px;
-                    right: -7px;
+                    left: 20px;
                     z-index: 99;
                     
                     text-align: center;
@@ -70,10 +70,17 @@
         }
     }
     
-
     &--icon {
         cursor: pointer;
-        display: block;
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-left: 10px;
+            color: $color-gray-8;
+            font-size: 14px;
+            font-weight: 400;
+        }
     }
 
     > img {

@@ -1,28 +1,69 @@
 .y-header {
-    &__top {
-        width: 100%;
-        
-        padding: 16px 0;
+    &__topbar {
+        background-color: $color-gray-8;
+        color: $color-white;
+        padding: 8px 0;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 14px;
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
         &--left {
-            a {
-                display: block;
+            display: flex;
+            align-items: center;
 
-                svg {
-                    path {
-                        fill: $color-black;
-                    }
+            svg {
+                margin-right: 3px;
+
+                path {
+                    fill: $color-white
                 }
             }
         }
 
+        &--right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            
+            &-middle {
+                margin: 0 12px;
+            }
+
+            li,
+            li a {
+                color: $color-white;
+                text-transform: uppercase;
+                font-size: 11px;
+                font-weight: 400;
+                line-height: 14px;
+            }
+        }
+    }
+
+    &__top {
+        width: 100%;
+        
+        padding: 10px 0 17px;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &--left {
+            a {
+                display: block;
+            }
+        }
+
         &--middle {
-            width: 58%;
-            padding: 0 30px;
+            width: 48%;
+            margin: 0 28px 0 30px;
 
             .busca {
                 border: none;
@@ -32,15 +73,19 @@
 
                 &:before {
                     content: '\f002';
-                    width: 22px;
-                    height: 22px;
-                    font-size: 22px;
+                    width: 31px;
+                    height: 31px;
+                    line-height: 31px;
+                    font-size: 15px;
                     display: block;
                     position: absolute;
-                    right: 10px;
+                    right: 2px;
                     top: 50%;
+                    border-radius: 50%;
                     transform: translateY(-50%);
-                    color: $color-black;
+                    color: $color-white;
+                    background-color: $color-main;
+                    text-align: center;
                 }
                 
                 legend,
@@ -50,17 +95,20 @@
                 }
 
                 input[type="text"] {
-                    display: flex;
-                    align-items: center;
+                    
                     width: 100%;
-                    border: 1px solid $color-gray-6;
+                    border: 1px solid $color-gray-1;
+                    border-radius: 50px;
                     background-color: $color-white;
+                    
                     padding-left: 15px;
                     padding-right: 15px;
+                    
                     color: $color-gray-7;
+                    
                     transition: all 225ms ease;
-                    height: 36px;
-                    line-height: 36px;
+                    height: 35px;
+                    line-height: 35px;
 
                     font-family: $font-main;
                     font-style: normal;
@@ -92,7 +140,7 @@
             justify-content: space-between;
 
             &>div {
-                padding: 0 36px;
+                padding: 0;
                 text-align: center;
 
                 a {
@@ -111,7 +159,9 @@
                     }
                 }
             }
-
+            &-minicart {
+                margin-left: 29px;
+            }
         }
     }
 
@@ -125,6 +175,7 @@
 
             span {
                 &.icon {
+                    height: 30px;
                     svg {
                         path {
                             fill: $color-black;
@@ -133,55 +184,10 @@
                 }
 
                 &:not(.icon) {
-                    font-size: 16px;
+                    font-size: 14px;
                     font-weight: 400;
-                    color: $color-black;
-                    margin-left: 8px;
-
-                    &::after {
-                        content: "\f078";
-                        font-family: FontAwesome;
-                        color: $color-black;
-                        font-size: 10px;
-                        margin-left: 6px;
-                        display: inline-block;
-                        vertical-align: middle;
-                    }
-                }
-            }
-        }
-        &-subs {
-            display: none;
-
-            position: absolute;
-            top: 100%;
-            left: 0;
-            
-            background-color: $color-white;
-
-            width: 233px;
-            padding: 10px;
-
-            box-shadow: 2px 2px 15px #0000001A;
-
-            li {
-                margin: 16px 0;
-
-                font-size: 16px;
-                font-weight: 400;
-                color: $color-black;
-
-                &:first-child {
-                    margin: 24px 0;
-                }
-
-                a {
-                    display: block;
                     color: $color-gray-8;
-    
-                    &:hover {
-                        color: $color-main;
-                    }
+                    margin-left: 9px;
                 }
             }
         }
@@ -200,10 +206,6 @@
                     span::after {
                         color: $color-main;
                     }
-                }
-
-                &-subs {
-                    display: block;
                 }
             }
         }

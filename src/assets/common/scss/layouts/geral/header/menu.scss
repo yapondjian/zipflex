@@ -2,9 +2,8 @@
     &__menu {
         width: 100%;
         background-color: $color-white;
-        border-top: 1px solid $color-gray-2;
-        border-bottom: 1px solid $color-gray-2;
-        padding: 16px 0;
+        border-top: 1px solid $color-gray-1;
+        padding: 6px 0;
 
         &--items {
             position: relative;
@@ -143,15 +142,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    &__departamento,
-    &__institucional {
+    
+    &__departamento {
+        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: space-between;
 
         &--item {
-            margin: 0 24px;
 
             &:first-child {
                 margin-left: 0;
@@ -160,21 +158,10 @@
             a {
                 font-size: 16px;
                 font-weight: 400;
-                line-height: 22px;
-                color: $color-black;
-                padding-bottom: 15px;
-                border-bottom: 1px solid $color-white;
-            }
+                line-height: 20px;
+                color: $color-gray-8;
 
-            &:hover {
-                a {
-                    color: $color-main;
-                    border-color: $color-main;
-                }
-            }
-
-            &.destaque {
-                a {
+                &:hover {
                     color: $color-main;
                 }
             }
