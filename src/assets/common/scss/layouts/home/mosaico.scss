@@ -1,0 +1,42 @@
+.y-mosaico {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--item {
+        width: 49%;
+    
+        .box-banner {
+            margin: 12px 0;
+
+            a {
+                display: block;
+            }
+        }
+
+        &:last-child {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .box-banner {
+                width: 49%;
+            }
+
+        }
+        
+    }
+}
+
+.y-mosaico__separate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 120px auto;
+
+    .y-left,
+    .y-right {
+        width: 49%;
+    }
+}

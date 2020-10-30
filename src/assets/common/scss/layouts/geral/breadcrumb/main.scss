@@ -1,0 +1,55 @@
+.bread-crumb {
+    padding: 48px 0 36px;
+
+    ul {
+        display: flex;
+
+        li {
+            margin: 0 5px;
+            display: flex;
+            align-items: center;
+            
+            a {
+                display: block;
+                @include t1;
+                color: $color-gray-6;
+            }
+
+            &::before {
+                content: '/';
+                display: inline-block;
+                @include t1;
+                color: $color-gray-6;
+                margin-right: 9px;
+            }
+
+            &:first-child {
+                a {
+                    font-size: 0;
+                }
+
+                &::before {
+                    display: none;
+                }
+
+                &::after {
+                    content: 'Inicio';
+                    font-size: 12px;
+                    cursor: pointer;
+                    @include t1;
+                    color: $color-gray-6;
+                }
+            }
+
+            &.last {
+                strong {
+                    a {
+                        display: block;
+                        @include t1-b;
+                        color: $color-main;
+                    }
+                }
+            }
+        }
+    }
+}

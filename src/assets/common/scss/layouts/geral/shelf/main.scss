@@ -1,0 +1,127 @@
+@import "../../common/scss/layouts/globals/fonts.scss";
+
+.y-shelf {
+    margin: 0 0 120px;
+    
+    >h2 {
+        display: none;
+    }
+    
+    >ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        position: relative;
+
+        li[layout*="-"] {
+            width: 47%;
+            margin: 5px 0.5%;
+            padding: 0 10px;
+            
+            @include breakpoint('desktop') {
+                width: 22%;
+                margin: 5px 10px;
+            }
+        }
+    }
+
+    &__item {
+        border: 1px solid $color-gray-3;
+        border-radius: 6px;
+        padding: 5px 12px 16px;
+
+        &-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                display: block;
+                img {
+                    height: auto;
+                    display: block;
+                }
+            }
+        }
+
+        &-content {
+            .brand {
+                display: block;
+                @include h6;
+                color: $color-gray-8;
+                margin: 6px 0;
+                text-transform: capitalize;
+            }
+        }
+
+        &-name {
+            overflow: hidden;
+            height: 36px;
+            margin: 6px 0 12px;
+
+            a {
+                display: block;
+                @include t1;
+                color: $color-gray-8;
+                text-transform: capitalize;
+            }
+        }
+
+        &--price {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            
+            &-old {
+                font-family: "Libre Franklin";
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+                text-decoration-line: line-through;
+                font-feature-settings: 'ss01' on, 'case' on;
+                margin: 0 12px 8px 0;
+            }
+
+            &-new {
+                @include t2-b;
+                color: $color-gray-8;
+                margin: 0 0 8px;
+            }
+
+            &-vista {
+                width: 100%;
+                padding: 12px 0;
+                border-top: 1px solid $color-gray-3;
+                color: $color-pink;
+
+                strong {
+                    display: block;
+                    @include h5;
+                    margin-bottom: 6px;
+                }
+                
+                span {
+                    display: block;
+                    font-family: "Libre Franklin";
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 13px;
+                    line-height: 12px;
+                    letter-spacing: 0.01em;
+                    font-feature-settings: 'ss01' on, 'case' on;
+                    color: $color-pink;
+                }
+
+            }
+        }
+
+        &-outStcok-text {
+            margin-top: 5px;
+            text-align: center;
+            font-size: 12px;
+            color: #585757;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.y-category {
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @include h5;
+        font-weight: 600;
+        color: $color-main;
+        padding-bottom: 30px;
+        border-bottom: 2px solid $color-main;
+        margin-bottom: 21px;
+
+        svg {
+            margin-right: 12px;
+        }
+    }
+
+    &-top {
+        text-align: center;
+        .box-banner {
+            a {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+
+    &-mosaico {
+        margin: 72px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .box-banner {
+            a {
+                display: block;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 23%;
+    }
+
+    &__right {
+        width: 77%;
+        .j-shelf>ul {
+            li {
+                .j-shelf__item {}
+            }
+        }
+    }
+
+    &-seeMore {
+        display: block;
+        margin: 48px auto 144px;
+        @include t2-alt;
+        border: 1px solid $color-gray-3;
+        background-color: $color-white;
+        border-radius: 6px;
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: $color-main;
+    }
+}

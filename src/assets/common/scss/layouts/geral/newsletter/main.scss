@@ -1,0 +1,105 @@
+
+@import "../../common/scss/layouts/globals/fonts.scss";
+
+
+.j-newsletter {
+    background-color: $color-gray-2;
+    padding: 18px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include breakpoint('mobile') {
+            flex-direction: column;
+        }
+    }
+
+    .j-news {
+        &__left {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-right: 24px;
+
+            @include breakpoint('mobile') {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            p {
+                @include h4;
+                color: $color-main;
+                margin-left: 10px;
+
+                @include breakpoint('mobile') {
+                    @include h5;
+                    margin: 13px 0 18px;
+                    text-align: center;
+                }
+            }
+        }
+
+        &__right {
+            form {
+                position: relative;
+
+                fieldset {
+                    border: 0;
+
+                    input {
+                        width: 300px;
+                        height: 35px;
+                        line-height: 35px;
+                        background-color: $color-white;
+                        border: 1px solid $color-white;
+                        border-radius: 6px;
+                        padding: 0 13px;
+                        @include t1;
+                        color: $color-gray-6;
+                    }
+                }
+
+                .btn-newsletter {
+                    width: 38px;
+                    height: 35px;
+                    font-size: 0;
+                    background-color: $color-main;
+                    border: 1px solid $color-main;
+                    border-radius: 0 6px 6px 0;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    text-align: center;
+
+                    &::after {
+                        content: "\f054";
+                        font-family: FontAwesome;
+                        font-size: 16px;
+                        color: $color-white;
+                        display: block;
+                        text-align: center;
+
+                        @include breakpoint('mobile') {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translateX(-50%) translateY(-50%);
+                        }
+                    }
+                }
+            }
+
+            .j-newsletter__success {
+                display: none;
+
+                &.is--active {
+                    display: block;
+                    color: $color-main;
+                    @include t1;
+                }
+            }
+        }
+    }
+}

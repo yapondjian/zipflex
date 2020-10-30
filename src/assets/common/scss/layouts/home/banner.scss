@@ -1,0 +1,25 @@
+.y-banner__main {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 16px;
+
+	&>.box-banner {
+		display: none;
+
+		&:first-child {
+			display: block;
+		}
+	}
+
+	.box-banner {
+		width: 100%;
+
+		a {
+			display: block;
+	
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

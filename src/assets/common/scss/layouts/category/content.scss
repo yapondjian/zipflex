@@ -1,0 +1,24 @@
+.pager,
+.searchResultsTime,
+.sub .filterBy,
+.sub .compare,
+.sub:last-child {
+    display: none;
+}
+
+.sub .orderBy {
+    margin: 20px 0 50px;
+    border: none;
+    color: $color-main;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+
+    select {
+        border: none;
+        color: $color-main;
+        font-size: 14px;
+        width: auto;
+        font-weight: bold;
+    }
+}

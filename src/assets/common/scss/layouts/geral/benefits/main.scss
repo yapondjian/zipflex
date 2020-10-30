@@ -1,0 +1,35 @@
+@import '../../../tools/breakpoint';
+@import '../../globals/fonts.scss';
+
+.y-benefits {
+    display: block;
+    padding: 20px 0;
+    background-color: $color-gray-1;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        svg {
+            path {
+                color: $color-black;
+            }
+        }
+        
+        p {
+            margin-left: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: $color-black;
+            line-height: 19px;
+        }
+    }
+}

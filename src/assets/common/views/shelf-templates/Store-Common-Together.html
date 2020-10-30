@@ -1,0 +1,35 @@
+#set($productId = $product.Id) 
+#set($productTitle = $product.HtmlEscapedName) 
+#set($productLink = $product.Uri) 
+#set($productListPrice = $product.ListPrice) 
+#set($productBestPrice = $product.BestPrice) 
+#set($productInstallmentValue = $product.InstallmentValue)
+
+<article class="y-together__item" data-product-id="$productId">
+    <div class="y-together__item-img">
+        <a class="y-together__item-img__img" title="$productTitle" href="$productLink">
+			$product.GetImageTag(72,72)
+		</a>
+    </div>
+    <div class="y-together__item-content">
+        
+        <p class="y-together__checkbox" data-product-id="$productId">Seleccionar</p>
+        
+        <a class="y-together__item-name" title="$productTitle" href="$productLink">            
+            $productTitle
+        </a>
+
+        <div class="y-together__item--price">
+            #if ($product.HasBestPrice)
+                <p class="y-together__item--price-old">
+                    <del>$product.ListPrice</del>
+                </p>
+            #end
+
+            <p class="y-together__item--price-new">
+                $product.BestPrice
+            </p>
+        </div>
+    </div>
+</article>
+

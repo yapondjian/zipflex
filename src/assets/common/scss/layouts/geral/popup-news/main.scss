@@ -1,0 +1,213 @@
+.j-popup__overlay {
+	min-height: 100vh;
+	min-width: 100vw;
+	background-color: #000;
+	opacity: 0;
+	pointer-events: none;
+	z-index: 999999;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.j-popup__overlay.is--active {
+	opacity: .4;	
+	pointer-events: all;
+	transition:  all 300ms ease;
+}
+.j-popup-register {
+	pointer-events: none;
+	opacity: 0;
+	transition:  all 300ms ease;
+}
+
+.j-popup-register.is--active {
+	opacity: 1;	
+	pointer-events: all;
+}
+
+.j-popup__close {
+	display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.j-popup__close:before,
+.j-popup__close:after {
+	content: '';
+    display: block;
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    right: 8px;
+    top: 16px;
+}
+.j-popup__close:after {
+	transform: rotate(50deg);
+}
+.j-popup__close:before {
+	transform: rotate(-50deg);
+}
+.j-popup-register {
+    background: url(/arquivos/fundo-popup-desk.png) no-repeat scroll 0 0 transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	display: block;
+	min-width: 502px;
+	width: 502px;
+	height: 450px;
+	max-height: 70vh;
+	display: flex;
+	z-index: 1000000;
+}
+.j-popup__left img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.j-popup__left {
+	width: 50%;
+}
+.j-popup__right {
+	width: 52%;
+	padding: 80px 10px 28px;
+}
+
+.j-popup__right form input{
+	display: block;
+	width: 95%;
+	padding: 10px 5px 5px 5px;
+	font-size: 16px;
+	margin: 0 10px 10px 10px;
+	border: none;
+    outline: none;
+    border-radius: 2px;
+    font-family: "Klavika";
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.j-popup__right form div{
+    width: 95%;
+    display: block;
+    margin: 0 10px 10px 10px;
+}
+
+.j-popup__right form div input{
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    margin: 0;
+}
+
+.j-popup__right form div label{
+    color: #fff;
+    font-weight: 100;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.j-popup__right form p{
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+}
+
+.j-popup__right form span{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.j-popup__right form #submit {
+	width: auto;
+	margin: 20px auto;
+	border: none;
+	background-color: #2dccd3;
+	font-size: 20px;
+	line-height: 16px;
+    color: #fff;
+    font-weight: 100;
+    padding: 10px;
+    text-transform: uppercase;
+	border-radius: 2px;
+	cursor: pointer;
+	transition: all 225ms ease;
+	box-shadow: 0 0 5px rgba(230,230,230,0.5);
+}
+.j-popup__right form #submit:hover, 
+.j-popup__right form #submit:focus{ 
+	transform: scale(1.05);
+	box-shadow: 0 0 10px #ccc;
+}
+
+.j-popup__success {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+    transition: all 200ms ease;
+}
+
+.j-popup__success.is--active {
+	opacity: 1;
+	height: auto;
+    pointer-events: all;
+    margin: 50% auto;
+}
+.j-popup__success p {
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+#register.is--inactive {
+	display: none;
+}
+
+img.mobile {
+	display: none;
+}
+
+@media only screen and ( max-width: 768px ) {
+	.j-popup-register {
+		flex-direction: column;
+		width: 75vw;
+		min-height: fit-content;
+		margin-top: 5vh;
+	}
+	.j-popup__left {
+		height: 150px;
+	}
+
+	.j-popup__right,
+	.j-popup__left {
+		width: 100%;
+	}	
+	.j-popup__right,
+	.j-popup__right form input {
+		margin: 15px 0;
+		max-width: 100%;
+	}
+
+	.j-popup__right {
+		margin: 0;
+	}
+	img.mobile {
+		display: block;
+	}
+	img.desk {
+		display: none;
+	}
+}
+

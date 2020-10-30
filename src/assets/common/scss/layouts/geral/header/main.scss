@@ -1,0 +1,211 @@
+.y-header {
+    &__top {
+        width: 100%;
+        
+        padding: 16px 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--left {
+            a {
+                display: block;
+
+                svg {
+                    path {
+                        fill: $color-black;
+                    }
+                }
+            }
+        }
+
+        &--middle {
+            width: 58%;
+            padding: 0 30px;
+
+            .busca {
+                border: none;
+                position: relative;
+                width: 100%;
+                margin: 0 auto;
+
+                &:before {
+                    content: '\f002';
+                    width: 22px;
+                    height: 22px;
+                    font-size: 22px;
+                    display: block;
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: $color-black;
+                }
+                
+                legend,
+                label,
+                select {
+                    display: none;
+                }
+
+                input[type="text"] {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    border: 1px solid $color-gray-6;
+                    background-color: $color-white;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    color: $color-gray-7;
+                    transition: all 225ms ease;
+                    height: 36px;
+                    line-height: 36px;
+
+                    font-family: $font-main;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+
+                .btn-buscar {
+                    color: transparent;
+                    font-size: 0;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    background-size: cover;
+                    width: 26px;
+                    height: 26px;
+                    display: block;
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        &--right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &>div {
+                padding: 0 36px;
+                text-align: center;
+
+                a {
+                    svg {
+                        path {
+                            fill: $color-black;
+                        }
+                    }
+
+                    &:hover {
+                        svg {
+                            path {
+                                fill: $color-main;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__account {
+        cursor: pointer;
+        position: relative;
+
+        &-icon {
+            display: flex;
+            align-items: center;
+
+            span {
+                &.icon {
+                    svg {
+                        path {
+                            fill: $color-black;
+                        }
+                    }
+                }
+
+                &:not(.icon) {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $color-black;
+                    margin-left: 8px;
+
+                    &::after {
+                        content: "\f078";
+                        font-family: FontAwesome;
+                        color: $color-black;
+                        font-size: 10px;
+                        margin-left: 6px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        &-subs {
+            display: none;
+
+            position: absolute;
+            top: 100%;
+            left: 0;
+            
+            background-color: $color-white;
+
+            width: 233px;
+            padding: 10px;
+
+            box-shadow: 2px 2px 15px #0000001A;
+
+            li {
+                margin: 16px 0;
+
+                font-size: 16px;
+                font-weight: 400;
+                color: $color-black;
+
+                &:first-child {
+                    margin: 24px 0;
+                }
+
+                a {
+                    display: block;
+                    color: $color-gray-8;
+    
+                    &:hover {
+                        color: $color-main;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .y-header__account {
+                &-icon {
+                    .icon {
+                        svg {
+                            path {
+                                fill: $color-main;
+                            }
+                        }
+                    }
+                    span,
+                    span::after {
+                        color: $color-main;
+                    }
+                }
+
+                &-subs {
+                    display: block;
+                }
+            }
+        }
+    }
+}

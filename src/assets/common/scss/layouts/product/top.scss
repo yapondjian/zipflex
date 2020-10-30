@@ -1,0 +1,349 @@
+.y-product {
+    &--wrapper__infos {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &__left {
+        width: 50%;
+        padding: 50px 35px 50px 100px;
+    }
+
+    &__img {
+        position: relative;
+
+        .flag {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 64px;
+            height: 64px;
+            background-color: $color-pink;
+            text-transform: uppercase;
+            @include h5;
+            font-weight: bold;
+            color: $color-white;
+            z-index: 9999;
+            border-radius: 4px;
+            padding: 0 5px;
+
+            &::before {
+                content: "HASTA";
+                display: block;
+                color: $color-white;
+                font-family: "Libre Franklin";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 8px;
+                line-height: 24px;
+            }
+        }
+
+        #image {
+            a {
+                cursor: zoom-in;
+            }
+        }
+
+        #show {
+            display: block;
+
+            #include {
+                width: 100%;
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            .thumbs {
+                width: 100%;
+                margin: 24px 0;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                li {
+                    border: none;
+                    margin: 0 12px;
+                }
+            }
+        }
+
+        .zoomWindow {
+            overflow: hidden;
+            border: 1px solid transparent;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            left: 0px !important;
+        }
+
+        .zoomPad {
+            position: relative;
+        }
+
+        .zoomWrapperImage {
+            img {
+                max-width: unset!important;
+                width: auto!important;
+            }
+        }
+    }
+
+    .y-benefits {
+        margin: 60px 0;
+        &__content {
+            &-item {
+                display: flex !important;
+                padding: 0 23px;
+
+                p {
+                    margin-left: 7px;
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__right {
+        width: 50%;
+        padding: 50px 100px 50px 35px;
+    }
+
+    &__brand {
+        @include h5;
+        color: $color-gray-6;
+    }
+
+    &__name {
+        @include h2;
+        color: $color-gray-8;
+        margin: 6px 0 36px;
+    }
+
+    &__price {
+
+        .productPrice {
+            display: flex;
+            flex-wrap: wrap;
+            
+            .descricao-preco {
+                padding-right: 36px;
+
+                .valor-de {
+                    display: block;
+                    font-size: 0;
+                    font-style: normal;
+                    margin-bottom: 6px;
+                    
+                    strong {
+                        font-family: "Libre Franklin";;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 18px;
+                        text-decoration-line: line-through;
+                        color: $color-gray-6;
+                    }
+                }
+                
+                .valor-por {
+                    display: block;
+                    font-size: 0;
+                    font-style: normal;
+    
+                    strong {
+                        @include h4;
+                        color: $color-gray-6;
+                    }
+                }
+        
+                .valor-dividido {
+                    display: none;
+                }
+            }
+        }
+
+        .preco-a-vista {
+            max-width: 230px;
+            display: block !important;
+            font-size: 0;
+            padding-left: 40px;
+            border-left: 1px solid $color-gray-3;
+            
+            strong {
+                &::before {
+                    content: "";
+                    width: 26px;
+                    height: 18px;
+                    background: url("/arquivos/pdp-card.png") no-repeat center center;
+                    display: inline-block;
+                    margin-right: 11px;
+                }
+
+                @include h3;
+                color: $color-pink;
+
+                &::after {
+                    content: "Precio con descuento Visa 12 cuotas sin interés";
+                    @include t1;
+                    color: $color-pink;
+                    display: block;
+                    margin-top: 10px;
+                }
+                
+            }
+        }
+
+        .economia-de {
+            display: block;
+            font-size: 0;
+            margin: 10px 0;
+            
+            span {
+                &::before {
+                    content: "¡Te ahorrás";
+                    @include t2;
+                    color: $color-gray-8;
+                    margin-right: 5px;
+                }
+
+                @include t2;
+                color: $color-gray-8;
+                font-style: normal;
+                font-weight: bold;
+
+                &::after {
+                    content: "!";
+                    @include t2;
+                    color: $color-gray-8;
+                }
+            }
+        }
+
+        &-otro {
+            display: block;
+            @include t3;
+            color: $color-blue;
+            background-color: $color-white;
+            border: none;
+            appearance: none;
+
+            i {
+                margin-right: 7px;
+                font-family: FontAwesome;
+            }
+        }
+    }
+
+    &__buy {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 36px 0;
+
+        .y-qty {
+            .box-qtd {
+                width: 97px;
+                height: 62px;
+                margin-right: 12px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                input {
+                    width: 60px;
+                    height: 60px;
+                    line-height: 60px;
+                    font-weight: 700;
+                    background-color: $color-white;
+                    border: 1px solid $color-gray-3;
+                    border-radius: 6px;
+                    text-align: center;
+                    @include h4;
+                    color: $color-blue;
+                    margin-right: 9px;
+                }
+
+                button {
+                    width: 27px;
+                    height: 27px;
+                    background-color: $color-white;
+                    border-radius: 6px;
+                    border: 1px solid $color-gray-3;
+                    cursor: pointer;
+                    color: $color-gray-8;
+                    font-size: 16px;
+
+                    &.btn-mais {
+                        margin-bottom: 6px;
+                    }
+                }
+            }
+        }
+
+        .buy-button {
+            cursor: pointer;
+            text-align: center;
+            @include t1-btn;
+            width: 125px;
+            height: 55px;
+            line-height: 55px;
+            border-radius: 6px;
+            background: linear-gradient(270deg, #F7EC00 -10.05%, #EE3524 100%);
+            color: $color-white;
+        }
+
+        .y-stock {
+            display: block;
+            width: 100%;
+            margin-top: 24px;
+            @include t2;
+            color: $color-main;
+        }
+
+        // AVISA-ME
+        .notifymetitle.notifyme-title {
+            color: $color-gray-8;
+            font-size: 20px;
+        }
+
+        fieldset.sku-notifyme-form.notifyme-form {
+            border: none;
+            display: flex;
+            >p {
+                color: $color-gray-8;
+                font-size: 18px;
+                line-height: 22px;
+                margin: 15px 0px;
+            }
+            input {
+                width: 80%;
+                height: 35px;
+                border: 1.5px solid $color-main;
+                border-radius: 5px;
+                margin: 10px 0px;
+                padding: 10px;
+                color: $color-gray-8;
+                &#notifymeButtonOK {
+                    background-color: $color-main;
+                    color: #fff;
+                    font-size: 16px;
+                    border: none;
+                    border-radius: 4px;
+                    width: 110px;
+                    height: 37px;
+                    margin-left: auto;
+                    margin-right: 20%;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

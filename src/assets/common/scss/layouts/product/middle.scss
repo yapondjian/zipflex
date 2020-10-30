@@ -1,0 +1,254 @@
+.y-product {
+    &__details {
+        margin: 36px 0;
+
+        h3 {
+            display: block;
+            @include h3;
+            color: $color-main;
+            margin-bottom: 24px;
+        }
+
+        .productDescription {
+            display: block;
+            @include t1;
+            color: $color-gray-8; 
+        }
+
+        #caracteristicas {
+
+            .Filtros, h4 {
+                display: none;
+            }
+    
+            table {
+                width: 100%;
+                border: 1px solid $color-gray-4;
+                border-radius: 6px;
+                
+                tr {
+                    background-color: $color-gray-1;
+                    border: none;
+                    
+                    &.even {
+                        background-color: $color-gray-3;
+                    }
+                    
+                    th {
+                        width: 50%;
+                        font-weight: bold;
+                        text-align: left;
+                        padding: 12px 24px;
+                        @include h6;
+                        color: $color-gray-8;
+                    }
+                    
+                    td {
+                        width: 50%;
+                        text-align: left;
+                        padding: 12px 24px;
+                        @include t1;
+                        color: $color-gray-8;
+                    }
+                }
+            }
+        }
+    }
+
+    &__related {
+        background-color: $color-gray-1;
+        border: 1px solid $color-gray-3;
+        border-radius: 6px;
+        padding: 12px;
+
+        .y-shelf {
+            margin: 0;
+
+            &__title {
+                padding-left: 72px;
+                display: block;
+                @include h4;
+                color: $color-orange;
+                margin: 16px 0 32px;
+            }
+        }
+
+        .slick {
+
+            &-arrow {
+                top: -35%;
+            }
+
+            &-prev {
+                left: 0;
+            }
+
+            &-next {
+                right: 0;
+            }
+        }
+
+        .y-related {
+            &__item {
+                background-color: $color-white;
+                padding: 12px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+
+                &-img {
+                    max-width: 96px;
+                }
+
+                &-name {
+                    display: block;
+                    a {
+                        display: block;
+                        @include t1-b;
+                        color: $color-black;
+                    }
+                }
+                
+                &--price {
+                    margin: 6px 0 12px;
+                    display: block;
+
+                    &-new {
+                        @include t1;
+                        color: $color-black;
+                    }
+                }
+
+                &--buy {
+                    display: block;
+                    @include t2-alt;
+                    color: $color-orange;
+                    width: 170px;
+                    height: 42px;
+                    line-height: 42px;
+                    text-align: center;
+                    background-color: $color-white;
+                    border: 1px solid $color-gray-3;
+                    border-radius: 6px;
+                }
+            }
+        }
+
+    }
+
+
+    &__together {
+        background-color: $color-gray-1;
+        border: 1px solid $color-gray-3;
+        border-radius: 6px;
+        padding: 24px;
+
+        .y--together {
+            margin: 0;
+
+            &>ul {
+                display: block;
+
+                li {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+
+        .y-together {
+            margin: 0;
+
+            &__title {
+                display: block;
+                @include h4;
+                color: $color-blue;
+                margin: 0 0 24px;
+            }
+
+            &__checkbox {
+                display: block;
+                cursor: pointer;
+                padding-left: 23px;
+                background: url("/arquivos/y-checkbox.png") no-repeat left center;
+                @include t1;
+                color: $color-gray-6;
+
+                &.is--checked {
+                    background: url("/arquivos/y-checked.png") no-repeat left center;
+                    color: $color-blue;
+                }
+            }
+
+            &__item {
+                border-top: 1px solid $color-gray-3;
+                padding: 18px 0;
+                display: flex;
+                align-items: flex-start;
+
+                &-img {
+                    max-width: 72px;
+                    margin-right: 12px;
+
+                    a {
+                        display: block;
+                        
+                        img {
+                            border-top: 1px solid $color-gray-3;
+                            border-radius: 6px;        
+                        }
+                    }
+                }
+
+                &-name {
+                    display: block;
+                    @include t1;
+                    color: $color-gray-8;
+                    margin: 12px 0;
+                }
+                
+                &--price {
+                    display: flex;
+                    align-items: flex-start;
+
+                    &-old {
+                        font-family: "Libre Franklin";
+                        font-weight: normal;
+                        font-size: 15px;
+                        line-height: 18px;
+                        text-decoration-line: line-through;
+                        color: $color-gray-8;
+                        margin-right: 12px;
+                    }
+
+                    &-new {
+                        @include h6;
+                        font-weight: 600;
+                        color: $color-gray-8;
+                    }
+                }
+            }
+
+            &__buy {
+                text-align: right;
+                border-top: 1px solid $color-gray-3;
+
+                button {
+                    cursor: pointer;
+                    margin-top: 24px;
+                    @include t2-alt;
+                    color: $color-white;
+                    width: 100px;
+                    height: 48px;
+                    line-height: 48px;
+                    text-align: center;
+                    background-color: $color-blue;
+                    border: 1px solid $color-blue;
+                    border-radius: 6px;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style: normal;
+    src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
+    src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+
+@mixin h1 {
+    font-family: $font-main;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 400;
+}
+
+@mixin h2 {
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+@mixin h3 {
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+}
+
+@mixin h4 {
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+@mixin h5 {
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+@mixin h6 {
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin t1 {
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: normal;
+}
+
+@mixin t1-b {
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+@mixin t1-alt-r {
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    font-feature-settings: 'zero' on;
+}
+
+@mixin t1-btn {
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+}
+
+@mixin t2 {
+    font-family: $font-main;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    letter-spacing: 0.01em;
+    font-feature-settings: 'ss01' on, 'case' on;
+}
+
+@mixin t2-r {
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+@mixin t2-b {
+    font-family: $font-main;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    font-feature-settings: 'ss01' on, 'case' on;
+}
+
+@mixin t2-alt {
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    font-feature-settings: 'ss01' on, 'case' on;
+}
+
+@mixin t3 {
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 12px;
+    font-feature-settings: 'ss01' on, 'case' on;
+}
+
+@mixin t3-b {
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 18px;
+    font-feature-settings: 'ss01' on, 'case' on;
+}
+
+@mixin num-2 {
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+}

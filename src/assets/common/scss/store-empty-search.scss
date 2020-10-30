@@ -1,0 +1,58 @@
+@import '../../common/scss/tools/_breakpoint.scss';
+@import "../../common/scss/layouts/globals/fonts.scss";
+@import "../../common/scss/layouts/globals/variables.scss";
+
+.y-empty {
+    &__content {
+        text-align: center;
+    }
+
+    &__title {
+        display: inline-block;
+        margin: 48px auto;
+        @include h2;
+        font-weight: bold;
+        color: $color-gray-8;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $color-gray-3;
+    
+        span {
+            color: $color-main;
+        }
+    }
+    
+    .y-mosaico {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        &--item {
+            width: 49%;
+        
+            .box-banner {
+                margin: 12px 0;
+    
+                a {
+                    display: block;
+                }
+            }
+    
+            &:last-child {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+    
+                .box-banner {
+                    width: 49%;
+                }
+    
+            }
+            
+        }
+    }
+    
+    .y-home__shelfs {
+        margin: 72px 0 150px;
+    }
+}

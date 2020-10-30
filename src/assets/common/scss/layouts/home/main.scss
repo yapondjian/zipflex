@@ -1,0 +1,84 @@
+@import "../../../../common/scss/layouts/geral/benefits/main.scss";
+
+.y-home {
+    &__store {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        &--list {
+            background-color: $color-main;
+            width: 40%;
+            padding: 24px 57px;
+
+            h2 {
+                color: $color-white;
+                @include h2;
+                display: block;
+                margin-bottom: 24px;
+            }
+
+            &-item {
+                &-info {
+                    background-color: $color-white;
+                    border: 1px solid $color-main;
+                    border-radius: 6px;
+                    max-width: 223px;
+                    margin: 0 12px;
+                    
+                    img {
+                        border-radius: 6px 6px 0 0;
+                    }
+
+                    &-title {
+                        @include t1-btn;
+                        color: $color-gray-8;
+                        display: block;
+                        text-align: left;
+                        padding: 0 12px;
+                        margin: 12px 0 18px;
+                    }
+
+                    &-list {
+                        padding: 0 12px;
+                        display: block;
+
+                        li {
+                            margin: 10px 0;
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+
+                            p {
+                                @include t3;
+                                color: $color-gray-8;
+                                margin-left: 8px;
+                                word-break: break-all;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-link {
+                margin: 24px 0;
+                display: inline-block;
+                background-color: $color-yellow;
+                color: $color-main;
+                border: 1px solid $color-yellow;
+                border-radius: 6px;
+                text-align: center;
+                @include t1-btn;
+                width: 130px;
+                height: 55px;
+                line-height: 55px;
+            }
+        }
+    }
+}
+
+.y-marcas {
+    width: 100%;
+    display: block;
+    margin: 96px 0 120px;
+}

@@ -1,0 +1,29 @@
+$font-main: 'Open Sans', sans-serif;
+
+$color-main: #BF7E58;
+$color-yellow: #F7EC00;
+$color-blue: #00AEEF;
+$color-pink: #D60C8C;
+$color-orange: #F58220;
+$color-green: #BED73B;
+
+$color-gradiente: linear-gradient(270deg, #F7EC00 -10.05%, #EE3524 100%);
+
+$color-white: #FFFFFF;
+$color-black: #1A1818;
+
+    $color-gray-1: #F9F9F9;
+    $color-gray-2: #E4E3E3;
+$color-gray-3: #DFDFDF;
+$color-gray-4: #C8C8C8;
+$color-gray-6: #858585;
+    $color-gray-7: #6D6D6D;
+    $color-gray-8: #7D7D7D;
+
+@mixin yBorder {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-image: linear-gradient(90deg,$color-main 0,$color-main 16%,$color-yellow 0,$color-yellow 32%, $color-blue 0, $color-blue 48%,$color-pink 0,$color-pink 64%,$color-orange 0,$color-orange 80%,$color-green 0,$color-green 100%);
+}

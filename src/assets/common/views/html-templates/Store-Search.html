@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Common-Styles" />
+    <link rel="stylesheet" href="/arquivos/store-desktop-category.css" />
+</head>
+
+<body id="topo">
+    <vtex:template id="Store-Desktop-Header" />
+
+    <main class='j-search'>
+        <div class="container">
+            <div class='j-search__top'>
+                <h2 class='j-search__title'>
+                    Resultados para <span class="j-search__term"></span>
+                </h2>
+                <div class="j-search__orderby">
+
+                </div>
+            </div>
+
+            <div class="j-category__content">
+                <div class="j-category__left">
+                    <div class="j-banner__small">
+                        <vtex:contentPlaceHolder id="Banner Lateral" />
+                    </div>
+                    <div class="j-category__filter">
+                        <div class="j-category__searchNavigator">
+                            <h3 class='j-category__searchNavigator--title'>
+                                Filtrar por
+                            </h3>
+                            <vtex.cmc:searchNavigator />
+                        </div>
+                    </div>
+                </div>
+                <div class="j-category__right">
+                    <div class="j-category__products">
+
+                        <vtex.cmc:searchResult layout="50569167-3d07-42e9-9d71-4fdd53a198a6" itemCount="36"
+                            columnCount="4" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="js--scroll-top">
+            <a href="#topo">
+                <img src="/arquivos/topo.jpg" />
+            </a>
+        </div>
+    </main>
+
+    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Desktop-Scripts" />
+    <script>
+        document.querySelector('.j-search__term').innerText = '" ' + vtxctx.searchTerm + ' "';
+    </script>
+    <script src="/arquivos/store-desktop-category.js"></script>
+</body>
+
+</html>

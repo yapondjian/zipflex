@@ -1,0 +1,84 @@
+<header class="y-header">
+    <div class="container">
+        <div class="y-header__top">
+            <div class="y-header__top--left">
+                <a href="/">
+                    <vtex.cmc:logohighmed />
+                </a>
+            </div>
+            <div class="y-header__top--middle">
+                <vtex.cmc:fullTextSearchBox/>
+            </div>
+            <div class="y-header__top--right">
+                <div class="y-header__account">
+                    <div class="y-header__account-icon">
+                        <span class="icon">        
+                            <vtex.cmc:iconuser />
+                        </span>
+                        <span>Entrar</span>
+                    </div>
+                    <ul class="y-header__account-subs">
+                        <li>Olá, seja bem-vindo!</li>
+                        <li>
+                            <a href="/account/ordes/">Meus Pedidos</a>
+                        </li>
+                        <li>
+                            <a href="/account/">Minha Conta</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="y-header__top--right-wishlist">
+                    <a href="/account/wishlist/">
+                        <span class="icon">
+                            <vtex.cmc:iconwishlist />
+                        </span>
+                    </a>
+                </div>
+                <div class="y-header__top--right-minicart">
+                    <div class="y-minicart">
+                        <span class='y-minicart--icon js--open-minicart'>
+                            <vtex.cmc:iconminicart />
+                            <vtex.cmc:AmountItemsInCart />
+                        </span>
+                        <div class="y-minicart__content">
+                            <div class="y-minicart-header">
+                                <p class='y-minicart__content--title'>
+                                    <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 2H4.36L5.05 4.07L8 12.91V16C8 16 8 16 8 16.05C7.54434 16.5057 7.22291 17.078 7.07095 17.7042C6.91898 18.3304 6.94234 18.9864 7.13847 19.6002C7.3346 20.2141 7.69593 20.7621 8.18285 21.1841C8.66977 21.6062 9.26349 21.8861 9.89894 21.9932C10.5344 22.1002 11.187 22.0303 11.7854 21.791C12.3837 21.5517 12.9046 21.1523 13.291 20.6366C13.6774 20.1208 13.9143 19.5087 13.9759 18.8673C14.0375 18.2258 13.9212 17.5798 13.64 17H17.34C17.1152 17.468 16.999 17.9808 17 18.5C17 19.1922 17.2053 19.8689 17.5899 20.4445C17.9744 21.0201 18.5211 21.4687 19.1606 21.7336C19.8001 21.9985 20.5039 22.0678 21.1828 21.9327C21.8617 21.7977 22.4854 21.4644 22.9749 20.9749C23.4644 20.4854 23.7977 19.8617 23.9327 19.1828C24.0678 18.5039 23.9985 17.8001 23.7336 17.1606C23.4687 16.5211 23.0201 15.9744 22.4445 15.5899C21.8689 15.2053 21.1922 15 20.5 15H10V13.75H22C22.2096 13.7505 22.4142 13.6852 22.5846 13.5632C22.7551 13.4411 22.8829 13.2686 22.95 13.07L25.51 5.38C25.6098 5.07929 25.6367 4.75917 25.5886 4.44602C25.5404 4.13286 25.4186 3.83562 25.233 3.57879C25.0475 3.32196 24.8036 3.11289 24.5214 2.9688C24.2392 2.8247 23.9268 2.74971 23.61 2.75H6.72L6 0.68C5.93462 0.486161 5.81136 0.317039 5.64685 0.195445C5.48234 0.0738505 5.28449 0.00563499 5.08 0H1C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1C0 1.26522 0.105357 1.51957 0.292893 1.70711C0.48043 1.89464 0.734784 2 1 2ZM12 18.5C12 18.7967 11.912 19.0867 11.7472 19.3334C11.5824 19.58 11.3481 19.7723 11.074 19.8858C10.7999 19.9993 10.4983 20.0291 10.2074 19.9712C9.91639 19.9133 9.64912 19.7704 9.43934 19.5607C9.22956 19.3509 9.0867 19.0836 9.02882 18.7926C8.97094 18.5017 9.00065 18.2001 9.11418 17.926C9.22771 17.6519 9.41997 17.4176 9.66665 17.2528C9.91332 17.088 10.2033 17 10.5 17C10.8978 17 11.2794 17.158 11.5607 17.4393C11.842 17.7206 12 18.1022 12 18.5ZM22 18.5C22 18.7967 21.912 19.0867 21.7472 19.3334C21.5824 19.58 21.3481 19.7723 21.074 19.8858C20.7999 19.9993 20.4983 20.0291 20.2074 19.9712C19.9164 19.9133 19.6491 19.7704 19.4393 19.5607C19.2296 19.3509 19.0867 19.0836 19.0288 18.7926C18.9709 18.5017 19.0007 18.2001 19.1142 17.926C19.2277 17.6519 19.42 17.4176 19.6666 17.2528C19.9133 17.088 20.2033 17 20.5 17C20.8978 17 21.2794 17.158 21.5607 17.4393C21.842 17.7206 22 18.1022 22 18.5ZM23.61 4.75L21.28 11.75H9.72L7.39 4.75H23.61Z" fill="#EE3524"/>
+                                    </svg>
+                                    <span>Carrinho</span>
+                                </p>
+                                <span class="y-minicart-close js--close-minicart">X</span>
+                            </div>
+                            <div class="y-minicart__content-js"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="y-header__menu">
+        <div class="container">
+            <vtex.cmc:menu />
+        </div>
+    </div>
+</header>
+
+<section class="y-benefits">
+    <div class="container">
+        <div class="y-benefits__content">
+            <div class="y-benefits__item">
+                <vtex.cmc:iconparcelamento />
+                <p>Parcele em até 6x sem juros*</p>
+            </div>
+            <div class="y-benefits__item">
+                <vtex.cmc:icondelivery />
+                <p>Frete grátis acima de R$ 250*</p>
+            </div>
+            <div class="y-benefits__item">
+                <vtex.cmc:icontroca />
+                <p>Troca grátis por 30 dias*</p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,35 @@
+#set($productId = $product.Id) 
+#set($productTitle = $product.HtmlEscapedName) 
+#set($productLink = $product.Uri) 
+#set($productListPrice = $product.ListPrice) 
+#set($productBestPrice = $product.BestPrice) 
+#set($productInstallmentValue = $product.InstallmentValue)
+
+<article class="y-related__item has--carousel js--shelf-item" data-product-id="$productId">
+    <div class="y-related__item-img">
+        <a class="y-related__item-img__img" title="$productTitle" href="$productLink">
+			$product.GetImageTag(96,96)
+		</a>
+    </div>
+    <div class="y-related__item-content">
+        <h2 class="y-related__item-name" title="$productTitle">
+            <a href="$productLink">
+				$productTitle
+			</a>
+        </h2>
+
+        #if ($product.IsInStock)
+            <div class="y-related__item--price">
+                <p class="y-related__item--price-new">
+                    $product.BestPrice
+                </p>
+            </div>
+                
+            <a class="y-related__item--buy" href="$productLink">Comprar</a>
+
+        #else
+            <p class="y-related__item-outStcok-text">Produto Esgotado</p>
+        #end
+    </div>
+</article>
+

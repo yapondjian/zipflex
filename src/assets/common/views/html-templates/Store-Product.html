@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Common-Styles" />
+    <link rel="stylesheet" href="/arquivos/store-desktop-product.css" />
+</head>
+
+<body>
+    <vtex:template id="Store-Desktop-Header" />
+
+    <main>
+        <div class="container">
+            <div class="y-product">
+                <div class="y-product--wrapper__infos">
+
+                    <div class="y-product__left">
+
+                        <div class="y-product__img">
+                            <vtex.cmc:discountHightLight/>
+                            <vtex.cmc:ProductImage />
+                        </div>
+
+                        <vtex.cmc:ybenefits />
+
+                        <div class="y-product__related">
+                            <h4 class="y-shelf__title">Pueden interesarte</h4>
+
+                            <div class="y-shelf__content">
+                                <vtex:contentPlaceHolder id="Related" />
+                            </div>
+                        </div>
+
+                        <div class="y-product__review">
+                            <vtex.cmc:UserReview />
+                        </div>
+
+                    </div>
+
+                    <div class="y-product__right">
+
+                        <div class="y-product__brand">
+                            <vtex.cmc:brandName />
+                        </div>
+
+                        <h1 class="y-product__name">
+                            <vtex.cmc:productName />
+                        </h1>
+
+                        <div class="y-product__price">
+                            <vtex.cmc:skuPrice />
+                            <button class="y-product__price-otro"><i class="fa fa-chevron-right"></i> Calcular con otro banco</button>
+                        </div>
+
+                        <div class="y-product__buy">
+                            <div class="y-qty"></div>
+
+                            <div class="y-buy">
+                                <vtex.cmc:BuyButton />
+                            </div>
+
+                            <div class="y-stock"></div>
+                        </div>
+
+                        <div class="y-product__together">
+                            <h4 class="y-together__title">¡Completá tu pedido!</h4>
+
+                            <div class="y-together__content">
+                                <vtex:contentPlaceHolder id="Together" />
+                            </div>
+
+                            <div class="y-together__buy">
+                                <button class="js--together">Comprar</button>
+                            </div>
+                        </div>
+
+                        <div class="y-product__details">
+                            <h3>Descripción</h3>
+                            <vtex.cmc:ProductDescription/>
+                        </div>
+
+                        <div class="y-product__details">
+                            <h3>Ficha técnica</h3>
+                            <vtex.cmc:productSpecification/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="y-product__shelf">
+                <div class="has--line">
+                    <h3 class="y-shelf__title">TE RECOMENDAMOS</h3>
+                    <span></span>
+                </div>
+                <vtex:contentPlaceHolder id="Vitrine inferior" />
+            </div>
+
+        </div>
+    </main>
+
+    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Common-Scripts" />
+    <vtex:template id="Store-Desktop-Scripts" />
+    <script type="text/javascript" src="/arquivos/store-desktop-product.js"></script>
+</body>
+</html>

@@ -1,0 +1,574 @@
+#opiniao_de_usuario {
+	@include breakpoint('mobile') {
+		margin-top: 40px;
+	}
+}
+
+#reviews ul.rating li .voteRatingBar {
+	background: none repeat scroll 0 0 #F5F5F5;
+	display: block;
+	height: 20px;
+	overflow: hidden;
+	border: 1px solid #e5e5e5;
+	-webkit-box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+	-webkit-border-radius: 3px;
+	border-radius: 3px
+}
+
+#reviews ul.rating li .voteRatingBar span {
+	background: none repeat scroll 0 0 $color-blue;
+	display: block;
+	height: 20px;
+	-webkit-box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.15);
+	-webkit-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
+	border-bottom: 3px solid $color-blue;
+}
+
+#reviews ul.rating li .voteRatingBar+span {
+	color: #9B9B9B;
+	font-size: 12px;
+	position: absolute;
+	right: 10px;
+	top: 0;
+	line-height: 20px;
+
+	@include breakpoint('mobile') {
+		display: none;
+	}
+}
+
+#reviews ul.rating {
+	padding: 0;
+	width: 51%;
+}
+
+#reviews ul.rating li {
+	clear: both;
+	display: block;
+	margin: 10px 0;
+	max-width: 320px;
+	overflow: hidden;
+	position: relative;
+	width: 100%
+}
+
+#reviews ul.rating li em {
+	float: left;
+	margin-right: 15px
+}
+
+#reviews .avalie-produto {
+	display: block;
+	padding-top: 20px;
+
+	@include breakpoint('mobile') {
+		width: 49%;
+		text-align: center;
+	}
+}
+
+#reviews .avalie-produto h5 {
+	color: #333;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 20px
+}
+
+#reviews .avalie-produto a {
+	display: block;
+	float: left;
+	margin: 10px 0;
+
+	@include breakpoint('mobile') {
+		float: none;
+		margin: 10px auto;
+	}
+}
+
+#reviews hr,
+#reviews p.media em span,
+#reviews .links-resenha-usuario {
+	display: none
+}
+
+#reviews .resenhas {
+	padding: 0;
+	border-top: 0 none;
+	margin: 0
+}
+
+#reviews .resenhas .quem {
+	padding: 0
+}
+
+#reviews .resenhas .opiniao-ajudou {
+	padding-top: 15px;
+	color: #333;
+	font-size: 13px;
+	font-weight: 300
+}
+
+#reviews .resenhas .opiniao-ajudou {
+	padding-top: 15px;
+	color: #333;
+	font-size: 13px;
+	font-weight: 300
+}
+
+#reviews .resenhas .opiniao-ajudou .bts li {
+	display: inline-block;
+	vertical-align: top;
+	margin: 5px 5px 0 0
+}
+
+#reviews .resenhas .opiniao-ajudou .bts li a {
+	color: #D0021B;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 18px
+}
+
+#publishUserReview #formUserReview {
+	width: 500px;
+	background-color: #fff;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	padding: 10px 20px;
+	position: fixed;
+	top: 30px;
+	left: 50%;
+	margin-left: -250px;
+	-webkit-box-shadow: 0 0 10px #ccc;
+	box-shadow: 0 0 10px #ccc;
+	z-index: 99999
+}
+
+#publishUserReview #formUserReview .header {
+	padding: 0;
+	margin: 0
+}
+
+#publishUserReview #formUserReview .header .close {
+	position: absolute;
+	right: 30px;
+	top: 20px
+}
+
+#publishUserReview #formUserReview .header .close a {
+	color: #000;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 20px
+}
+
+#publishUserReview #formUserReview .footer,
+#publishUserReview #formUserReview .header h1 {
+	display: none
+}
+
+#publishUserReview #formUserReview label {
+	display: block
+}
+
+#publishUserReview #formUserReview input+label {
+	display: inline-block;
+	vertical-align: middle
+}
+
+#publishUserReview #formUserReview input {
+	margin: 0
+}
+
+#publishUserReview #formUserReview input[type=text],
+#publishUserReview #formUserReview textarea {
+	color: #999999;
+	background-color: #fff;
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.42857143;
+	white-space: nowrap;
+	vertical-align: middle;
+	background-image: none;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	min-height: 34px;
+	width: 100%
+}
+
+#publishUserReview #formUserReview .grp {
+	position: relative;
+	margin: 10px 0 5px
+}
+
+#publishUserReview #formUserReview .grp span {
+	position: absolute;
+	top: 5px;
+	right: 0
+}
+
+#publishUserReview #formUserReview .ranking {
+	display: block;
+	margin-top: 15px
+}
+
+#publishUserReview #formUserReview .aviso-resenha {
+	margin-top: 10px;
+	font-size: 12px;
+	font-weight: 300;
+	font-style: italic;
+	line-height: 15px
+}
+
+#reviews .avalie-produto #opcoes-avalie {
+	display: none;
+}
+
+#reviews .avalie-produto #opcoes-avalie p strong {
+	display: none
+}
+
+#reviews .avalie-produto #opcoes-avalie .firadio {
+	margin: 2px 0 0 0;
+	vertical-align: top
+}
+
+#reviews .avalie-produto #opcoes-avalie label {
+	color: #333;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 20px;
+	margin: 0 20px 0 5px
+}
+
+#reviews #formUserReview .avaliar a,
+#reviews #lnkPubliqueResenha {
+	background-color: #083675;
+	border: 0 none;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	min-height: 43px;
+	padding: 10px;
+	width: 250px;
+	text-align: center;
+	text-decoration: none;
+}
+
+#reviews #formUserReview .avaliar a:hover,
+#reviews #formUserReview .avaliar a:active,
+#reviews #lnkPubliqueResenha:hover,
+#reviews #lnkPubliqueResenha:active {
+	color: #fff;
+	opacity: .8;
+	text-decoration: none
+}
+
+.rating-avalie .ratingStar,
+.rating-produto {
+	font-size: 0;
+	line-height: 0;
+	color: transparent
+}
+
+.rating-produto:after {
+	content: "Avalie";
+	display: inline-block;
+	font-size: 13px;
+	margin-left: 8px;
+	color: #000;
+	line-height: 20px
+}
+
+.rating-produto:before,
+.rating-demonstrativo:before,
+.rating-wrapper .rating:before {
+	content: "\f006   \f006   \f006   \f006   \f006";
+	font-family: FontAwesome;
+	font-size: 14px;
+	line-height: 20px;
+	color: #F0AD4E;
+	font-style: normal
+}
+
+.rating-avalie a {
+	text-decoration: none
+}
+
+.rating-avalie .ratingStar.emptyRatingStar:before,
+.rating-avalie .ratingStar.filledRatingStar:before {
+	font-family: FontAwesome;
+	font-size: 16px;
+	line-height: 20px;
+	color: #F0AD4E;
+	font-style: normal;
+	content: "\f006";
+	text-decoration: none;
+	-webkit-transition: .300s all;
+	-o-transition: .300s all;
+	transition: .300s all
+}
+
+.rating-avalie .ratingStar.filledRatingStar:before {
+	content: "\f005"
+}
+
+.rating-produto.avaliacao50:before,
+.rating-produto.a50:before,
+.rating-demonstrativo.avaliacao50:before,
+.rating-demonstrativo.a50:before,
+.rating-wrapper .rating.avaliacao50:before,
+.rating-wrapper .rating.a50:before {
+	content: "\f005   \f005   \f005   \f005   \f005"
+}
+
+.rating-produto.avaliacao45:before,
+.rating-produto.a45:before,
+.rating-demonstrativo.avaliacao45:before,
+.rating-demonstrativo.a45:before,
+.rating-wrapper .rating.avaliacao45:before,
+.rating-wrapper .rating.a45:before {
+	content: "\f005   \f005   \f005   \f005   \f123"
+}
+
+.rating-produto.avaliacao40:before,
+.rating-produto.a40:before,
+.rating-demonstrativo.avaliacao40:before,
+.rating-demonstrativo.a40:before,
+.rating-wrapper .rating.avaliacao40:before,
+.rating-wrapper .rating.a40:before {
+	content: "\f005   \f005   \f005   \f005    \f006"
+}
+
+.rating-produto.avaliacao35:before,
+.rating-produto.a35:before,
+.rating-demonstrativo.avaliacao35:before,
+.rating-demonstrativo.a35:before,
+.rating-wrapper .rating.avaliacao35:before,
+.rating-wrapper .rating.a35:before {
+	content: "\f005   \f005   \f005   \f123   \f006"
+}
+
+.rating-produto.avaliacao30:before,
+.rating-produto.a30:before,
+.rating-demonstrativo.avaliacao30:before,
+.rating-demonstrativo.a30:before,
+.rating-wrapper .rating.avaliacao30:before,
+.rating-wrapper .rating.a30:before {
+	content: "\f005   \f005   \f005   \f006   \f006"
+}
+
+.rating-produto.avaliacao25:before,
+.rating-produto.a25:before,
+.rating-demonstrativo.avaliacao25:before,
+.rating-demonstrativo.a25:before,
+.rating-wrapper .rating.avaliacao25:before,
+.rating-wrapper .rating.a25:before {
+	content: "\f005   \f005   \f123   \f006   \f006"
+}
+
+.rating-produto.avaliacao20:before,
+.rating-produto.a20:before,
+.rating-demonstrativo.avaliacao20:before,
+.rating-demonstrativo.a20:before,
+.rating-wrapper .rating.avaliacao20:before,
+.rating-wrapper .rating.a20:before {
+	content: "\f005   \f005   \f006   \f006   \f006"
+}
+
+.rating-produto.avaliacao15:before,
+.rating-produto.a15:before,
+.rating-demonstrativo.avaliacao15:before,
+.rating-demonstrativo.a15:before,
+.rating-wrapper .rating.avaliacao15:before,
+.rating-wrapper .rating.a15:before {
+	content: "\f005   \f123   \f006   \f006   \f006"
+}
+
+.rating-produto.avaliacao10:before,
+.rating-produto.a10:before,
+.rating-demonstrativo.avaliacao10:before,
+.rating-demonstrativo.a10:before,
+.rating-wrapper .rating.avaliacao10:before,
+.rating-wrapper .rating.a10:before {
+	content: "\f005   \f006   \f006   \f006   \f006"
+}
+
+.rating-produto.avaliacao5:before,
+.rating-produto.a5:before,
+.rating-demonstrativo.avaliacao5:before,
+.rating-demonstrativo.a5:before,
+.rating-wrapper .rating.avaliacao5:before,
+.rating-wrapper .rating.a5:before {
+	content: "\f123   \f006   \f006   \f006   \f006"
+}
+
+.rating-produto.avaliacao0:before,
+.rating-produto.a0:before,
+.rating-demonstrativo.avaliacao0:before,
+.rating-demonstrativo.a0:before,
+.rating-wrapper .rating.avaliacao0:before,
+.rating-wrapper .rating.a0:before {
+	content: "\f006   \f006   \f006   \f006   \f006"
+}
+
+
+.y-product__review {
+	margin: 60px 0;
+	
+	.user-review {
+		hr {
+			display: none;
+		}
+
+		h4 {
+			font-size: 0;
+		}
+
+		.avaliacao {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+
+			.media {
+				display: none;
+			}
+
+			ul.rating {
+				width: 210px;
+				
+				&::before {
+					content: "Opiniones";
+					display: block;
+					@include h4;
+					font-weight: 600;
+					color: $color-gray-8;
+					margin-bottom: 24px;
+				}
+
+				li {
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					margin: 18px 0;
+
+					.voteRatingStar {
+						display: none;
+					}
+
+					.voteRatingBar {
+						order: 2;
+						width: 100%;
+						background-color: $color-gray-2;
+						position: relative;
+						height: 18px;
+						display: block;
+
+						span {
+							position: absolute;
+							top: 0;
+							left: 0;
+							height: 100%;
+							background-color: $color-orange;
+						}
+
+						&+span {
+							order: 1;
+							color: $color-orange;
+							@include h5;
+							margin-right: 7px;
+							width: 30%;
+						}
+					}
+				}
+			}
+
+			.avalie-produto,
+			#ulPubliqueResenha,
+			.links-resenha-usuario {
+				display: none;
+			}
+
+			.resenhas {
+				width: 320px;
+				padding-left: 25px;
+
+				&::before {
+					content: "Comentarios";
+					display: block;
+					@include h5;
+					font-weight: 600;
+					color: $color-gray-8;
+					margin: 0 0 33px
+				}
+
+				li {
+					border-bottom: 1px solid $color-gray-3;
+
+					.quem {
+						display: flex;
+						flex-wrap: wrap;
+
+						.rating-wrapper {
+							order: 1;
+							width: 100%;
+
+							strong {
+								display: none;
+							}
+
+							.rating::before {
+								color: $color-orange;
+							}
+						}
+
+						.dados {
+							order: 2;
+							width: 100%;
+							margin: 25px 0 14px;
+
+							strong {
+								color: $color-black;
+								@include t2-b;
+
+								span {
+									@include t2-b;
+									color: $color-orange;
+									margin-right: 6px;
+								}
+							}
+
+							.email-resenha,
+							.cidade-resenha {
+								display: none;
+							}
+						}
+					}
+
+					.opt-texto {
+						margin-bottom: 21px;
+
+						p {
+							@include t1;
+							color: $color-gray-8;
+						}
+					}
+
+					.util {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

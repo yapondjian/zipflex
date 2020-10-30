@@ -1,0 +1,183 @@
+.y-header {
+    &__menu {
+        width: 100%;
+        background-color: $color-white;
+        border-top: 1px solid $color-gray-2;
+        border-bottom: 1px solid $color-gray-2;
+        padding: 16px 0;
+
+        &--items {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &--first {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px 0;
+            
+            &-items {
+
+                > a {
+                    display: block;
+                    @include t1-b;
+                    color: $color-main;
+                    text-transform: uppercase;
+                    padding: 5px 12px 5px 0;
+                    border-right: 1px solid $color-main;
+                    margin-right: 12px;
+                }
+
+                &.spotlight {
+                    
+                    a {
+                        background-color: $color-main;
+                        color: $color-yellow;
+                        padding: 5px 6px;
+                        border-radius: 3px;
+
+                        svg {
+                            margin-right: 6px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .y-header__menu--sub {
+                        visibility: visible;
+                        top: 100%;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .card {
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                text-align: right;
+
+                span {
+                    @include t3-b;
+                    line-height: 13px;
+                    color: $color-main;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &--sub {
+            visibility: hidden;
+            top: 75%;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background-color: $color-white;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 99999;
+            transition: all ease-in-out .5s;
+
+            &::before {
+                @include yBorder;
+            }
+
+            &-menu {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding: 24px;
+            }
+
+            &-item {
+                display: block;
+                margin-right: 24px;
+                width: 300px;
+
+                h6 {
+                    display: block;
+                    a {
+                        @include h6;
+                        display: block;
+                        color: $color-main;
+                        padding-bottom: 6px;
+                        border-bottom: 1px solid $color-gray-3;
+                    }
+                }
+
+                li {
+                    a {
+                        display: block;
+                        padding: 6px 0;
+                        @include t1;
+                        color: $color-gray-8;
+                    }
+                }
+
+                &>.see-all {
+                    background-color: $color-main;
+                    margin-top: 6px;
+                    color: $color-white;
+                    @include t2-alt;
+                    padding: 8px 10px;
+                    border-radius: 6px;
+                    display: inline-block;
+                }
+            }
+
+            &-product {
+                border-left: 1px solid $color-gray-3;
+            }
+        }
+    }
+}
+
+.y-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__departamento,
+    &__institucional {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &--item {
+            margin: 0 24px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            a {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 22px;
+                color: $color-black;
+                padding-bottom: 15px;
+                border-bottom: 1px solid $color-white;
+            }
+
+            &:hover {
+                a {
+                    color: $color-main;
+                    border-color: $color-main;
+                }
+            }
+
+            &.destaque {
+                a {
+                    color: $color-main;
+                }
+            }
+        }
+    }
+}

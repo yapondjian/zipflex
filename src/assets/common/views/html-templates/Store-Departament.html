@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Common-Styles" />
+    <link rel="stylesheet" href="/arquivos/store-desktop-category.css" />
+</head>
+
+<body>
+    <vtex:template id="Store-Desktop-Header" />
+
+    <main>
+        <div class="container">
+            <section class="y-category-top">
+                <vtex:contentPlaceHolder id="Banner principal" />
+            </section>
+            
+            <section class="y-home__shelfs">
+                <div class="has--line">
+                    <h3 class="y-shelf__title">Ofertas</h3>
+                    <span></span>
+                </div>
+                <vtex:contentPlaceHolder id="Vitrine 1" />
+            </section>
+
+            <section class="y-category-mosaico">
+                <vtex:contentPlaceHolder id="Mosaico Banner" />
+            </section>
+
+            <section class="y-home__shelfs">
+                <div class="has--line">
+                    <h3 class="y-shelf__title">Novedades</h3>
+                    <span></span>
+                </div>
+                <vtex:contentPlaceHolder id="Vitrine 2" />
+            </section>
+
+            <vtex.cmc:ybrands />
+
+            <a href="/pinturas/tipo-de-pinturas" class="y-category-seeMore">Ver todo Pinturas</a>
+        </div>
+
+    </main>
+
+    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Common-Scripts" />
+    <vtex:template id="Store-Desktop-Scripts" />
+    <script src="/arquivos/store-desktop-category.js"></script>
+</body>
+</html>
