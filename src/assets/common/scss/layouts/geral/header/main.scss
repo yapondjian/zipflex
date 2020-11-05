@@ -11,6 +11,32 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            &.y-mobile {
+                display: none;
+            }
+
+            @include breakpoint('mobile') {
+                &.y-desktop {
+                    display: none;
+                }
+                &.y-mobile {
+                    display: block;
+                }
+
+                p {
+                    text-align: center;
+                    color: $color-white;
+                    font-size: 12px;
+                    line-height: 17px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+
+                    strong {
+                        font-weight: 800;
+                    }
+                }
+            }
         }
 
         &--left {
@@ -55,15 +81,49 @@
         align-items: center;
         justify-content: flex-start;
 
+        @include breakpoint('mobile') {
+            justify-content: space-between;
+        }
+
         &--left {
+
+            @include breakpoint('mobile') {
+                margin: 0 27px;
+            }
+
             a {
                 display: block;
             }
         }
 
         &--middle {
-            width: 48%;
-            margin: 0 28px 0 30px;
+            @include breakpoint('desktop') {
+                width: 48%;
+                margin: 0 28px 0 30px;
+            }
+
+            .js--search-content {
+                @include breakpoint('mobile') {
+                    display: none;
+
+                    &.is--active {
+                        position: fixed;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 99999;
+
+                        display: block;
+
+                        width: 100%;
+                        height: calc(100vh - 100px);
+                        
+                        background-color: $color-white;
+                        border-top: 1px solid $color-gray-1;
+
+                        padding: 15px 20px;
+                    }
+                }
+            }
 
             .busca {
                 border: none;
@@ -86,6 +146,14 @@
                     color: $color-white;
                     background-color: $color-main;
                     text-align: center;
+
+                    @include breakpoint('mobile') {
+                        background-color: $color-white;
+                        color: $color-black;
+                        font-size: 25px;
+                        right: 8px;
+                    }
+
                 }
                 
                 legend,
@@ -114,6 +182,13 @@
                     font-style: normal;
                     font-weight: 400;
                     font-size: 14px;
+
+                    @include breakpoint('mobile') {
+                        border-radius: 0;
+                        border: 0;
+                        border-bottom: 1px solid $color-black;
+                        padding: 0 15px;
+                    }
                 }
 
                 .btn-buscar {
@@ -160,7 +235,10 @@
                 }
             }
             &-minicart {
-                margin-left: 29px;
+
+                @include breakpoint('desktop') {
+                    margin-left: 29px;
+                }
             }
         }
     }

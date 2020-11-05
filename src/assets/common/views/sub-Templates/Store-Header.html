@@ -1,6 +1,6 @@
 <header class="y-header">
     <div class="y-header__topbar">
-        <div class="container">
+        <div class="container y-desktop">
             <div class="y-header__topbar--left">
                 <vtex.cmc:iconphone />
                 +55 11 2081-7160
@@ -15,19 +15,33 @@
                 </li>
             </ul>
         </div>
+        <div class="container y-mobile">
+            <p>até <strong>10x sem juros</strong></p>
+        </div>
     </div>
     <div class="container">
         <div class="y-header__top">
+            <div class="y-header__top--menu js--menu y-mobile">
+                <vtex.cmc:iconmenu />
+            </div>
             <div class="y-header__top--left">
                 <a href="/">
                     <vtex.cmc:logo />
                 </a>
             </div>
             <div class="y-header__top--middle">
-                <vtex.cmc:fullTextSearchBox/>
+                <span class="y-mobile js--search">
+                    <vtex.cmc:iconsearch />
+                </span>
+                <div class="js--search-content">
+                    <div class="y-mobile y-close">
+                        <span>+</span>
+                    </div>
+                    <vtex.cmc:fullTextSearchBox/>
+                </div>
             </div>
             <div class="y-header__top--right">
-                <div class="y-header__account">
+                <div class="y-header__account y-desktop">
                     <a href="/account" class="y-header__account-icon">
                         <span class="icon">        
                             <vtex.cmc:iconaccount />
@@ -39,7 +53,7 @@
                     <div class="y-minicart">
                         <span class='y-minicart--icon js--open-minicart'>
                             <vtex.cmc:iconminicart />
-                            <span>Carrinho</span>
+                            <span class="y-desktop">Carrinho</span>
                             <vtex.cmc:AmountItemsInCart />
                         </span>
                         <div class="y-minicart__content">
@@ -60,6 +74,9 @@
         </div>
     </div>
     <div class="y-header__menu">
+        <div class="y-mobile y-close">
+            <span>+</span>
+        </div>
         <div class="container">
             <vtex.cmc:menu />
         </div>
