@@ -5,6 +5,11 @@
 .j-newsletter {
     background-color: $color-main;
     padding: 12px 0;
+    
+    @include breakpoint('mobile') {
+        padding: 25px 0 30px;
+        margin: 43px 0 35px;
+    }
 
     .container {
         display: flex;
@@ -22,10 +27,11 @@
             align-items: center;
             justify-content: flex-start;
             margin-right: 24px;
-
+            
             @include breakpoint('mobile') {
                 flex-direction: column;
                 justify-content: center;
+                margin-right: 0;
             }
 
             p {
@@ -37,7 +43,7 @@
 
                 @include breakpoint('mobile') {
                     @include h5;
-                    margin: 13px 0 18px;
+                    margin: 0;
                     text-align: center;
                 }
             }
@@ -46,13 +52,27 @@
         &__right {
             margin-left: 23px;
 
+            @include breakpoint('mobile') {
+                margin-left: 0;
+                width: 100%;
+            }
+
             form {
                 position: relative;
                 display: flex;
                 align-items: center;
 
+                @include breakpoint('mobile') {
+                    flex-direction: column;
+                }
+
                 fieldset {
                     border: 0;
+
+                    @include breakpoint('mobile') {
+                        margin: 17px 0;
+                        width: 100%;
+                    }
 
                     input {
                         width: 237px;
@@ -66,6 +86,10 @@
                         font-weight: 400;
                         color: $color-gray-6;
                         text-align: center;
+
+                        @include breakpoint('mobile') {
+                            width: 100%;
+                        }
                     }
                 }
 
@@ -80,6 +104,10 @@
                     color: $color-white;
                     text-transform: uppercase;
                     font-size: 14px;
+
+                    @include breakpoint('mobile') {
+                        width: 100%;
+                    }
                 }
             }
 

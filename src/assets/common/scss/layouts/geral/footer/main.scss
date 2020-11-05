@@ -10,7 +10,45 @@
         align-items: flex-start;
         justify-content: space-between;
 
+        @include breakpoint('mobile') {
+            flex-wrap: wrap;
+        }
+
         &--item {
+            @include breakpoint('mobile') {
+                width: 50%;
+
+                h6 {
+                    width: 90%;
+                    text-align: center;
+                    border: 1px solid $color-gray-8;
+                }
+
+                ul {
+                    display: none;
+                }
+                
+                &:nth-child(2) {
+                    display: none;
+                }
+                    
+                &:last-child {
+                    width: 100%;
+
+                    h6 {
+                        border: 0;
+                    }
+        
+                    ul {
+                        display: flex;
+
+                        li:last-child {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
 
             h6 {
                 font-family: $font-asap;
@@ -76,12 +114,38 @@
         align-items: center;
         justify-content: space-between;
 
+        h5 {
+            text-align: center;
+            color: $color-white;
+            margin: 30px 0 15px;
+            font-family: $font-asap;
+            font-size: 14px;
+            font-weight: 800;
+            line-height: 20px;
+        }
+        
         &--selos {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 25px 0;
             border-bottom: 1px solid $color-white;
+    
+            @include breakpoint('mobile') {
+                flex-direction: column;
+            }
+        }
+
+        &--pagamento {
+            @include breakpoint('mobile') {
+                width: 100%;
+                background: url('/arquivos/bandeiras-mobile.png') no-repeat center bottom;
+                padding-bottom: 90px;
+
+                img {
+                    display: none;
+                }
+            }
         }
 
         &--social {
@@ -99,6 +163,12 @@
         &--copy {
             text-align: center;
             padding: 18px 0 20px;
+
+            @include breakpoint('mobile') {
+                text-align: left;
+                padding-right: 100px;
+                background: url('/arquivos/logopanda.png') no-repeat center right;
+            }
 
             p {
                 color: $color-white;
