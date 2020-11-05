@@ -4,6 +4,10 @@
 .y-benefits {
     display: block;
     background-color: $color-white;
+
+    @include breakpoint('mobile') {
+        display: none;
+    }
     
     &__content {
         display: flex;

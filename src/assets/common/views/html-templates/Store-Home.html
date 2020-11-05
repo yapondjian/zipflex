@@ -14,11 +14,15 @@
     <vtex:template id="Store-Header" />
 
     <main>
-        <section class="y-banner__main">
+        <section class="y-banner__main y-desktop">
             <vtex:contentPlaceHolder id="Banners Slider Principal" />
         </section>
+        
+        <section class="y-banner__main y-mobile">
+            <vtex:contentPlaceHolder id="Banners Slider Principal Mobile" />
+        </section>
 
-        <section class="y-benefits">
+        <section class="y-benefits y-desktop">
             <div class="container">
                 <div class="y-benefits__content">
                     <div class="y-benefits__item">
@@ -98,7 +102,7 @@
             </div>
         </section>
 
-        <section class="y-brand">
+        <section class="y-brand y-desktop">
             <h4 class="y-title">Nossas <strong>Marcas</strong></h4>
 
             <div class="y-brand__slick">

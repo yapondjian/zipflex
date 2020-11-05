@@ -1,42 +1,70 @@
-.y-mosaico {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.y-find {
+    &__slick {
+        display: block;
+        width: 100%;
+        background: url('/arquivos/find-bg.png') no-repeat top center;
 
-    &--item {
-        width: 49%;
-    
-        .box-banner {
-            margin: 12px 0;
-
-            a {
-                display: block;
-            }
+        .y-find__item:first-child {
+            display: block;
         }
 
-        &:last-child {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-
-            .box-banner {
-                width: 49%;
-            }
-
+        &>.y-find__item,
+        &>.y-find__item:last-child {
+            display: none;
         }
-        
     }
-}
 
-.y-mosaico__separate {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 120px auto;
+    &__item {
+        padding: 35px 42px;
 
-    .y-left,
-    .y-right {
-        width: 49%;
+        @include breakpoint('mobile') {
+            padding: 32px 37px;
+        }
+
+        &.y-find__item {
+            border-left: 1px solid $color-white;
+            border-right: 1px solid $color-white;
+        }
+    }
+
+    &__title {
+        font-family: $font-asap;
+        color: $color-white;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 26px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        font-family: $font-main;
+        color: $color-white;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+
+        strong {
+            font-weight: 800;
+        }
+    }
+
+    &__cta {
+        font-family: $font-asap;
+        color: $color-white;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        margin-top: 296px;
+        border: 1px solid $color-white;
+        border-radius: 30px;
+        display: inline-block;
+        padding: 4px 43px;
+        text-transform: uppercase;
+        
+        @include breakpoint('mobile') {
+            padding: 8px 39px;
+            margin-top: 264px;
+        }
     }
 }
