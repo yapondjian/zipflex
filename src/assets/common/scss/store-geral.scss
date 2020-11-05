@@ -1,8 +1,9 @@
-@import '../../common/scss/tools/_breakpoint.scss';
-@import "../../common/scss/layouts/globals/fonts.scss";
-@import "../../common/scss/layouts/globals/variables.scss";
+@import '../scss/tools/breakpoint';
+@import './layouts/globals/fonts.scss';
+@import './layouts/globals/variables.scss';
 @import './layouts/geral/header/index.scss';
-@import './layouts/geral/footer/index.scss';
-@import "./layouts/geral/newsletter/main.scss";
 @import './layouts/geral/breadcrumb/main.scss';
-@import "../../common/scss/layouts/geral/shelf/index.scss";
+@import "./layouts/geral/newsletter/main.scss";
+@import './layouts/geral/footer/index.scss';
+@import './layouts/geral/atendimento/main.scss';
+@import './layouts/geral/shelf/index.scss';

@@ -101,8 +101,8 @@ body {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 1000px;
-	max-width: 90vw;
+	width: 1100px;
+	max-width: 95vw;
 }
 
 img {
@@ -167,16 +167,16 @@ section#vtex-callcenter__toolbar {
 	width: 100%;
 
 	li {
-		margin: 0 5px;
+		margin: 0 2.5px;
 
 		button {
 			display: block;
 			font-size: 0;
-			width: 16px;
-			height: 7px;
+			width: 13px;
+			height: 13px;
 			background-color: $color-white;
-			border-radius: 3px;
-			border: 1px solid $color-main;
+			border-radius: 50%;
+			border: 1px solid $color-gray-8;
 			position: relative;
 			cursor: pointer;
 			transition: all 225ms ease;
@@ -184,7 +184,7 @@ section#vtex-callcenter__toolbar {
 
 		&.slick-active {
 			button {
-				background-color: $color-main;
+				background-color: $color-gray-8;
 			}
 		}
 	}
@@ -203,4 +203,22 @@ section#vtex-callcenter__toolbar {
 	strong {
 		font-weight: 700;
 	}
+}
+
+.y-desktop {
+	display: block;
+	@include breakpoint('mobile') {
+		display: none;
+	}
+}
+
+.y-mobile {
+	display: none;
+	@include breakpoint('mobile') {
+		display: block;
+	}
+}
+
+.is--hide {
+	display: none;
 }

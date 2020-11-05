@@ -1,23 +1,16 @@
-import Minicart from "../../../../common/js/modules/geral/minicart";
+import Atendimento from './atendimento';
+import Minicart from './minicart'
 import Menu from "./menu";
 import Newsletter from "./newsletter";
 
 
 const Methods = {
 	init() {
-		Minicart.init();
+		Atendimento.init();
+		// Minicart.init();
 		Menu.init();
-		Newsletter.init();
-		Methods.sliderBrands();
-	},
-
-    sliderBrands() {
-        $('.y-marcas__list').slick({
-            arrows: true,
-            dots: false,
-            slidesToShow: 5
-        })
-    }
+		// Newsletter.init();
+	}
 };
 
 export default {
