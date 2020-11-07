@@ -1,52 +1,57 @@
-.bread-crumb {
-    padding: 48px 0 36px;
-
-    ul {
-        display: flex;
-
-        li {
-            margin: 0 5px;
+.y-breadcrumb {
+    .bread-crumb {
+        ul {
             display: flex;
-            align-items: center;
-            
-            a {
-                display: block;
-                @include t1;
-                color: $color-gray-6;
-            }
 
-            &::before {
-                content: '/';
-                display: inline-block;
-                @include t1;
-                color: $color-gray-6;
-                margin-right: 9px;
-            }
-
-            &:first-child {
+            li {
+                display: flex;
+                align-items: center;
+                
                 a {
-                    font-size: 0;
+                    display: block;
+                    @include t1;
+                    line-height: 26px;
+                    color: $color-white;
+                    text-transform: uppercase;
+
+                    @include breakpoint('mobile') {
+                        font-size: 10px;
+                    }
                 }
 
                 &::before {
-                    display: none;
-                }
-
-                &::after {
-                    content: 'Inicio';
-                    font-size: 12px;
-                    cursor: pointer;
+                    content: " / ";
+                    display: inline-block;
                     @include t1;
-                    color: $color-gray-6;
-                }
-            }
+                    line-height: 26px;
+                    color: $color-white;
+                    margin: 0 9px;
 
-            &.last {
-                strong {
+                    @include breakpoint('mobile') {
+                        font-size: 10px;
+                    }
+                }
+
+                &:first-child {
                     a {
-                        display: block;
-                        @include t1-b;
-                        color: $color-main;
+                        font-size: 0;
+                    }
+
+                    &::before {
+                        display: none;
+                    }
+
+                    &::after {
+                        content: 'Home';
+                        cursor: pointer;
+                        @include t1;
+                        line-height: 26px;
+                        color: $color-white;
+                        text-transform: uppercase;
+
+                        @include breakpoint('mobile') {
+                            font-size: 10px;
+                        }
                     }
                 }
             }
