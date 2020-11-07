@@ -1,5 +1,9 @@
 .y-header {
     background-color: $color-white;
+
+    @include breakpoint('mobile') {
+        border-bottom: 1px solid $color-gray-1;
+    }
     
     &__topbar {
         background-color: $color-gray-8;
