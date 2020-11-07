@@ -8,49 +8,43 @@
 <article class="y-shelf__item has--carousel js--shelf-item" data-product-id="$productId">
     <div class="y-shelf__item-img">
         <a class="y-shelf__item-img__img" title="$productTitle" href="$productLink">
-			$product.GetImageTag(230,230)
+			$product.GetImageTag(162,162)
 		</a>
     </div>
     <div class="y-shelf__item-content">
-        $product.BrandLink
 
         <h2 class="y-shelf__item-name" title="$productTitle">
             <a href="$productLink">
 				$productTitle
 			</a>
         </h2>
-
+        
         #if ($product.IsInStock)
-            <div class="y-shelf__item--price">
-                <p class="y-shelf__item--price-old">
-                    #if ($product.HasBestPrice)
-                        <del>$product.ListPrice</del>
-                    #end
-                </p>
-
-                <p class="y-shelf__item--price-new">
-                    #if ($product.BestPrice > 1)
-                        $product.BestPrice
-                    #end
-                </p>
-
-                <p class="y-shelf__item--price-vista">
-                    <strong>
-                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.3333 0H1.66668C1.31305 0 0.973916 0.140476 0.723868 0.390525C0.473819 0.640573 0.333344 0.979711 0.333344 1.33333V10.6667C0.333344 11.0203 0.473819 11.3594 0.723868 11.6095C0.973916 11.8595 1.31305 12 1.66668 12H16.3333C16.687 12 17.0261 11.8595 17.2762 11.6095C17.5262 11.3594 17.6667 11.0203 17.6667 10.6667V1.33333C17.6667 0.979711 17.5262 0.640573 17.2762 0.390525C17.0261 0.140476 16.687 0 16.3333 0ZM16.3333 10.6667H1.66668V3.33333H16.3333V10.6667Z" fill="#D60C8C"/>
-                            <path d="M3.00001 6.33333H9.66668C9.84349 6.33333 10.0131 6.2631 10.1381 6.13807C10.2631 6.01305 10.3333 5.84348 10.3333 5.66667C10.3333 5.48986 10.2631 5.32029 10.1381 5.19526C10.0131 5.07024 9.84349 5 9.66668 5H3.00001C2.8232 5 2.65363 5.07024 2.52861 5.19526C2.40358 5.32029 2.33334 5.48986 2.33334 5.66667C2.33334 5.84348 2.40358 6.01305 2.52861 6.13807C2.65363 6.2631 2.8232 6.33333 3.00001 6.33333Z" fill="#D60C8C"/>
-                            <path d="M7.66668 7.66667H3.00001C2.8232 7.66667 2.65363 7.7369 2.52861 7.86193C2.40358 7.98695 2.33334 8.15652 2.33334 8.33333C2.33334 8.51014 2.40358 8.67971 2.52861 8.80474C2.65363 8.92976 2.8232 9 3.00001 9H7.66668C7.84349 9 8.01306 8.92976 8.13808 8.80474C8.26311 8.67971 8.33334 8.51014 8.33334 8.33333C8.33334 8.15652 8.26311 7.98695 8.13808 7.86193C8.01306 7.7369 7.84349 7.66667 7.66668 7.66667Z" fill="#D60C8C"/>
-                            <path d="M14.3333 5H13C12.6318 5 12.3333 5.29848 12.3333 5.66667V7C12.3333 7.36819 12.6318 7.66667 13 7.66667H14.3333C14.7015 7.66667 15 7.36819 15 7V5.66667C15 5.29848 14.7015 5 14.3333 5Z" fill="#D60C8C"/>
-                        </svg>
-                        $product.BestPrice
-                    </strong>
-                    <span>Precio con descuento<br />Visa 12 cuotas sin interés</span>
-                </p>
-                
+            <div class="y-shelf__item-compared">
+                $product.Compare
             </div>
 
+            <div class="y-shelf__item--price">
+                #if ($product.HasBestPrice)
+                    <p class="y-shelf__item--price-old">
+                        <del>$product.ListPrice</del>
+                    </p>
+                #end
+
+                #if ($product.BestPrice > 1)
+                    <p class="y-shelf__item--price-new">
+                        $product.BestPrice
+                    </p>
+                #end
+
+                <p class="y-shelf__item--installment">
+                    #if ($product.NumbersOfInstallment > 1)
+                    ou <strong>${product.NumbersOfInstallment}x</strong> de <strong>$product.InstallmentValue</strong>
+                    #end
+                </p>
+            </div>
         #else
-            <p class="y-shelf__item-outStcok-text">Produto Esgotado</p>
+            <p class="y-shelf__item-outStcok-text">Sob Consulta</p>
         #end
     </div>
 </article>
