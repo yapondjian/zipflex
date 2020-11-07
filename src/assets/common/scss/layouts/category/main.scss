@@ -1,73 +1,236 @@
 .y-category {
+    background-color: $color-gray-1;
 
-    &__title {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        @include h5;
-        font-weight: 600;
-        color: $color-main;
-        padding-bottom: 30px;
-        border-bottom: 2px solid $color-main;
-        margin-bottom: 21px;
-
-        svg {
-            margin-right: 12px;
-        }
-    }
-
-    &-top {
+    &__top {
         text-align: center;
+        display: block;
+        position: relative;
+
+        background-color: $color-white;
+
         .box-banner {
             a {
                 display: block;
                 text-align: center;
             }
         }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
-    &-mosaico {
-        margin: 72px 0;
+    &__title {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        .box-banner {
-            a {
-                display: block;
+        @include breakpoint('mobile') {
+            flex-direction: column;
+        }
+    }
+
+    &__name {
+        
+        h2 {
+            font-family: $font-asap;
+            font-size: 26px;
+            line-height: 26px;
+            font-weight: 800;
+            color: $color-white;
+            text-transform: uppercase;
+        }
+
+        @include breakpoint('mobile') {
+            order: 2;
+            margin-top: 8px;
+
+            h2 {
+                font-size: 20px;
             }
         }
     }
 
     &__content {
         display: flex;
+        align-items: flex-start;
         justify-content: space-between;
+        
+        @include breakpoint('desktop') {
+            padding: 30px 0;
+        }
     }
 
     &__left {
-        width: 23%;
+        width: 25%;
+        margin-right: 16px;
     }
 
     &__right {
-        width: 77%;
-        .j-shelf>ul {
-            li {
-                .j-shelf__item {}
+        width: 75%;
+
+        @include breakpoint('mobile') {
+            width: 100%;
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+            .searchResultsTime:first-child {
+                
+                @include breakpoint('desktop') {
+                    display: block;
+                }
+
+                .resultado-busca {
+                    &-termo,
+                    &-tempo {
+                        display: none;
+                    }
+
+                    &-numero {
+                        span {
+                            text-transform: uppercase;
+                            font-size: 16px;
+                            line-height: 26px;
+                            font-weight: 800;
+                            color: $color-gray-8;
+                        }
+                    }
+                }
+            }
+
+            .sub {
+                @include breakpoint('mobile') {
+                    display: none;
+                }
+
+                label {
+                    display: none;
+                }
+
+                select {
+                    width: 185px;
+                    height: 35px;
+                    line-height: 35px;
+                    background-color: $color-white;
+                    padding: 7px 12px;
+                    text-transform: uppercase;
+                    color: $color-gray-6;
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+
+            .vitrine {
+                width: 100%;
+
+                @include breakpoint('desktop') {
+                    margin-top: 24px;
+                }
+            }
+
+            .pager.bottom {
+                display: block;
+                margin: 33px 0 40px;
+
+                ul.pages {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    @include breakpoint('mobile') {
+                        justify-content: center;
+                    }
+
+                    li {
+                        &.pgprevious,
+                        &.next,
+                        &.pgEmpty {
+                            display: none;
+                        }
+
+                        width: 38px;
+                        height: 38px;
+                        line-height: 38px;
+                        text-align: center;
+                        color: $color-gray-8;
+                        font-size: 14px;
+                        font-weight: 300;
+                        margin-right: 10px;
+                        border: 1px solid $color-main;
+
+                        &.pgCurrent {
+                            background-color: $color-main;
+                            color: $color-white;
+                        }
+
+                        &.first,
+                        &.last {
+                            border: 0;
+                            border-top: 1px solid $color-gray-6;
+                            border-right: 1px solid $color-gray-6;
+                            background-color: inherit;
+                            font-size: 0;
+                            transform: rotate(45deg);
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        &.first {
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        .y-shelf {
+            margin: 0;
+            
+            &>ul {
+                margin: 0;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+
+                li {
+                    width: 25%;
+                    margin: 0;
+
+                    @include breakpoint('mobile') {
+                        width: 50%;
+                    }
+                }
             }
         }
     }
 
-    &-seeMore {
+    &__bottom {
         display: block;
-        margin: 48px auto 144px;
-        @include t2-alt;
-        border: 1px solid $color-gray-3;
-        background-color: $color-white;
-        border-radius: 6px;
-        width: 150px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        color: $color-main;
+        margin: 0 auto 45px;
+
+        h3 {
+            @include h4;
+            color: $color-gray-8;
+            font-weight: 800;
+        }
+
+        p {
+            margin: 16px 0;
+            @include t2;
+            color: $color-gray-8;
+        }
     }
+}
+
+#returnToTop {
+    display: none !important;
 }

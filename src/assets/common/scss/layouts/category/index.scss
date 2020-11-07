@@ -1,6 +1,8 @@
 @import 'main.scss';
-@import 'filter.scss';
 @import 'content.scss';
+
+@import 'filter.scss';
+@import 'filterMobile.scss';
 
 // Ajustes na página de busca
 @import 'search.scss';

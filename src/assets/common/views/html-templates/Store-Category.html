@@ -2,59 +2,116 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
 
 <head>
-    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Head" />
     <vtex:template id="Store-Common-Styles" />
-    <link rel="stylesheet" href="/arquivos/store-desktop-category.css" />
+    <link rel="stylesheet" href="/arquivos/store-category.css" />
 </head>
 
 <body id="topo">
-    <vtex:template id="Store-Desktop-Header" />
+    <vtex:template id="Store-Header" />
 
     <main>
-        <div class="container">
-
-            <div class="y-category__top">
-                <vtex.cmc:breadCrumb />
-    
-                <div class="y-category__order">
-                    <button class="js--toggle">
-                        <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.66667 1.99999C4.66667 2.17681 4.7369 2.34638 4.86193 2.4714C4.98695 2.59642 5.15652 2.66666 5.33333 2.66666H16C16.1768 2.66666 16.3464 2.59642 16.4714 2.4714C16.5964 2.34638 16.6667 2.17681 16.6667 1.99999C16.6667 1.82318 16.5964 1.65361 16.4714 1.52859C16.3464 1.40357 16.1768 1.33333 16 1.33333H5.33333C5.15652 1.33333 4.98695 1.40357 4.86193 1.52859C4.7369 1.65361 4.66667 1.82318 4.66667 1.99999Z" fill="#8C8C8C"/>
-                            <path d="M16 11.32H5.33333C5.15652 11.32 4.98695 11.3902 4.86193 11.5153C4.7369 11.6403 4.66667 11.8099 4.66667 11.9867C4.66667 12.1635 4.7369 12.333 4.86193 12.4581C4.98695 12.5831 5.15652 12.6533 5.33333 12.6533H16C16.1768 12.6533 16.3464 12.5831 16.4714 12.4581C16.5964 12.333 16.6667 12.1635 16.6667 11.9867C16.6667 11.8099 16.5964 11.6403 16.4714 11.5153C16.3464 11.3902 16.1768 11.32 16 11.32Z" fill="#8C8C8C"/>
-                            <path d="M1.66667 3.66666C2.58714 3.66666 3.33333 2.92047 3.33333 1.99999C3.33333 1.07952 2.58714 0.333328 1.66667 0.333328C0.746192 0.333328 0 1.07952 0 1.99999C0 2.92047 0.746192 3.66666 1.66667 3.66666Z" fill="#8C8C8C"/>
-                            <path d="M16 6.33333H5.33333C5.15652 6.33333 4.98695 6.40357 4.86193 6.52859C4.7369 6.65361 4.66667 6.82318 4.66667 7C4.66667 7.17681 4.7369 7.34638 4.86193 7.4714C4.98695 7.59642 5.15652 7.66666 5.33333 7.66666H16C16.1768 7.66666 16.3464 7.59642 16.4714 7.4714C16.5964 7.34638 16.6667 7.17681 16.6667 7C16.6667 6.82318 16.5964 6.65361 16.4714 6.52859C16.3464 6.40357 16.1768 6.33333 16 6.33333Z" fill="#8C8C8C"/>
-                            <path d="M1.66667 8.66666C2.58714 8.66666 3.33333 7.92047 3.33333 7C3.33333 6.07952 2.58714 5.33333 1.66667 5.33333C0.746192 5.33333 0 6.07952 0 7C0 7.92047 0.746192 8.66666 1.66667 8.66666Z" fill="#8C8C8C"/>
-                            <path d="M1.66667 13.6667C2.58714 13.6667 3.33333 12.9205 3.33333 12C3.33333 11.0795 2.58714 10.3333 1.66667 10.3333C0.746192 10.3333 0 11.0795 0 12C0 12.9205 0.746192 13.6667 1.66667 13.6667Z" fill="#8C8C8C"/>
-                        </svg>
-                        Ordernar
-                    </button>
-                    <ul class="y-category__list">
-                        <li>
-                            <a href="?PS=36&amp;O=OrderByTopSaleDESC">Más vendidos</a>
-                        </li>
-                        <li>
-                            <a href="?PS=36&amp;O=OrderByReleaseDateDESC">Más nuevos</a>
-                        </li>
-                        <li>
-                            <a href="?PS=36&amp;O=OrderByPriceASC">Más baratos</a>
-                        </li>
-                        <li>
-                            <a href="?PS=36&amp;O=OrderByPriceDESC">Más caros</a>
-                        </li>
-                    </ul>
+        <div class="y-category__top">
+            <div class="y-desktop">
+                <vtex:contentPlaceHolder id="Banner Topo Desktop" />
+            </div>
+            
+            <div class="y-mobile">
+                <vtex:contentPlaceHolder id="Banner Topo Mobile" />
+            </div>
+            
+            <div class="container">
+                <div class="y-category__title">
+                    <div class="y-category__name">
+                        <vtex.cmc:searchTitle />
+                    </div>
+                    <div class="y-breadcrumb">
+                        <vtex.cmc:breadCrumb />
+                    </div>
                 </div>
             </div>
+        </div>
 
+        <vtex:template id="Store-Benefits" />
+
+        <div class="y-category__buttons y-mobile">
+            <button class="y-category__buttons--item js--open-filter">
+                <span class="icon">
+                    <vtex.cmc:iconfiltro />
+                </span>
+                <span>Filtrar</span>
+            </button>
+            <button class="y-category__buttons--item js--open-order">
+                <span class="icon">
+                    <vtex.cmc:iconorder />
+                </span>
+                <span>Ordernar</span>
+            </button>
+        </div>
+
+        <div class="y-category__filter js--filter-content y-mobile">
+            <div class="y-category__filter-top">
+                <div class="y-category__filter--title">
+                    <span class="icon">
+                        <vtex.cmc:iconfiltro />
+                    </span>
+                    <strong>Filtrar</strong>
+                </div>
+
+                <span class="y-close">+</span>
+            </div>
+
+            <div class="y-category__searchNavigator">
+                <vtex.cmc:searchNavigator />
+            </div>
+        </div>
+
+        <div class="y-category__filter js--order-content y-mobile">
+            <div class="y-category__filter-top">
+                <div class="y-category__filter--title">
+                    <span class="icon">
+                        <vtex.cmc:iconorder />
+                    </span>
+                    <strong>Ordernar</strong>
+                </div>
+                <span class="y-close">+</span>
+            </div>
+
+            <div class="y-category__searchNavigator">
+                <ul>
+                    <li>
+                        <a href="?O=OrderByPriceASC">Melhor Preço</a>
+                    </li>
+                    <li>
+                        <a href="?O=OrderByPriceDESC">Maior Preço</a>
+                    </li>
+                    <li>
+                        <a href="?O=OrderByTopSaleDESC">Mais Vendidos</a>
+                    </li>
+                    <li>
+                        <a href="?O=OrderByReleaseDateDESC">Mais Recentes</a>
+                    </li>
+                    <li>
+                        <a href="?O=OrderByBestDiscountDESC">Melhor Desconto</a>
+                    </li>
+                    <li>
+                        <a href="?O=OrderByReviewRateDESC">Melhor Avaliação</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container">
             <div class="y-category__content">
-
-                <div class="y-category__left">
+                <div class="y-category__left y-desktop">
                     <div class="y-category__filter">
-                        <h5 class="y-category__title">                            
-                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.7802 11.38V21C8.78048 21.1673 8.82274 21.3319 8.9031 21.4786C8.98347 21.6254 9.09937 21.7496 9.2402 21.84C9.40115 21.944 9.58859 21.9995 9.7802 22C9.92488 21.999 10.0678 21.9683 10.2002 21.91L14.6402 19.85C14.8138 19.7697 14.9607 19.6412 15.0635 19.4799C15.1663 19.3187 15.2207 19.1313 15.2202 18.94V11.38L23.7502 1.66C23.877 1.51562 23.9596 1.33776 23.988 1.14769C24.0164 0.957619 23.9894 0.763397 23.9102 0.588265C23.8311 0.413134 23.7032 0.264511 23.5418 0.160183C23.3804 0.055856 23.1924 0.000243084 23.0002 0H1.0002C0.808024 0.000243084 0.619987 0.055856 0.458593 0.160183C0.2972 0.264511 0.169287 0.413134 0.090161 0.588265C0.0110352 0.763397 -0.0159508 0.957619 0.0124318 1.14769C0.0408143 1.33776 0.123363 1.51562 0.2502 1.66L8.7802 11.38ZM20.7902 2L13.4702 10.34C13.3094 10.5223 13.2205 10.7569 13.2202 11V18.3L10.7802 19.43V11C10.7799 10.7569 10.691 10.5223 10.5302 10.34L3.2102 2H20.7902Z" fill="#EE3524"/>
-                            </svg>
-                            Filtrar
-                        </h5>
+                        <div class="y-category__filter--title">
+                            <span class="icon">
+                                <vtex.cmc:iconfiltro />
+                            </span>
+                            <strong>Filtro</strong>
+                        </div>
+
                         <div class="y-category__searchNavigator">
                             <vtex.cmc:searchNavigator />
                         </div>
@@ -62,16 +119,20 @@
                 </div>
 
                 <div class="y-category__right">
-                    <vtex.cmc:searchResult layout="44f537fa-5757-464a-8221-b8d5eaecd62d" itemCount="36" columnCount="36" />
+                    <vtex.cmc:searchResult layout="9db1c778-d944-4f4b-891f-ef2e23f5f058" itemCount="16" columnCount="4" />
+        
+                    <div class="y-category__bottom">
+                        <vtex:contentPlaceHolder id="SEO text" />
+                    </div>
                 </div>
-
             </div>
         </div>
     </main>
 
-    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Footer" />
     <vtex:template id="Store-Common-Scripts" />
-    <vtex:template id="Store-Desktop-Scripts" />
-    <script src="/arquivos/store-desktop-category.js"></script>
+    <vtex:template id="Store-Scripts" />
+    <script src="/arquivos/y-smartResearch.js"></script>
+    <script src="/arquivos/store-category.js"></script>
 </body>
 </html>

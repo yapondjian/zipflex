@@ -1,13 +1,11 @@
 import ScrollToTop from './actions';
-import InfinityScroll from './infinityScroll';
 
 const Methods = {
-  init() {
-    ScrollToTop.init();
-    InfinityScroll.init();
-  }
+	init() {
+		ScrollToTop.init();
+	}
 };
 
 export default {
-  init: Methods.init
+	init: Methods.init
 };
