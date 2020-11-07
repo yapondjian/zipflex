@@ -220,5 +220,7 @@ section#vtex-callcenter__toolbar {
 }
 
 .is--hide {
+	opacity: 0;
+	height: 0;
 	display: none;
 }
