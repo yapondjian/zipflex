@@ -1,0 +1,28 @@
+@import "./tools/breakpoint";
+@import "./layouts/globals/fonts.scss";
+@import "./layouts/globals/variables.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.y-institucional {
+    &__content {
+        p {
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
+            color: $color-gray-8;
+            margin: 16px 0;
+        }
+
+        .box-banner {
+            display: block;
+            text-align: center;
+            margin: 23px auto;
+            
+            a {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+}
