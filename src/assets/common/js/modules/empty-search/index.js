@@ -1,23 +1,38 @@
 const Methods = {
     init() {
-        Methods.searchTerm();
-        Methods.sliders();
+        Methods.oqueProcura();
+        Methods.brands();
     },
 
-    searchTerm() {
-        let term = window.location.search.split(`?ft=`)[1];
-        document.querySelector(`.js--term`).innerText = term;
-    },
-
-    sliders() {
-        $('.helperComplement').remove();
-
-        $(".y-shelf > ul").slick({
+    oqueProcura() {
+        $('.y-find__slick').slick({
             arrows: true,
             dots: true,
             infinite: true,
-            slidesToShow: 5
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '0 30px'
+                    }
+                }
+            ]
         });
+    },
+
+    brands() {
+        $(".y-brand__slick").slick({
+            arrows: true,
+            dots: true,
+            infinite: false,
+            slidesToShow: 6
+        })
     }
 };
 

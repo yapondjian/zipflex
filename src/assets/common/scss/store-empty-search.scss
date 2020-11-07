@@ -1,58 +1,65 @@
-@import '../../common/scss/tools/_breakpoint.scss';
-@import "../../common/scss/layouts/globals/fonts.scss";
-@import "../../common/scss/layouts/globals/variables.scss";
+@import "./tools/breakpoint";
+@import "./layouts/globals/fonts.scss";
+@import "./layouts/globals/variables.scss";
+@import "./layouts/geral/find/main.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 .y-empty {
-    &__content {
-        text-align: center;
-    }
-
     &__title {
-        display: inline-block;
-        margin: 48px auto;
-        @include h2;
-        font-weight: bold;
-        color: $color-gray-8;
-        padding-bottom: 12px;
-        border-bottom: 1px solid $color-gray-3;
-    
-        span {
-            color: $color-main;
-        }
-    }
-    
-    .y-mosaico {
+        font-family: 'Roboto', sans-serif;
+
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+
+        margin: 53px auto 110px;
+
+        @include breakpoint('mobile') {
+            flex-direction: column;
+            margin: 26px 0 47px;
+        }
     
-        &--item {
-            width: 49%;
-        
-            .box-banner {
-                margin: 12px 0;
-    
-                a {
-                    display: block;
-                }
-            }
-    
-            &:last-child {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex-wrap: wrap;
-    
-                .box-banner {
-                    width: 49%;
-                }
-    
-            }
+        strong {
+            margin-right: 98px;
+
+            font-size: 113px;
+            line-height: 149px;
+            font-weight: 700;
             
+            color: #C4C4C4;
+
+            @include breakpoint('mobile') {
+                margin-right: 0;
+                margin-bottom: 6px;
+
+                font-size: 40px;
+                line-height: 53px;
+            }
+        }
+
+        span {
+            font-size: 45px;
+            font-weight: 300;
+            line-height: 59px;
+            
+            color: #4C4C4C;
+
+            @include breakpoint('mobile') {
+                text-align: center;
+                font-size: 16px;
+                line-height: 21px;
+            }
         }
     }
-    
-    .y-home__shelfs {
-        margin: 72px 0 150px;
+}
+
+.y-brand {
+    width: 100%;
+    display: block;
+    margin: 103px 0 69px;
+
+    @include breakpoint('mobile') {
+        display: none;
     }
 }

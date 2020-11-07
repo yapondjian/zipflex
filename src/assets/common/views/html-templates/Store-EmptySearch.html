@@ -2,42 +2,44 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
 
 <head>
-    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Head" />
     <vtex:template id="Store-Common-Styles" />
-    <link rel="stylesheet" href="/arquivos/store-desktop-empty-search.css" />
+    <link rel="stylesheet" href="/arquivos/store-empty-search.css" />
 </head>
 
 <body>
-    <vtex:template id="Store-Desktop-Header" />
+    <vtex:template id="Store-Header" />
     
     <main>
         <div class="container">
             <div class="y-empty__content">
-                <h2 class="y-empty__title">No hay resultados para <span class="js--term"></span></h2>
-            </div>
-
-            <section class="y-mosaico">
-                <div class="y-mosaico--item">
-                    <vtex:contentPlaceHolder id="Banner Principal" />
+                <div class="y-empty__title">
+                    <strong>Ops,</strong>
+                    <span>está página<br/>não foi encontrada</span>
                 </div>
-                <div class="y-mosaico--item">
-                    <vtex:contentPlaceHolder id="Banner menores" />
+            </div>
+                
+            <section class="y-find">
+                <h4 class="y-title">O que você <strong>procura?</strong></h4>
+
+                <div class="y-find__slick">
+                    <vtex:contentPlaceHolder id="O que vc procura" />
                 </div>
             </section>
-                
-            <section class="y-home__shelfs">
-                <div class="has--line">
-                    <h3 class="y-shelf__title">OFERTAS</h3>
-                    <span></span>
+
+            <section class="y-brand y-desktop">
+                <h4 class="y-title">Nossas <strong>Marcas</strong></h4>
+    
+                <div class="y-brand__slick">
+                    <vtex:contentPlaceHolder id="Marcas" />
                 </div>
-                <vtex:contentPlaceHolder id="Vitrine" />
             </section>
         </div>
     </main>
 
-    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Footer" />
     <vtex:template id="Store-Common-Scripts" />
-    <vtex:template id="Store-Desktop-Scripts" />
-    <script type="text/javascript" src="/arquivos/store-desktop-empty-search.js"></script>
+    <vtex:template id="Store-Scripts" />
+    <script type="text/javascript" src="/arquivos/store-empty-search.js"></script>
 </body>
 </html>
