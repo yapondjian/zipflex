@@ -1,4 +1,6 @@
 .y-header {
+    background-color: $color-white;
+    
     &__topbar {
         background-color: $color-gray-8;
         color: $color-white;
@@ -122,6 +124,17 @@
 
                         padding: 15px 20px;
                     }
+
+                    .y-close {
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        font-size: 30px;
+                        color: $color-black;
+                        transform: rotate(-45deg);
+                        z-index: 999;
+                        cursor: pointer;
+                    }
                 }
             }
 
@@ -151,7 +164,7 @@
                         background-color: $color-white;
                         color: $color-black;
                         font-size: 25px;
-                        right: 8px;
+                        right: 25px;
                     }
 
                 }
@@ -205,6 +218,10 @@
                     right: 10px;
                     top: 50%;
                     transform: translateY(-50%);
+
+                    @include breakpoint('mobile') {
+                        right: 25px;
+                    }
                 }
             }
         }

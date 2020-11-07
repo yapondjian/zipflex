@@ -12,7 +12,7 @@ const Methods = {
     },
 
     search() {
-        $('.js--search').live('click', function(){
+        $('.js--search, .js--search-content .y-close').live('click', function(){
             $('body').toggleClass('no--scroll');
             $('.js--search-content').toggleClass('is--active');
         })
