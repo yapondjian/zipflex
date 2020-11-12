@@ -31,7 +31,7 @@ const Methods = {
                     'email': userData.email.value
                 }
                 
-                fetch('/api/dataentities/NL/documents/?an=highmedtatix', {
+                fetch('/api/dataentities/NL/documents/?an=zipflextatix', {
                     method: "PATCH",
                     headers: headers,
                     body: JSON.stringify(data)

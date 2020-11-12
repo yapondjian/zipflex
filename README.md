@@ -1,8 +1,8 @@
-# Código fonte - highmed Vtex - FrontEnd
+# Código fonte - Zipflex Vtex - FrontEnd
 
 ## URLs do site
 
-admin: <https://highmedtatix.vtexcommercestable.com.br/admin/a>
+admin: <https://zipflextatix.vtexcommercestable.com.br/admin/a>
 
 
 ## Como rodar o projeto:
