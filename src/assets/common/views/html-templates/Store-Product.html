@@ -2,106 +2,180 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
 
 <head>
-    <vtex:template id="Store-Desktop-Head" />
+    <vtex:template id="Store-Head" />
     <vtex:template id="Store-Common-Styles" />
-    <link rel="stylesheet" href="/arquivos/store-desktop-product.css" />
+    <link rel="stylesheet" href="/arquivos/store-product.css" />
 </head>
 
 <body>
-    <vtex:template id="Store-Desktop-Header" />
+    <vtex:template id="Store-Header" />
 
     <main>
-        <div class="container">
-            <div class="y-product">
-                <div class="y-product--wrapper__infos">
-
+        <div class="y-product">
+            <section class="y-product__top">
+                <div class="container">
+    
                     <div class="y-product__left">
-
                         <div class="y-product__img">
-                            <vtex.cmc:discountHightLight/>
                             <vtex.cmc:ProductImage />
                         </div>
-
-                        <vtex.cmc:ybenefits />
-
-                        <div class="y-product__related">
-                            <h4 class="y-shelf__title">Pueden interesarte</h4>
-
-                            <div class="y-shelf__content">
-                                <vtex:contentPlaceHolder id="Related" />
-                            </div>
-                        </div>
-
-                        <div class="y-product__review">
-                            <vtex.cmc:UserReview />
-                        </div>
-
                     </div>
-
+    
                     <div class="y-product__right">
-
-                        <div class="y-product__brand">
-                            <vtex.cmc:brandName />
-                        </div>
-
                         <h1 class="y-product__name">
                             <vtex.cmc:productName />
                         </h1>
-
-                        <div class="y-product__price">
-                            <vtex.cmc:skuPrice />
-                            <button class="y-product__price-otro"><i class="fa fa-chevron-right"></i> Calcular con otro banco</button>
+    
+                        <div class="y-product__box-price">
+                            <div class="y-product__price">
+                                <vtex.cmc:skuPrice />
+                            </div>
+    
+                            <div class="y-product__flag">
+                                <vtex.cmc:discountHightLight/>
+                            </div>
                         </div>
-
+    
+                        <div class="y-product__shortdescription">
+                            <vtex.cmc:productDescriptionShort />
+                        </div>
+    
+                        <div class="y-product__inputs">
+                            <div class="y-qtd"></div>
+    
+                            <div class="y-frete">
+                                <p>Calcule o frete</p>
+                                <vtex.cmc:shippingValue/>
+                                <script>ShippingValue();</script>
+                            </div>
+                        </div>
+    
+                        <div class="y-product__variations">
+                            <vtex.cmc:skuRichSelection changeImage="1" />
+                        </div>
+    
                         <div class="y-product__buy">
-                            <div class="y-qty"></div>
-
                             <div class="y-buy">
                                 <vtex.cmc:BuyButton />
                             </div>
-
-                            <div class="y-stock"></div>
                         </div>
+                    </div>
 
-                        <div class="y-product__together">
-                            <h4 class="y-together__title">¡Completá tu pedido!</h4>
+                    <div class="y-product__bottom">
+                        <vtex.cmc:ilustrativo />
+                    </div>
+                </div>
+            </section>
 
-                            <div class="y-together__content">
-                                <vtex:contentPlaceHolder id="Together" />
-                            </div>
+            <section class="y-product__details is--hide">
+                <div class="container">
+                    <div class="y-product__details--left">
+                        <img src="/arquivos/maciez-imagem.png" alt="" />
+                    </div>
+                    <div class="y-product__details--right">
+                        <h5 class="y-title">Maciez</h5>
+                        <vtex:contentPlaceHolder id="Descritivo Maciez" />
+                    </div>
+                </div>
+            </section>
 
-                            <div class="y-together__buy">
-                                <button class="js--together">Comprar</button>
-                            </div>
-                        </div>
+            <section class="y-product__mosaico">
+                <div class="container">
+                    <article class="y-product__mosaico-image">
+                        <img src="/arquivos/description-1.png" alt="" />
+                    </article>
+                    <article class="y-product__mosaico-text">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et urna sed eros lobortis faucibus vel ac mauris. Mauris vel tempor metus, quis mattis enim. Quisque pretium velit ipsum, in blandit ipsum laoreet ut. Cras varius aliquam magna, in pulvinar ex tristique nec. Vestibulum et justo eu mi lacinia vehicula. Curabitur sit amet nisi libero. Vestibulum at elementum tellus. In hac habitasse platea dictumst. Cras in augue dui.</p>
+                    </article>
+    
+                    <article class="y-product__mosaico-text">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et urna sed eros lobortis faucibus vel ac mauris. Mauris vel tempor metus, quis mattis enim. Quisque pretium velit ipsum, in blandit ipsum laoreet ut. Cras varius aliquam magna, in pulvinar ex tristique nec. Vestibulum et justo eu mi lacinia vehicula. Curabitur sit amet nisi libero. Vestibulum at elementum tellus. In hac habitasse platea dictumst. Cras in augue dui.</p>
+                    </article>
+                    <article class="y-product__mosaico-image">
+                        <img src="/arquivos/description-2.png" alt="" />
+                    </article>
+    
+                    <article class="y-product__mosaico-image">
+                        <img src="/arquivos/description-3.png" alt="" />
+                    </article>
+                    <article class="y-product__mosaico-text">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et urna sed eros lobortis faucibus vel ac mauris. Mauris vel tempor metus, quis mattis enim. Quisque pretium velit ipsum, in blandit ipsum laoreet ut. Cras varius aliquam magna, in pulvinar ex tristique nec. Vestibulum et justo eu mi lacinia vehicula. Curabitur sit amet nisi libero. Vestibulum at elementum tellus. In hac habitasse platea dictumst. Cras in augue dui.</p>
+                    </article>
+                </div>
+            </section>
 
-                        <div class="y-product__details">
-                            <h3>Descripción</h3>
-                            <vtex.cmc:ProductDescription/>
-                        </div>
+            <section class="y-product__medidas">
+                <div class="container">
+                    <h4 class="y-title">Lorem ipsum dolor sit amet</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et urna sed eros lobortis faucibus vel ac mauris. Mauris vel tempor metus, quis mattis enim. Quisque pretium velit ipsum, in blandit ipsum laoreet ut. Cras varius aliquam magna, in pulvinar ex tristique nec. Vestibulum et justo eu mi lacinia vehicula. Curabitur sit amet nisi libero. Vestibulum at elementum tellus. In hac habitasse platea dictumst. Cras in augue dui.</p>
 
-                        <div class="y-product__details">
-                            <h3>Ficha técnica</h3>
-                            <vtex.cmc:productSpecification/>
+                    <h2>Medidas</h2>
+
+                    <div class="y-product__medidas--slick">
+                        <img src="/arquivos/medidas-1.png" alt="" />
+                        <img src="/arquivos/medidas-2.png" alt="" />
+                        <img src="/arquivos/medidas-3.png" alt="" />
+                    </div>
+                </div>
+            </section>
+
+            <section class="y-product__selos">
+                <div class="container">
+                    <h6 class="y-title">Lorem ipsum dolor sit amet</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et urna sed eros lobortis faucibus vel ac mauris. Mauris vel tempor metus, quis mattis enim. Quisque pretium velit ipsum, in blandit ipsum laoreet ut. Cras varius aliquam magna, in pulvinar ex tristique nec. Vestibulum et justo eu mi lacinia vehicula. Curabitur sit amet nisi libero. Vestibulum at elementum tellus. In hac habitasse platea dictumst. Cras in augue dui.</p>
+                    <ul>
+                        <li>
+                            <img src="/arquivos/selo-pro-mola.png" alt="" />
+                        </li>
+                        <li>
+                            <img src="/arquivos/selo-iso.png" alt="" />
+                        </li>
+                        <li>
+                            <img src="/arquivos/selo-inner.png" alt="" />
+                        </li>
+                        <li>
+                            <img src="/arquivos/abicol.png" alt="" />
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        
+            <div class="container">
+                <section class="y-shelfs">
+                    <vtex:contentPlaceHolder id="Vitrine" />
+                </section>
+            </div>
+            
+            <section class="y-buybox">
+                <div class="container">
+                    <h1 class="y-product__name">
+                        <vtex.cmc:productName />
+                    </h1>
+    
+                    <div class="y-product__variations">
+                        <vtex.cmc:skuRichSelection changeImage="1" />
+                    </div>
+
+                    <div class="y-product__price">
+                        <vtex.cmc:skuPrice />
+                    </div>
+                    
+                    <div class="y-product__buy">
+                        <div class="y-buy">
+                            <vtex.cmc:BuyButton />
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="y-product__shelf">
-                <div class="has--line">
-                    <h3 class="y-shelf__title">TE RECOMENDAMOS</h3>
-                    <span></span>
-                </div>
-                <vtex:contentPlaceHolder id="Vitrine inferior" />
-            </div>
-
+            </section>
         </div>
     </main>
 
-    <vtex:template id="Store-Desktop-Footer" />
+    <vtex:template id="Store-Footer" />
     <vtex:template id="Store-Common-Scripts" />
-    <vtex:template id="Store-Desktop-Scripts" />
-    <script type="text/javascript" src="/arquivos/store-desktop-product.js"></script>
+    <vtex:template id="Store-Scripts" />
+    <script type="text/javascript" src="/arquivos/store-product.js"></script>
 </body>
 </html>

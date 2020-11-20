@@ -1,44 +1,43 @@
 .y-product {
-    &--wrapper__infos {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
+    &__top {
+        display: block;
+        width: 100%;
+        background: url("/arquivos/topo.png") no-repeat top center $color-white;
+        padding: 62px 0 190px;
+
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
     }
 
     &__left {
-        width: 50%;
-        padding: 50px 35px 50px 100px;
+        width: 55%;
+    }
+
+    &__right {
+        width: 45%;
+        padding: 0 65px 0 110px;
+    }
+
+    &__bottom {
+        width: 100%;
+        padding: 110px 0 155px;
+
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            color: $color-black;
+        }
+
     }
 
     &__img {
         position: relative;
-
-        .flag {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 64px;
-            height: 64px;
-            background-color: $color-pink;
-            text-transform: uppercase;
-            @include h5;
-            font-weight: bold;
-            color: $color-white;
-            z-index: 9999;
-            border-radius: 4px;
-            padding: 0 5px;
-
-            &::before {
-                content: "HASTA";
-                display: block;
-                color: $color-white;
-                font-family: "Libre Franklin";
-                font-style: normal;
-                font-weight: 600;
-                font-size: 8px;
-                line-height: 24px;
-            }
-        }
+        margin-top: 15px;
 
         #image {
             a {
@@ -47,11 +46,11 @@
         }
 
         #show {
-            display: block;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
 
             #include {
-                width: 100%;
-
                 img {
                     display: block;
                     width: 100%;
@@ -59,16 +58,7 @@
             }
 
             .thumbs {
-                width: 100%;
-                margin: 24px 0;
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-
-                li {
-                    border: none;
-                    margin: 0 12px;
-                }
+                display: none;
             }
         }
 
@@ -93,219 +83,165 @@
         }
     }
 
-    .y-benefits {
-        margin: 60px 0;
-        &__content {
-            &-item {
-                display: flex !important;
-                padding: 0 23px;
-
-                p {
-                    margin-left: 7px;
-
-                    span {
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
-    }
-
-    &__right {
-        width: 50%;
-        padding: 50px 100px 50px 35px;
-    }
-
-    &__brand {
-        @include h5;
-        color: $color-gray-6;
-    }
-
     &__name {
-        @include h2;
-        color: $color-gray-8;
-        margin: 6px 0 36px;
+        font-size: 45px;
+        line-height: 54px;
+        color: $color-white;
+        font-weight: 700;
+    }
+
+    &__box-price {
+        margin: 25px 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     &__price {
 
         .productPrice {
-            display: flex;
-            flex-wrap: wrap;
+            display: block;
             
             .descricao-preco {
-                padding-right: 36px;
 
                 .valor-de {
-                    display: block;
-                    font-size: 0;
+                    font-size: 15px;
+                    line-height: 18px;
                     font-style: normal;
-                    margin-bottom: 6px;
+                    color: #D2D2D2;
+                    font-weight: 500;
                     
                     strong {
-                        font-family: "Libre Franklin";;
                         font-style: normal;
-                        font-weight: normal;
-                        font-size: 18px;
-                        line-height: 18px;
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 16px;
                         text-decoration-line: line-through;
-                        color: $color-gray-6;
                     }
                 }
                 
                 .valor-por {
-                    display: block;
                     font-size: 0;
                     font-style: normal;
+                    margin: 6px 0;
     
                     strong {
-                        @include h4;
-                        color: $color-gray-6;
+                        font-size: 35px;
+                        line-height: 42px;
+                        color: $color-white;
+                        font-weight: 500;
                     }
                 }
         
                 .valor-dividido {
-                    display: none;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: $color-white;
+                    font-style: normal;
+                    font-weight: 500;
+                    
+                    strong {
+                        font-weight: 500;
+                    }
                 }
             }
         }
 
         .preco-a-vista {
-            max-width: 230px;
-            display: block !important;
-            font-size: 0;
-            padding-left: 40px;
-            border-left: 1px solid $color-gray-3;
-            
-            strong {
-                &::before {
-                    content: "";
-                    width: 26px;
-                    height: 18px;
-                    background: url("/arquivos/pdp-card.png") no-repeat center center;
-                    display: inline-block;
-                    margin-right: 11px;
-                }
-
-                @include h3;
-                color: $color-pink;
-
-                &::after {
-                    content: "Precio con descuento Visa 12 cuotas sin interés";
-                    @include t1;
-                    color: $color-pink;
-                    display: block;
-                    margin-top: 10px;
-                }
-                
-            }
+            display: none !important;
         }
 
         .economia-de {
-            display: block;
-            font-size: 0;
-            margin: 10px 0;
-            
-            span {
+            display: none;
+        }
+    }
+
+    &__variations {
+        margin: 20px 0;
+
+        ul {
+            .specification {
+                font-family: $font-roboto;
+                font-size: 10px;
+                line-height: 13px;
+                color: $color-white;
+                font-weight: 500;
+                margin-bottom: 7px;
+
                 &::before {
-                    content: "¡Te ahorrás";
-                    @include t2;
-                    color: $color-gray-8;
-                    margin-right: 5px;
-                }
-
-                @include t2;
-                color: $color-gray-8;
-                font-style: normal;
-                font-weight: bold;
-
-                &::after {
-                    content: "!";
-                    @include t2;
-                    color: $color-gray-8;
+                    content: "Escolha sua  ";
+                    font-family: $font-roboto;
+                    font-size: 10px;
+                    line-height: 13px;
+                    color: $color-white;
+                    font-weight: 600;
                 }
             }
-        }
 
-        &-otro {
-            display: block;
-            @include t3;
-            color: $color-blue;
-            background-color: $color-white;
-            border: none;
-            appearance: none;
+            .skuList {
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    
+                    input {
+                        display: none;
 
-            i {
-                margin-right: 7px;
-                font-family: FontAwesome;
+                        &.checked+label {
+                            border-color: $color-main;
+                        }
+                    }
+
+                    label {
+                        width: 80px;
+                        height: 40px;
+                        border: 2px solid $color-white;
+                        border-radius: 50px;
+                        background-color: $color-white;
+                        overflow: hidden;
+                        
+                        margin: 0 10px 0 0;
+                        
+                        text-align: center;
+                        font-size: 14px;
+                        line-height: 40px;
+                        font-weight: 500;
+                        color: $color-black;
+
+                        cursor: pointer;
+
+                        &:hover {
+                            border-color: $color-main;
+                        }
+                    }
+                }
+
             }
         }
     }
 
     &__buy {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        margin: 36px 0;
-
-        .y-qty {
-            .box-qtd {
-                width: 97px;
-                height: 62px;
-                margin-right: 12px;
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-
-                input {
-                    width: 60px;
-                    height: 60px;
-                    line-height: 60px;
-                    font-weight: 700;
-                    background-color: $color-white;
-                    border: 1px solid $color-gray-3;
-                    border-radius: 6px;
-                    text-align: center;
-                    @include h4;
-                    color: $color-blue;
-                    margin-right: 9px;
-                }
-
-                button {
-                    width: 27px;
-                    height: 27px;
-                    background-color: $color-white;
-                    border-radius: 6px;
-                    border: 1px solid $color-gray-3;
-                    cursor: pointer;
-                    color: $color-gray-8;
-                    font-size: 16px;
-
-                    &.btn-mais {
-                        margin-bottom: 6px;
-                    }
-                }
-            }
-        }
+        display: block;
+        width: 100%;
 
         .buy-button {
-            cursor: pointer;
-            text-align: center;
-            @include t1-btn;
-            width: 125px;
-            height: 55px;
-            line-height: 55px;
-            border-radius: 6px;
-            background: linear-gradient(270deg, #F7EC00 -10.05%, #EE3524 100%);
-            color: $color-white;
-        }
-
-        .y-stock {
             display: block;
+
+            cursor: pointer;
+            
             width: 100%;
-            margin-top: 24px;
-            @include t2;
-            color: $color-main;
+            height: 56px;
+            line-height: 56px;
+            border-radius: 50px;
+            background: $color-darkgreen;
+        
+            
+            color: $color-white;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
         }
 
         // AVISA-ME

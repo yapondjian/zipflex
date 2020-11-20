@@ -44,9 +44,9 @@ const Methods = {
     
     destaque() {
         $('.helperComplement').remove();
-        $('.y-find__slick').slick({
+        $('.y-find__slick ul').slick({
             arrows: true,
-            dots: true,
+            dots: false,
             infinite: true,
             slidesToShow: 3,
             responsive: [
