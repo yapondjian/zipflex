@@ -24,68 +24,259 @@
 
         <vtex:template id="Store-Benefits" />
 
-        <div class="container">
-            <section class="y-home__shelfs">
-                <h4 class="y-title">Nossos <strong>Destaques</strong></h4>
-                <vtex:contentPlaceHolder id="Vitrine 1" />
-            </section>
-        </div>
-    
-        <section class="y-sac">
-            <div class="y-sac__title">
-                <h1>Atendimento <strong>Diferenciado</strong></h1>
-                <p>Não tem certeza se o produto te atende? Tem dúvidas técnicas?</p>
-                <p>Conte com nossos consultores para te auxiliar.</p>
-            </div>
+        <section class="y-half container">
+            <vtex:contentPlaceHolder id="Half Banners Desktop" />
+        </section>
+
+        <section class="y-find">
             <div class="container">
-                <div class="y-sac__option">
-                    <div class="y-sac__option--item">
-                        <div class="y-sac__option--item-img">
-                            <img src="/arquivos/sac-1.png" alt="SAC" />
+                <h4 class="y-title"><strong>Destaques</strong></h4>
+        
+                <div class="y-find__slick">
+                    <vtex:contentPlaceHolder id="Destaques" />
+                </div>
+            </div>
+        </section>
+
+        <section class="y-ideal">
+            <h4 class="y-title"><strong>Ideal para você</strong></h4>
+            
+            <div class="container">
+                <div class="y-ideal-flex">
+                    <h5 class="y-ideal-title">Molas <strong>premium</strong></h5>
+                    <h5 class="y-ideal-title">Espuma <strong>premium</strong></h5>
+                </div>
+            </div>
+    
+            <div class="y-ideal-flex">
+                <div class="y-ideal-left">
+                    <div class="y-ideal-content">
+                        <div class="y-ideal-content">
+                            <div class="y-ideal-content__left">
+                                <img src="/arquivos/ideal-mola-premium.jpg" alt="Molas premium" />
+                            </div>
+                            <div class="y-ideal-content__right">
+                                <div class="y-ideal-icon">
+                                    <img src="/arquivos/view-more-icon.png" alt="Expandir" />
+                                </div>
+                                <ul class="y-ideal-list">
+                                    <li>
+                                        <div class="y-ideal-item__left">
+                                            <vtex.cmc:iconlatex />
+                                        </div>
+                                        <div class="y-ideal-item__right">
+                                            <span class="y-ideal-subtitle">Látex</span>
+                                            <strong>100% natural</strong>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="y-ideal-item__left">
+                                            <vtex.cmc:iconmolas />
+                                        </div>
+                                        <div class="y-ideal-item__right">
+                                            <span class="y-ideal-subtitle">Molas</span>
+                                            <strong>Ensacadas</strong>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="y-ideal-item__left">
+                                            <vtex.cmc:iconespuma />
+                                        </div>
+                                        <div class="y-ideal-item__right">
+                                            <span class="y-ideal-subtitle">Espuma de</span>
+                                            <strong>Alta resistencia</strong>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="y-sac__option--item-info">
-                            <h3 class="y-sac__option--item-title">Suporte na Compra</h3>
-                            <p class="y-sac__option--item-description">Não sabe qual o melhor produto para sua necessidade? Nosso consultor está aqui para te ajudar!</p>
-                            <a href="#">
-                                <vtex.cmc:iconwhatsapp /> EU QUERO
-                            </a>
+                    </div>  
+                </div>
+    
+                <div class="y-ideal-right">
+                    <div class="y-ideal-content">
+                        <div class="y-ideal-content__left">
+                            <img src="/arquivos/ideal-espuma-premium.jpg" alt="Espuma premium" />
                         </div>
-                    </div>
-                    <div class="y-sac__option--item">
-                        <div class="y-sac__option--item-img">
-                            <img src="/arquivos/sac-2.png" alt="SAC" />
+                        <div class="y-ideal-content__right">
+                            <div class="y-ideal-icon">
+                                <img src="/arquivos/view-more-icon.png" alt="Expandir" />
+                            </div>
+                            <ul class="y-ideal-list">
+                                <li>
+                                    <div class="y-ideal-item__left">
+                                        <vtex.cmc:iconlatex />
+                                    </div>
+                                    <div class="y-ideal-item__right">
+                                        <span class="y-ideal-subtitle">Látex</span>
+                                        <strong>100% natural</strong>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="y-ideal-item__left">
+                                        <vtex.cmc:iconespuma />
+                                    </div>
+                                    <div class="y-ideal-item__right">
+                                        <span class="y-ideal-subtitle">Espuma de</span>
+                                        <strong>Alta resistencia</strong>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="y-sac__option--item-info">
-                            <h3 class="y-sac__option--item-title">SAC</h3>
-                            <p class="y-sac__option--item-description">Dúvidas com seu pedido ou orçamento? Estamos aqui para te ajudar!</p>
-                            <a href="#">
-                                <vtex.cmc:iconwhatsapp /> EU QUERO
-                            </a>
-                        </div>
-                    </div>
+                    </div>  
                 </div>
             </div>
         </section>
     </main>
 
-    <div class="container">
-        <section class="y-find">
-            <h4 class="y-title">O que você <strong>procura?</strong></h4>
-
-            <div class="y-find__slick">
-                <vtex:contentPlaceHolder id="O que vc procura" />
+    <section class="y-sleep">
+        <div class="container">
+            <div class="y-sleep__content">
+                <div class="y-sleep__left">
+                    <img src="/arquivos/banner-sleeping.jpg" alt="Banner sleeping" />
+                </div>
+                <div class="y-sleep__right">
+                    <h3 class="y-sleep__title">Por que dormir com Zipflex</h3>
+                    <ul class="y-sleep__list">
+                        <li>
+                            <img src="/arquivos/lua.png" alt="" />
+                            <p>O colchão se adapta a voce</p>
+                        </li>
+                        <li>
+                            <img src="/arquivos/nao-alergico.png" alt="" />
+                            <p>Não alérgico</p>
+                        </li>
+                        <li>
+                            <img src="/arquivos/certificado.png" alt="" />
+                            <p>Produto certificado</p>
+                        </li>
+                        <li>
+                            <img src="/arquivos/levar.png" alt="" />
+                            <p>Fácil e prático de lavar</p>
+                        </li>
+                    </ul>
+                    <a href="#" class="y-sleep__link">Saiba mais</a>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="y-brand y-desktop">
-            <h4 class="y-title">Nossas <strong>Marcas</strong></h4>
+    <section>
+        <div class="container">
+            <div class="y-infos-product">
+                <h4 class="y-title">Travesseiro<strong>Látex Premium</strong></h4>
 
-            <div class="y-brand__slick">
-                <vtex:contentPlaceHolder id="Marcas" />
+                <div class="y-infos-product__flex">
+                    <div class="y-infos-product__flex-left">
+                        <p>Excelente ventilação <br/> e controle térmico</p>
+                        <img src="/arquivos/travesseiro-latex-left.jpg" alt="Travesseiro" />
+                    </div>
+                    <div class="y-infos-product__flex-center">
+                        <ul class="y-infos-product__list">
+                            <li>
+                                <img src="/arquivos/latex.png" alt=""/>
+                                <div>
+                                    <p>Látex</p>
+                                    <span>100% Natural</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="/arquivos/sangue.png" alt=""/>
+                                <div>
+                                    <p>Auxilia na</p>
+                                    <span>Circulação sanguínea</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="/arquivos/ventilacao.png" alt=""/>
+                                <div>
+                                    <p>Estrutura de</p>
+                                    <span>Canais de ventilação</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="/arquivos/anti-alergico.png" alt=""/>
+                                <div>
+                                    <p>Travesseiro</p>
+                                    <span>Anti alérgico</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="y-infos-product__flex-right">
+                        <img src="/arquivos/travesseiro-latex-right.jpg" alt="Travesseiro" />
+                    </div>
+                </div>
+
+                <a href="#" class="y-infos-product__link">
+                    Comprar travesseiro
+                </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </div>
+    <section class="y-black-section">
+        <div class="container">
+            <div class="y-black-selo">
+                <img src="/arquivos/black-selo.png" alt="Garantia de 12 meses" />
+            </div>
+
+            <div class="y-black-top">
+                <ul class="y-black-list">
+                    <li>
+                        <span class="y-black-line"></span>
+                        <h5 class="y-list-title">Suporte para dúvidas</h5>
+                        <p class="y-list-text">Nunc nec neque. Phasellus volutpat, metus eget  egestas mollis, lacus lacus blandit dui, id egestas quam  mauris ut lacus. Proin magna. Duis leo. Aenean  vulputate eleifend tellus.</p>
+                    </li>
+                    <li>
+                        <span class="y-black-line"></span>
+                        <h5 class="y-list-title">12 meses de garantia</h5>
+                        <p class="y-list-text">Nunc nec neque. Phasellus volutpat, metus eget  egestas mollis, lacus lacus blandit dui, id egestas quam  mauris ut lacus. Proin magna. Duis leo. Aenean  vulputate eleifend tellus.</p>
+                    </li>
+                    <li>
+                        <span class="y-black-line"></span>
+                        <h5 class="y-list-title">Devolução e envio</h5>
+                        <p class="y-list-text">Nunc nec neque. Phasellus volutpat, metus eget  egestas mollis, lacus lacus blandit dui, id egestas quam  mauris ut lacus. Proin magna. Duis leo. Aenean  vulputate eleifend tellus.</p>
+                    </li>
+                </ul>
+
+                <a href="#" class="y-black-link">Saiba mais</a>
+            </div>
+
+            <div class="y-black-embed">
+                <vtex:contentPlaceHolder id="Video Embed" />
+
+                <a href="#" class="y-black-link">Mais vídeos</a>
+            </div>
+        </div>
+    </section>
+
+    <vtex:template id="Store-Newsletter" />
+
+    <section class="y-depoimentos">
+        <div class="container">
+            <h5 class="y-title">DEPOIMENTOS</h5>
+            <ul class="y-depoimentos__list">
+                <li>
+                    <p>"Mudou completamente minha vida, regulei meu sono e consequentemente todas as minhas tarefas, recomendo.”</p>
+                    <strong>Jorge Paulo</strong>
+                </li>
+                <li>
+                    <p>"Mudou completamente minha vida, regulei meu sono e consequentemente todas as minhas tarefas, recomendo.”</p>
+                    <strong>Daniele Lima</strong>
+                </li>
+                <li>
+                    <p>"Mudou completamente minha vida, regulei meu sono e consequentemente todas as minhas tarefas, recomendo.”</p>
+                    <strong>Tiago Ferreira</strong>
+                </li>
+                <li>
+                    <p>"Mudou completamente minha vida, regulei meu sono e consequentemente todas as minhas tarefas, recomendo.”</p>
+                    <strong>Jorge Paulo</strong>
+                </li>
+            </ul>
+            <a href="#" class="y-depoimentos__link">Ver mais depoimentos</a>
+        </div>
+    </section>
 
     <vtex:template id="Store-Footer" />
     <vtex:template id="Store-Common-Scripts" />

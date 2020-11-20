@@ -2,23 +2,21 @@
     &__menu {
         width: 100%;
         background-color: $color-white;
-        border-top: 1px solid $color-gray-1;
-        padding: 6px 0 0;
         position: relative;
 
         @include breakpoint('mobile') {
             opacity: 0;
 
             position: fixed;
-            top: 0;
-            left: -100vw;
+            top: 110px;
+            left: -10000000px;
 
-            width: 83%;
-            height: 100vh;
+            width: 100vw;
+            height: calc(100vh - 112px);
             overflow-y: auto;
 
             border-top: 0;
-            background-color: $color-white;
+            background-color: $color-main;
             z-index: 99999999;
 
             padding: 0;
@@ -36,6 +34,8 @@
             }
 
             .y-close {
+                display: none;
+
                 position: fixed;
                 top: 0;
                 right: 100vw;
@@ -62,162 +62,26 @@
                 max-width: 100%;
             }
         }
-    }
-}
 
-.y-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+        &-list {
+            display: flex;
 
-    @include breakpoint('mobile') {
-        display: block;
-    }
-
-    &__account {
-        @include breakpoint('mobile') {
-            display: flex !important;
-            align-items: center;
-            justify-content: flex-start;
-
-            background-color: $color-main;
-
-            padding: 30px 20px;
-
-            p {
-                color: $color-white;
-                margin-left: 12px;
-                
-                strong {
-                    display: block;
-                    font-size: 14px;
-                    font-weight: 800;
-                    line-height: 18px;
-                }
-                
-                a {
-                    color: $color-white;
-                    text-decoration: underline;
-                    
-                    font-size: 14px;
-                    font-weight: 800;
-                    line-height: 18px;
-                }
-            }
-        }
-    }
-    
-    &__departamento {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        @include breakpoint('mobile') {
-            display: block;
-        }
-
-        &--item {
-
-            &:first-child {
-                margin-left: 0;
-            }
-
-            &:hover {
-                &>a {
-                    color: $color-main;
-                    border-color: $color-main;
-                }
-
-                .y-menu__submenu {
-                    display: block;
-                }
-            }
-
-            &>a {
-                padding-bottom: 10px;
-                border-bottom: 4px solid $color-white;
-            }
-
-            &.y-destaque {
-                background-color: $color-main;
-                a {
-                    color: $color-white;
-                    &::after {
-                        display: none;
-                    }
-                }
-            }
-
-            a {
+            @include breakpoint('mobile') {
                 display: block;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 20px;
-                color: $color-gray-8;
-                padding: 8px 0;
+            }
 
-                @include breakpoint('mobile') {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    width: 100%;
-                    text-align: left;
-                    line-height: 45px;
-                    padding: 0 25px 0 20px;
-                    text-transform: uppercase;
-                    border-bottom: 1px solid $color-gray-1;
+            li {
+                margin: 0 21px;
 
-                    &::after {
-                        content: "\f054";
-                        font-family: FontAwesome;
-                        color: $color-gray-8;
-                        font-size: 15px;
+                a {
+                    font-size: 16px;
+                    line-height: 40px;
+                    color: $color-black;
+
+                    @include breakpoint('mobile') {
+                        color: $color-white;
                     }
                 }
-
-                &:hover {
-                    color: $color-main;
-                }
-            }
-        }
-    }
-
-    &__submenu {
-        display: none;
-
-        position: absolute;
-        left: 0;
-        
-        width: 100%;
-        z-index: 99999;
-        
-        background-color: $color-white;
-        border: 1px solid #F5F5F5;
-
-        .container {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-        }
-
-        &--itens {
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: 18px 0 28px;
-
-            h3 {
-                font-family: $font-asap;
-                font-size: 16px;
-                line-height: 20px;
-                font-weight: 800;
-                color: $color-main;
-                margin-bottom: 11px;
-            }
-
-            ul {
-                margin-right: 90px;
             }
         }
     }

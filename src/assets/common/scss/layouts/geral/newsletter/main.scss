@@ -4,11 +4,10 @@
 
 .j-newsletter {
     background-color: $color-main;
-    padding: 12px 0;
+    padding: 23px 0;
     
     @include breakpoint('mobile') {
-        padding: 25px 0 30px;
-        margin: 43px 0 35px;
+        padding: 39px 0 35px;
     }
 
     .container {
@@ -21,105 +20,87 @@
         }
     }
 
-    .j-news {
-        &__left {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            margin-right: 24px;
-            
+    .j-title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-right: 30px;
+
+        .icon {
+            margin-right: 10px;
+        }
+        
+        h4 {
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 300;
+            color: $color-white;
+        }
+    }
+
+
+    form {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @include breakpoint('mobile') {
+            flex-direction: column;
+        }
+
+        fieldset {
+            border: 0;
+
             @include breakpoint('mobile') {
-                flex-direction: column;
-                justify-content: center;
-                margin-right: 0;
+                margin: 17px 0;
+                width: 100%;
             }
 
-            p {
+            input {
+                width: 266px;
+                height: 45px;
+                line-height: 45px;
+                background-color: $color-white;
+                border: 1px solid #CBCBCB;
+                border-radius: 5px;
+                padding: 0 20px;
                 font-size: 14px;
-                line-height: 20px;
-                font-weight: 400;
-                color: $color-white;
-                margin-left: 10px;
+                font-weight: 300;
+                color: $color-gray-7;
+                text-align: left;
+                margin-right: 35px;
 
                 @include breakpoint('mobile') {
-                    @include h5;
-                    margin: 0;
-                    text-align: center;
+                    margin: 22px auto;
+                    display: block;
                 }
             }
         }
 
-        &__right {
-            margin-left: 23px;
+        .btn-newsletter {
+            width: 127px;
+            height: 45px;
+            background-color: $color-white;
+            border: 1px solid #CBCBCB;
+            border-radius: 5px;
+            text-align: center;
+            color: $color-main;
+            font-size: 14px;
 
             @include breakpoint('mobile') {
-                margin-left: 0;
-                width: 100%;
+                display: block;
+                margin: 8px auto;
             }
+        }
+    }
 
-            form {
-                position: relative;
-                display: flex;
-                align-items: center;
+    .j-newsletter__success {
+        display: none;
 
-                @include breakpoint('mobile') {
-                    flex-direction: column;
-                }
-
-                fieldset {
-                    border: 0;
-
-                    @include breakpoint('mobile') {
-                        margin: 17px 0;
-                        width: 100%;
-                    }
-
-                    input {
-                        width: 237px;
-                        height: 30px;
-                        line-height: 30px;
-                        background-color: $color-white;
-                        border: 1px solid $color-white;
-                        border-radius: 50px;
-                        padding: 0 13px;
-                        font-size: 14px;
-                        font-weight: 400;
-                        color: $color-gray-6;
-                        text-align: center;
-
-                        @include breakpoint('mobile') {
-                            width: 100%;
-                        }
-                    }
-                }
-
-                .btn-newsletter {
-                    width: 100px;
-                    height: 30px;
-                    margin-left: 12px;
-                    background-color: $color-main;
-                    border: 1px solid $color-white;
-                    border-radius: 50px;
-                    text-align: center;
-                    color: $color-white;
-                    text-transform: uppercase;
-                    font-size: 14px;
-
-                    @include breakpoint('mobile') {
-                        width: 100%;
-                    }
-                }
-            }
-
-            .j-newsletter__success {
-                display: none;
-
-                &.is--active {
-                    display: block;
-                    color: $color-main;
-                    @include t1;
-                }
-            }
+        &.is--active {
+            display: block;
+            color: $color-main;
+            @include t1;
         }
     }
 }

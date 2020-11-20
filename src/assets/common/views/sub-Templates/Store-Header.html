@@ -1,28 +1,13 @@
 <header class="y-header">
-    <div class="y-header__topbar">
-        <div class="container y-desktop">
-            <div class="y-header__topbar--left">
-                <vtex.cmc:iconphone />
-                +55 11 2081-7160
-            </div>
-            <ul class="y-header__topbar--right">
-                <li class="y-header__topbar--right-item">
-                    <a href="/quem-somos">Quem Somos</a>
-                </li>
-                <li class="y-header__topbar--right-middle"> | </li>
-                <li class="y-header__topbar--right-item">
-                    <a href="/fale-conosco">Fale Conosco</a>
-                </li>
-            </ul>
-        </div>
-        <div class="container y-mobile">
-            <p>até <strong>10x sem juros</strong></p>
-        </div>
-    </div>
     <div class="container">
         <div class="y-header__top">
-            <div class="y-header__top--menu js--menu y-mobile">
-                <vtex.cmc:iconmenu />
+            <div class="y-header__top--menu y-mobile">
+                <div class="js--menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="23" viewBox="0 0 30 23"><g transform="translate(1.5 1.5)"><line x2="27" fill="none" stroke="#f07f3c" stroke-linecap="round" stroke-width="3"/><line x2="27" transform="translate(0 10)" fill="none" stroke="#f07f3c" stroke-linecap="round" stroke-width="3"/><line x2="27" transform="translate(0 20)" fill="none" stroke="#f07f3c" stroke-linecap="round" stroke-width="3"/></g></svg>
+                </div>
+                <a href="/account" class="icon-user">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23.297" height="25" viewBox="0 0 23.297 25"><g transform="translate(0 14.081)"><path d="M29.088,288.389c-7.512,0-11.648,3.554-11.648,10.006a.912.912,0,0,0,.912.912H39.824a.912.912,0,0,0,.912-.912C40.737,291.943,36.6,288.389,29.088,288.389Zm-9.79,9.094c.359-4.825,3.648-7.269,9.79-7.269s9.432,2.444,9.791,7.269Z" transform="translate(-17.44 -288.389)" fill="#2d2926"/></g><g transform="translate(5.596)"><path d="M138.1,0a5.98,5.98,0,0,0-6.052,6.174,6.073,6.073,0,1,0,12.1,0A5.98,5.98,0,0,0,138.1,0Zm0,10.919a4.513,4.513,0,0,1-4.227-4.745A4.149,4.149,0,0,1,138.1,1.825a4.2,4.2,0,0,1,4.227,4.349A4.513,4.513,0,0,1,138.1,10.919Z" transform="translate(-132.049)" fill="#2d2926"/></g></svg>
+                </a>
             </div>
             <div class="y-header__top--left">
                 <a href="/">
@@ -30,38 +15,66 @@
                 </a>
             </div>
             <div class="y-header__top--middle">
-                <span class="y-mobile js--search">
-                    <vtex.cmc:iconsearch />
-                </span>
                 <div class="js--search-content">
                     <div class="y-mobile y-close">
                         <span>+</span>
                     </div>
                     <vtex.cmc:fullTextSearchBox/>
                 </div>
+                
+                <div class="y-header__menu">
+                    <div class="y-mobile y-search">
+                        <vtex.cmc:fullTextSearchBox/>
+                    </div>
+                    <ul class="y-header__menu-list">
+                        <li>
+                            <a href="" class="y-header__menu-link">Colchão </a>
+                        </li>
+                        <li>
+                            <a href="" class="y-header__menu-link">Travesseiro</a>
+                        </li>
+                        <li>
+                            <a href="" class="y-header__menu-link">Quem somos</a>
+                        </li>
+                        <li>
+                            <a href="" class="y-header__menu-link">Certificação</a>
+                        </li>
+                        <li>
+                            <a href="" class="y-header__menu-link">Entrega</a>
+                        </li>
+                        <li>
+                            <a href="" class="y-header__menu-link">Box</a>
+                        </li>
+                        <li>
+                            <a href="" class="y-header__menu-link">Cabeceira</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="y-header__top--right">
+                <div class="y-header__search--right y-desktop">
+                    <div class="js--open-search">
+                        <span>BUSCAR</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><path d="M24.715,23.341l-6.1-6.1a10.537,10.537,0,1,0-1.375,1.374l6.1,6.1a.972.972,0,1,0,1.375-1.375ZM1.944,10.522A8.578,8.578,0,1,1,10.522,19.1,8.588,8.588,0,0,1,1.944,10.522Z" fill="#2d2926"/></svg>
+                    </div>
+                </div>
                 <div class="y-header__account y-desktop">
                     <a href="/account" class="y-header__account-icon">
                         <span class="icon">        
-                            <vtex.cmc:iconaccount />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23.297" height="25" viewBox="0 0 23.297 25"><g transform="translate(0 14.081)"><path d="M29.088,288.389c-7.512,0-11.648,3.554-11.648,10.006a.912.912,0,0,0,.912.912H39.824a.912.912,0,0,0,.912-.912C40.737,291.943,36.6,288.389,29.088,288.389Zm-9.79,9.094c.359-4.825,3.648-7.269,9.79-7.269s9.432,2.444,9.791,7.269Z" transform="translate(-17.44 -288.389)" fill="#2d2926"/></g><g transform="translate(5.596)"><path d="M138.1,0a5.98,5.98,0,0,0-6.052,6.174,6.073,6.073,0,1,0,12.1,0A5.98,5.98,0,0,0,138.1,0Zm0,10.919a4.513,4.513,0,0,1-4.227-4.745A4.149,4.149,0,0,1,138.1,1.825a4.2,4.2,0,0,1,4.227,4.349A4.513,4.513,0,0,1,138.1,10.919Z" transform="translate(-132.049)" fill="#2d2926"/></g></svg>
                         </span>
-                        <span>Entre ou Cadastre-se</span>
                     </a>
                 </div>
                 <div class="y-header__top--right-minicart">
                     <div class="y-minicart">
                         <span class='y-minicart--icon js--open-minicart'>
-                            <vtex.cmc:iconminicart />
-                            <span class="y-desktop">Carrinho</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27.316" height="25" viewBox="0 0 27.316 25"><g transform="translate(18.222 18.188)"><path d="M344.953,362.612a3.406,3.406,0,1,0,3.406,3.406A3.41,3.41,0,0,0,344.953,362.612Zm0,4.768a1.362,1.362,0,1,1,1.362-1.362A1.364,1.364,0,0,1,344.953,367.38Z" transform="translate(-341.547 -362.612)" fill="#f07f3c"/></g><g transform="translate(0 0)"><path d="M27.1,26.729a1.021,1.021,0,0,0-.8-.392H6.307l-.92-3.848a1.022,1.022,0,0,0-.994-.784H1.022a1.022,1.022,0,1,0,0,2.044H3.587l3.321,13.9a1.022,1.022,0,0,0,.994.784H23.808a1.022,1.022,0,0,0,.992-.776L27.286,27.6A1.024,1.024,0,0,0,27.1,26.729Zm-4.09,9.655H8.708l-1.913-8H24.989Z" transform="translate(0 -21.705)" fill="#f07f3c"/></g><g transform="translate(5.858 18.188)"><path d="M113.212,362.612a3.406,3.406,0,1,0,3.406,3.406A3.41,3.41,0,0,0,113.212,362.612Zm0,4.768a1.362,1.362,0,1,1,1.362-1.362A1.364,1.364,0,0,1,113.212,367.38Z" transform="translate(-109.806 -362.612)" fill="#f07f3c"/></g></svg>
                             <vtex.cmc:AmountItemsInCart />
                         </span>
                         <div class="y-minicart__content">
                             <div class="y-minicart-header">
                                 <p class='y-minicart__content--title'>
-                                    <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 2H4.36L5.05 4.07L8 12.91V16C8 16 8 16 8 16.05C7.54434 16.5057 7.22291 17.078 7.07095 17.7042C6.91898 18.3304 6.94234 18.9864 7.13847 19.6002C7.3346 20.2141 7.69593 20.7621 8.18285 21.1841C8.66977 21.6062 9.26349 21.8861 9.89894 21.9932C10.5344 22.1002 11.187 22.0303 11.7854 21.791C12.3837 21.5517 12.9046 21.1523 13.291 20.6366C13.6774 20.1208 13.9143 19.5087 13.9759 18.8673C14.0375 18.2258 13.9212 17.5798 13.64 17H17.34C17.1152 17.468 16.999 17.9808 17 18.5C17 19.1922 17.2053 19.8689 17.5899 20.4445C17.9744 21.0201 18.5211 21.4687 19.1606 21.7336C19.8001 21.9985 20.5039 22.0678 21.1828 21.9327C21.8617 21.7977 22.4854 21.4644 22.9749 20.9749C23.4644 20.4854 23.7977 19.8617 23.9327 19.1828C24.0678 18.5039 23.9985 17.8001 23.7336 17.1606C23.4687 16.5211 23.0201 15.9744 22.4445 15.5899C21.8689 15.2053 21.1922 15 20.5 15H10V13.75H22C22.2096 13.7505 22.4142 13.6852 22.5846 13.5632C22.7551 13.4411 22.8829 13.2686 22.95 13.07L25.51 5.38C25.6098 5.07929 25.6367 4.75917 25.5886 4.44602C25.5404 4.13286 25.4186 3.83562 25.233 3.57879C25.0475 3.32196 24.8036 3.11289 24.5214 2.9688C24.2392 2.8247 23.9268 2.74971 23.61 2.75H6.72L6 0.68C5.93462 0.486161 5.81136 0.317039 5.64685 0.195445C5.48234 0.0738505 5.28449 0.00563499 5.08 0H1C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1C0 1.26522 0.105357 1.51957 0.292893 1.70711C0.48043 1.89464 0.734784 2 1 2ZM12 18.5C12 18.7967 11.912 19.0867 11.7472 19.3334C11.5824 19.58 11.3481 19.7723 11.074 19.8858C10.7999 19.9993 10.4983 20.0291 10.2074 19.9712C9.91639 19.9133 9.64912 19.7704 9.43934 19.5607C9.22956 19.3509 9.0867 19.0836 9.02882 18.7926C8.97094 18.5017 9.00065 18.2001 9.11418 17.926C9.22771 17.6519 9.41997 17.4176 9.66665 17.2528C9.91332 17.088 10.2033 17 10.5 17C10.8978 17 11.2794 17.158 11.5607 17.4393C11.842 17.7206 12 18.1022 12 18.5ZM22 18.5C22 18.7967 21.912 19.0867 21.7472 19.3334C21.5824 19.58 21.3481 19.7723 21.074 19.8858C20.7999 19.9993 20.4983 20.0291 20.2074 19.9712C19.9164 19.9133 19.6491 19.7704 19.4393 19.5607C19.2296 19.3509 19.0867 19.0836 19.0288 18.7926C18.9709 18.5017 19.0007 18.2001 19.1142 17.926C19.2277 17.6519 19.42 17.4176 19.6666 17.2528C19.9133 17.088 20.2033 17 20.5 17C20.8978 17 21.2794 17.158 21.5607 17.4393C21.842 17.7206 22 18.1022 22 18.5ZM23.61 4.75L21.28 11.75H9.72L7.39 4.75H23.61Z" fill="#EE3524"/>
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27.316" height="25" viewBox="0 0 27.316 25"><g transform="translate(18.222 18.188)"><path d="M344.953,362.612a3.406,3.406,0,1,0,3.406,3.406A3.41,3.41,0,0,0,344.953,362.612Zm0,4.768a1.362,1.362,0,1,1,1.362-1.362A1.364,1.364,0,0,1,344.953,367.38Z" transform="translate(-341.547 -362.612)" fill="#f07f3c"/></g><g transform="translate(0 0)"><path d="M27.1,26.729a1.021,1.021,0,0,0-.8-.392H6.307l-.92-3.848a1.022,1.022,0,0,0-.994-.784H1.022a1.022,1.022,0,1,0,0,2.044H3.587l3.321,13.9a1.022,1.022,0,0,0,.994.784H23.808a1.022,1.022,0,0,0,.992-.776L27.286,27.6A1.024,1.024,0,0,0,27.1,26.729Zm-4.09,9.655H8.708l-1.913-8H24.989Z" transform="translate(0 -21.705)" fill="#f07f3c"/></g><g transform="translate(5.858 18.188)"><path d="M113.212,362.612a3.406,3.406,0,1,0,3.406,3.406A3.41,3.41,0,0,0,113.212,362.612Zm0,4.768a1.362,1.362,0,1,1,1.362-1.362A1.364,1.364,0,0,1,113.212,367.38Z" transform="translate(-109.806 -362.612)" fill="#f07f3c"/></g></svg>
                                     <span>Carrinho</span>
                                 </p>
                                 <span class="y-minicart-close js--close-minicart">X</span>
@@ -71,14 +84,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="y-header__menu">
-        <div class="y-mobile y-close">
-            <span>+</span>
-        </div>
-        <div class="container">
-            <vtex.cmc:menu />
         </div>
     </div>
 </header>

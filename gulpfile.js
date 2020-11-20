@@ -115,7 +115,6 @@ function scriptsCommon(){
       }))
     .pipe(uglify())
     .pipe(gulp.dest(paths.common.scripts.dest))
-    .b
 }
 
 function vtexLocal() {

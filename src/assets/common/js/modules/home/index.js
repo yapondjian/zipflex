@@ -1,9 +1,14 @@
 const Methods = {
     init() {
         Methods.bannerMain();
-        Methods.sliderShelf();
-        Methods.brands();
-        Methods.oqueProcura();
+        Methods.depoimentos();
+        
+        if( window.innerWidth <= 767 ) {
+            Methods.beneficios();
+            Methods.bannerTopo();
+        } else {
+            Methods.destaque();
+        }
     },
 
     bannerMain() {
@@ -21,30 +26,24 @@ const Methods = {
         });
     },
 
-    sliderShelf() {
-        $('.helperComplement').remove();
-
-        $(".y-home__shelfs ul").slick({
-            arrows: true,
-            dots: true,
-            infinite: true,
-            slidesToShow: 4,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '30px'
-                    }
-                }
-            ]
+    bannerTopo() {
+        $(".y-half").slick({
+            arrows: false,
+            dots: true
         });
     },
 
-    oqueProcura() {
+    beneficios() {
+        $(".y-benefits__content").slick({
+            arrows: true,
+            dots: false,
+            infinite: false,
+            slidesToShow: 1
+        });
+    },
+    
+    destaque() {
+        $('.helperComplement').remove();
         $('.y-find__slick').slick({
             arrows: true,
             dots: true,
@@ -66,12 +65,20 @@ const Methods = {
         });
     },
 
-    brands() {
-        $(".y-brand__slick").slick({
-            arrows: true,
+    depoimentos() {
+        $(".y-depoimentos__list").slick({
+            arrows: false,
             dots: true,
             infinite: false,
-            slidesToShow: 6
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings : {
+                        slidesToShow: 1
+                    }
+                }
+            ]
         })
     }
 };

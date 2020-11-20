@@ -59,3 +59,15 @@
 		}
 	}
 }
+
+.y-half {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin: 22px auto 45px;
+
+	@include breakpoint('mobile') {
+		display: block;
+		margin: 15px auto 25px;
+	}
+}

@@ -5,9 +5,8 @@ const Methods = {
     },
 
     openMenu() {
-        $('.js--menu, .y-header__menu .y-close').live('click', function(){
-            $('body').toggleClass('no--scroll');
-            $('.y-header__menu').toggleClass('is--active')
+        $('.js--menu').live('click', function(){
+            $('.y-header__menu').toggleClass('is--active');
         })
     },
 

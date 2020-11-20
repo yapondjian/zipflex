@@ -8,7 +8,7 @@
 <article class="y-shelf__item has--carousel js--shelf-item" data-product-id="$productId">
     <div class="y-shelf__item-img">
         <a class="y-shelf__item-img__img" title="$productTitle" href="$productLink">
-			$product.GetImageTag(162,162)
+			$product.GetImageTag(420,250)
 		</a>
     </div>
     <div class="y-shelf__item-content">
@@ -20,31 +20,31 @@
         </h2>
         
         #if ($product.IsInStock)
-            <div class="y-shelf__item-compared">
-                $product.Compare
-            </div>
-
             <div class="y-shelf__item--price">
-                #if ($product.HasBestPrice)
-                    <p class="y-shelf__item--price-old">
-                        <del>$product.ListPrice</del>
-                    </p>
-                #end
-
-                #if ($product.BestPrice > 1)
-                    <p class="y-shelf__item--price-new">
-                        $product.BestPrice
-                    </p>
-                #end
-
-                <p class="y-shelf__item--installment">
-                    #if ($product.NumbersOfInstallment > 1)
-                    ou <strong>${product.NumbersOfInstallment}x</strong> de <strong>$product.InstallmentValue</strong>
+                <div class="y-shelf__item--box">
+                    #if ($product.HasBestPrice)
+                        <p class="y-shelf__item--price-old">
+                            <del>$product.ListPrice</del>
+                        </p>
                     #end
-                </p>
+
+                    #if ($product.BestPrice > 1)
+                        <p class="y-shelf__item--price-new">
+                            $product.BestPrice
+                        </p>
+                    #end
+                </div>
+                <div class="y-shelf__item--avista">
+                    <span>À vista</span>
+                </div>
             </div>
+
+            <a href="$productLink" class="y-shelf__item--buy">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27.316" height="25" viewBox="0 0 27.316 25"><g transform="translate(18.222 18.188)"><path d="M344.953,362.612a3.406,3.406,0,1,0,3.406,3.406A3.41,3.41,0,0,0,344.953,362.612Zm0,4.768a1.362,1.362,0,1,1,1.362-1.362A1.364,1.364,0,0,1,344.953,367.38Z" transform="translate(-341.547 -362.612)" fill="#E8E8E8"></path></g><g transform="translate(0 0)"><path d="M27.1,26.729a1.021,1.021,0,0,0-.8-.392H6.307l-.92-3.848a1.022,1.022,0,0,0-.994-.784H1.022a1.022,1.022,0,1,0,0,2.044H3.587l3.321,13.9a1.022,1.022,0,0,0,.994.784H23.808a1.022,1.022,0,0,0,.992-.776L27.286,27.6A1.024,1.024,0,0,0,27.1,26.729Zm-4.09,9.655H8.708l-1.913-8H24.989Z" transform="translate(0 -21.705)" fill="#E8E8E8"></path></g><g transform="translate(5.858 18.188)"><path d="M113.212,362.612a3.406,3.406,0,1,0,3.406,3.406A3.41,3.41,0,0,0,113.212,362.612Zm0,4.768a1.362,1.362,0,1,1,1.362-1.362A1.364,1.364,0,0,1,113.212,367.38Z" transform="translate(-109.806 -362.612)" fill="#E8E8E8"></path></g></svg>
+                Adicionar ao carrinho
+            </a>
         #else
-            <p class="y-shelf__item-outStcok-text">Sob Consulta</p>
+            <p class="y-shelf__item-outStcok-text">Sem estoque</p>
         #end
     </div>
 </article>

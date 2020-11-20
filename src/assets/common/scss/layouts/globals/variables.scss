@@ -1,8 +1,10 @@
-$font-main: 'Source Sans Pro', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;300;400;600;700;800;900&display=swap');
+
+$font-main: 'MuseoModerno', cursive;
 $font-asap: 'Asap', sans-serif;
 
 
-$color-main: #C21F26;
+$color-main: #F07F3C;
 $color-yellow: #F7EC00;
 $color-blue: #00AEEF;
 $color-pink: #D60C8C;
@@ -12,20 +14,12 @@ $color-green: #25D366;
 $color-gradiente: linear-gradient(270deg, #F7EC00 -10.05%, #EE3524 100%);
 
 $color-white: #FFFFFF;
-$color-black: #1A1818;
+$color-black: #2D2926;
 
 $color-gray-1: #F5F5F5;
-$color-gray-2: #E4E3E3;
+$color-gray-2: #E6E6E6;
 $color-gray-3: #DFDFDF;
 $color-gray-4: #C8C8C8;
 $color-gray-6: #858585;
-$color-gray-7: #6D6D6D;
-$color-gray-8: #333333;
-
-@mixin yBorder {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 6px;
-    background-image: linear-gradient(90deg,$color-main 0,$color-main 16%,$color-yellow 0,$color-yellow 32%, $color-blue 0, $color-blue 48%,$color-pink 0,$color-pink 64%,$color-orange 0,$color-orange 80%,$color-green 0,$color-green 100%);
-}
+$color-gray-7: #939393;
+$color-gray-8: #1F1C1A;

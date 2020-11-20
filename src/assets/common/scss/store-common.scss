@@ -78,6 +78,7 @@ body {
 	line-height: 24px;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
 
 	&.no--scroll {
 		overflow: hidden;
@@ -101,7 +102,7 @@ body {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 1100px;
+	width: 1300px;
 	max-width: 95vw;
 }
 
@@ -176,7 +177,7 @@ section#vtex-callcenter__toolbar {
 			height: 13px;
 			background-color: $color-white;
 			border-radius: 50%;
-			border: 1px solid $color-gray-8;
+			border: 1px solid $color-main;
 			position: relative;
 			cursor: pointer;
 			transition: all 225ms ease;
@@ -184,24 +185,48 @@ section#vtex-callcenter__toolbar {
 
 		&.slick-active {
 			button {
-				background-color: $color-gray-8;
+				background-color: $color-main;
 			}
 		}
 	}
 }
 
 .y-title {
-	margin: 65px auto 34px;
 	text-align: center;
-	font-family: $font-asap;
-	font-size: 24px;
-	line-height: 27px;
-	font-weight: 400;
-	text-transform: uppercase;
-	color: $color-gray-8;
+	font-family: $font-main;
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: 900;
+	color: $color-main;
+
+	@include breakpoint('mobile') {
+		font-size: 20px;
+		line-height: 40px;
+		font-weight: 700;
+	}
 
 	strong {
-		font-weight: 700;
+		display: block;
+		font-family: $font-main;
+		font-size: 30px;
+		line-height: 40px;
+		font-weight: 900;
+		color: $color-main;
+		
+		@include breakpoint('mobile') {
+			font-size: 20px;
+			line-height: 40px;
+			font-weight: 700;
+		}
+	}
+	
+	&::after {
+		content: "";
+		display: block;
+		margin: 11px auto 0;
+		width: 92px;
+		height: 3px;
+		background-color: $color-main;
 	}
 }
 
