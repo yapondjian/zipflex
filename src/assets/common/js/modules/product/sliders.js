@@ -2,7 +2,10 @@ const Methods = {
     init() {
         Methods.images();
         Methods.medidas();
-        Methods.products();
+
+        if( window.innerWidth > 767 ) {
+            Methods.products();
+        }
 
         $('.y-product__variations ul .skuList span input').on('change', function(){
             $(".y-images--slider").slick('unslick');
@@ -27,7 +30,15 @@ const Methods = {
             slidesToShow: 1,
             centerMode: true,
             centerPadding: '160px',
-            infinite: true
+            infinite: true,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        centerPadding: '30px'
+                    }
+                }
+            ]
         });
     },
 

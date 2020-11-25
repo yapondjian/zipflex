@@ -46,7 +46,6 @@
                             <div class="y-frete">
                                 <p>Calcule o frete</p>
                                 <vtex.cmc:shippingValue/>
-                                <script>ShippingValue();</script>
                             </div>
                         </div>
     
@@ -62,7 +61,13 @@
                     </div>
 
                     <div class="y-product__bottom">
-                        <vtex.cmc:ilustrativo />
+                        <div class="y-product__bottom--description">
+                            <vtex.cmc:ProductDescription/>
+                        </div>
+
+                        <div class="y-product__bottom--banner">
+                            <vtex.cmc:ilustrativo />
+                        </div>
                     </div>
                 </div>
             </section>

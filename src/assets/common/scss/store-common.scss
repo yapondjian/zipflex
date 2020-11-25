@@ -210,16 +210,15 @@ section#vtex-callcenter__toolbar {
 
 	strong {
 		display: block;
-		font-family: $font-main;
 		font-size: 30px;
 		line-height: 40px;
-		font-weight: 900;
+		font-family: $font-900;
 		color: $color-main;
 		
 		@include breakpoint('mobile') {
 			font-size: 20px;
 			line-height: 40px;
-			font-weight: 700;
+			font-family: $font-700;
 		}
 	}
 	

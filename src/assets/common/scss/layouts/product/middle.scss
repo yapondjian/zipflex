@@ -2,20 +2,39 @@
     &__details {
         padding: 121px 0;
         background: url("/arquivos/maciez-bg.png") no-repeat center center;
+        
+        @include breakpoint('mobile') {
+            padding: 50px 0;
+            background-repeat: repeat-y;
+            flex-direction: column;
+        }
 
         .container {
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @include breakpoint('mobile') {
+                flex-direction: column;
+                padding: 0 15px;
+            }
         }
 
         &--left {
             width: 45%;
             text-align: center;
-        }
 
+            @include breakpoint('mobile') {
+                width: 100%;
+            }
+        }
+        
         &--right {
             width: 55%;
+
+            @include breakpoint('mobile') {
+                width: 100%;
+            }
 
             h5 {
                 text-align: left;
@@ -43,23 +62,41 @@
 
     &__mosaico {
         margin: 90px auto 100px;
+
+        @include breakpoint('mobile') {
+            margin: 35px auto;
+        }
         
         .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+
+            @include breakpoint('mobile') {
+                padding: 0 15px;
+            }
         }
 
         &-image {
             width: 50%;
             text-align: center;
             margin: 150px 0;
-        }
 
+            @include breakpoint('mobile') {
+                width: 100%;
+                margin: 15px 0;
+            }
+        }
+        
         &-text {
             width: 50%;
             padding-left: 80px;
+
+            @include breakpoint('mobile') {
+                width: 100%;
+                padding: 15px 0;
+            }
 
             h3 {
                 color: $color-main;
@@ -78,10 +115,12 @@
                 line-height: 21px;
             }
 
-            &+.y-product__mosaico-text {
-                text-align: right;
-                padding-left: 0;
-                padding-right: 80px;
+            @include breakpoint('desktop') {
+                &+.y-product__mosaico-text {
+                    text-align: right;
+                    padding-left: 0;
+                    padding-right: 80px;
+                }
             }
         }
     }
@@ -119,26 +158,34 @@
             line-height: 39px;
             display: block;
             text-align: center;
+
+            @include breakpoint('mobile') {
+                margin: 30px 0;
+            }
         }
 
         &--slick {
-            padding: 0 480px;
 
+            @include breakpoint('desktop') {
+                padding: 0 480px;
+    
+                .slick-arrow {
+                    &.slick-prev {
+                        left: 485px;
+                    }
+    
+                    &.slick-next {
+                        right: 485px;
+                    }
+                }
+            }
+    
             .slick-arrow {
                 
                 &::after {
                     color: #666666;
                     font-size: 20px;
                 }
-
-                &.slick-prev {
-                    left: 485px;
-                }
-
-                &.slick-next {
-                    right: 485px;
-                }
-
             }
 
             .slick-list {

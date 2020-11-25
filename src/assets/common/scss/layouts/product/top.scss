@@ -5,6 +5,10 @@
         background: url("/arquivos/topo.png") no-repeat top center $color-white;
         padding: 62px 0 190px;
 
+        @include breakpoint('mobile') {
+            padding: 40px 0;
+        }
+
         .container{
             display: flex;
             align-items: center;
@@ -15,23 +19,51 @@
 
     &__left {
         width: 55%;
+
+        @include breakpoint('mobile') {
+            width: 100%;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
     }
 
     &__right {
         width: 45%;
         padding: 0 65px 0 110px;
+
+        @include breakpoint('mobile') {
+            width: 100%;
+            padding: 0 20px;
+        }
     }
 
     &__bottom {
         width: 100%;
-        padding: 110px 0 155px;
 
-        p {
+        @include breakpoint('desktop') {
+            padding: 110px 0 155px;
+        }
+
+        &--description {
+
+            @include breakpoint('desktop') {
+                margin-top: 116px;
+            }
+
+            text-align: center;
             font-size: 16px;
             font-family: $font-300;
             line-height: 19px;
-            color: $color-black;
+            color: $color-gray-8;
+
+            p {
+                font-size: 16px;
+                font-family: $font-300;
+                line-height: 19px;
+                color: $color-gray-8;
+            }
         }
+
 
     }
 
@@ -40,7 +72,10 @@
         margin-top: 15px;
 
         #image {
-            min-height: 450px;
+
+            @include breakpoint('desktop') {
+                min-height: 450px;
+            }
             
             .y-images--slider {
                 display: block;
@@ -96,6 +131,12 @@
         line-height: 54px;
         color: $color-white;
         font-family: $font-700;
+
+        @include breakpoint('mobile') {
+            margin-top: 15px;
+            font-size: 26px;
+            line-height: 32px;
+        }
     }
 
     &__box-price {
@@ -138,6 +179,10 @@
                 line-height: 13px;
                 color: $color-white;
                 margin-bottom: 7px;
+
+                @include breakpoint('mobile') {
+                    color: $color-gray-8;
+                }
             }
 
             .box-qtd {
@@ -155,6 +200,10 @@
                     font-size: 20px;
                     font-family: $font-500;
                     color: #022B36;
+
+                    @include breakpoint('mobile') {
+                        border-color: $color-gray-8;
+                    }
                 }
                 
                 .btn {
@@ -173,6 +222,10 @@
                     cursor: pointer;
                     font-size: 14px;
                     font-family: $font-500;
+
+                    @include breakpoint('mobile') {
+                        border: 0.5px solid $color-gray-8;
+                    }
                     
                     &-mais {
                         top: 0;
@@ -198,6 +251,10 @@
                 font-weight: 500;
                 line-height: 13px;
                 margin: 0 0 7px;
+                
+                @include breakpoint('mobile') {
+                    color: $color-gray-8;
+                }
             }
 
             h1 {
@@ -223,6 +280,10 @@
                         border-radius: 50px;
                         position: relative;
                         padding: 0 20px;
+
+                        @include breakpoint('mobile') {
+                            border: 1px solid $color-gray-8;
+                        }
         
                         .quantity {
                             display: none;
@@ -363,6 +424,11 @@
                         line-height: 42px;
                         color: $color-white;
                         font-weight: 500;
+
+                        @include breakpoint('mobile') {
+                            font-size: 26px;
+                            line-height: 32px;
+                        }
                     }
                 }
         
@@ -400,6 +466,12 @@
                 color: $color-white;
                 font-weight: 500;
                 margin-bottom: 7px;
+
+                @include breakpoint('mobile') {
+                    color: $color-gray-8;
+                    font-size: 12px;
+                    line-height: 15px;
+                }
 
                 &::before {
                     // content: "Escolha sua  ";
@@ -440,12 +512,17 @@
                         font-size: 14px;
                         line-height: 40px;
                         font-family: $font-500;
-                        color: $color-black;
+                        color: $color-gray-8;
 
                         cursor: pointer;
 
                         &:hover {
                             border-color: $color-main;
+                        }
+
+                        @include breakpoint('mobile') {
+                            border-color: $color-gray-8;
+                            margin: 0 10px 10px 0;
                         }
                     }
                 }
