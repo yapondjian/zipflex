@@ -97,6 +97,213 @@
         justify-content: space-between;
     }
 
+    &__inputs {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .y-qtd {
+            margin-right: 25px;
+
+            p {
+                font-family: $font-roboto;
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 13px;
+                color: $color-white;
+                margin-bottom: 7px;
+            }
+
+            .box-qtd {
+                position: relative;
+                width: 75px;
+
+                input {
+                    width: 50px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    background-color: $color-white;
+                    border: 1px solid $color-white;
+                    border-radius: 5px 0 0 5px;
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: #022B36;
+                }
+                
+                .btn {
+                    color: #022B36;
+                    position: absolute;
+                    right: 0;
+                    width: 22px;
+                    height: 20px;
+                    line-height: 20px;
+                    border: 1px solid $color-white;
+                    background-color: $color-white;
+                    box-shadow: none;
+                    outline: none;
+                    text-align: center;
+                    appearance: none;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 500;
+                    
+                    &-mais {
+                        top: 0;
+                        border-radius: 0 5px 0 0;
+                    }
+                    
+                    &-menos {
+                        bottom: 0;
+                        border-radius: 0 0 5px 0;
+                    }
+                }
+            }
+        }
+
+        .y-frete {
+            width: 100%;
+            margin: 0 auto;
+
+            p {
+                color: $color-white;
+                font-family: $font-roboto;
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 13px;
+                margin: 0 0 7px;
+            }
+
+            h1 {
+                display: none;
+            }
+
+            #popupCalculoFreteWrapper {
+                display: none;
+            }
+
+            #calculoFrete {
+                h1,
+                h2,
+                .close {
+                    display: none;
+                }
+
+                .content {
+                    fieldset {
+                        border: none;
+                        background-color: $color-white;
+                        width: 191px;
+                        border-radius: 50px;
+                        position: relative;
+                        padding: 0 20px;
+        
+                        .quantity {
+                            display: none;
+                        }
+        
+                        .prefixo {
+                            font-size: 0px;
+                            width: 100%;
+                            
+                        }
+
+                        .lnkExterno {
+                            display: none;
+                        }
+
+                        input {
+                            width: 80%;
+                            height: 40px;
+                            border: 0;
+                            color: #ACACAC;
+                            font-size: 12px;
+                            font-weight: 600;
+                            line-height: 40px;
+                            padding: 6px;
+                            
+                            &::placeholder {
+                                color: #ACACAC;
+                            }
+
+                            &[type="button"] {
+                                display: block;
+                                color: $color-main;
+                                background-color: $color-white;
+                                width: 40px;
+                                height: 40px;
+                                font-size: 12px;
+                                font-weight: 700;
+                                line-height: 40px;
+                                text-transform: uppercase;
+                                margin: 0 10px;
+                                border: none;
+                                cursor: pointer;
+                                padding: 0;
+                                position: absolute;
+                                right: 10px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .freight-values {
+                margin: 7px 0;
+                max-width: 343px;
+                width: 100%;
+
+                table {
+                    width: 100%;
+
+                    tr {
+                        width: 100%;
+                    }
+                    th {
+                        height: auto;
+                        padding: 0;
+
+                        &:first-child {
+                            font-size: 0;
+                            &::before {
+                                content: "Valor";
+                                font-family: $font-main;
+                                font-size: 18px;
+                                color: $color-white;
+                                display: block;
+                                text-align: left;
+                            }
+                        }
+                        &:nth-child(2) {
+                            font-size: 0;
+                            &::before {
+                                content: "Prazo";
+                                font-family: $font-main;
+                                font-size: 18px;
+                                color: $color-white;
+                                display: block;
+                                text-align: left;
+                            }
+                        }
+                    }
+                    th,
+                    td {
+                        width: 50%;
+                        vertical-align: middle;
+                    }
+                    td {
+                        font-family: $font-roboto;
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+
     &__price {
 
         .productPrice {
@@ -169,7 +376,7 @@
                 margin-bottom: 7px;
 
                 &::before {
-                    content: "Escolha sua  ";
+                    // content: "Escolha sua  ";
                     font-family: $font-roboto;
                     font-size: 10px;
                     line-height: 13px;
