@@ -1,4 +1,4 @@
-import Atendimento from './atendimento';
+import BackToTop from './backToTop';
 import Minicart from './minicart'
 import Menu from "./menu";
 import Newsletter from "./newsletter";
@@ -6,8 +6,8 @@ import Newsletter from "./newsletter";
 
 const Methods = {
 	init() {
-		Atendimento.init();
-		// Minicart.init();
+		BackToTop.init();
+		Minicart.init();
 		Menu.init();
 		// Newsletter.init();
 		Methods.shelfPrice();

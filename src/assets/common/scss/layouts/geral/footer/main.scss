@@ -116,6 +116,7 @@
     &__bottom {
         width: 100%;
         background-color: $color-white;
+        padding: 0 0 50px;
         
         &--copy {
             text-align: center;
@@ -143,5 +144,16 @@
                 }
             }
         }
+    }
+
+    .container {
+        position: relative;
+    }
+
+    #y-top {
+        position: absolute;
+        bottom: 105px;
+        right: 30px;
+        cursor: pointer;
     }
 }
