@@ -155,5 +155,10 @@
         bottom: 105px;
         right: 30px;
         cursor: pointer;
+
+        @include breakpoint('mobile') {
+            bottom: 30px;
+            right: 15px;
+        }
     }
 }

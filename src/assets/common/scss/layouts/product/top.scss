@@ -41,7 +41,7 @@
         width: 100%;
 
         @include breakpoint('desktop') {
-            padding: 110px 0 155px;
+            padding: 110px 0 0;
         }
 
         &--description {
@@ -65,10 +65,10 @@
         }
 
         &--banner {
-            margin: 120px auto;
+            margin: 120px auto 0;
 
             @include breakpoint('mobile') {
-                margin: 60px auto;
+                margin: 40px auto 0;
             }
         }
 

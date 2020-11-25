@@ -29,16 +29,8 @@ const Methods = {
             dots: false,
             slidesToShow: 1,
             centerMode: true,
-            centerPadding: '160px',
-            infinite: true,
-            responsive: [
-                {
-                    breakpoint: 767,
-                    settings: {
-                        centerPadding: '30px'
-                    }
-                }
-            ]
+            centerPadding: '30px',
+            infinite: true
         });
     },
 
