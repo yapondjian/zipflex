@@ -245,7 +245,7 @@
             vertical-align: middle;
             font-size: 22px;
             line-height: 26px;
-            font-weight: 700;
+            font-family: $font-700;
             color: $color-black;
             width: 30%;
         }
@@ -288,7 +288,7 @@
                         color: $color-main;
                         font-size: 32px;
                         line-height: 38px;
-                        font-weight: 500;
+                        font-family: $font-500;
                     }
                     .valor-dividido {
                         color: $color-black;

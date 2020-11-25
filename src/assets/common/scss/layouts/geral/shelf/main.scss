@@ -68,7 +68,7 @@
             a {
                 display: block;
                 font-size: 18px;
-                font-weight: 300;
+                font-family: $font-300;
                 color: $color-gray-8;
                 line-height: 20px;
                 text-align: center;
@@ -113,7 +113,7 @@
             &-old {
                 font-size: 16px;
                 line-height: 21px;
-                font-weight: 300;
+                font-family: $font-300;
                 color: #939393;
                 text-decoration: line-through;
                 margin-bottom: 10px;
@@ -123,7 +123,7 @@
             &-new {
                 font-size: 26px;
                 line-height: 28px;
-                font-weight: bold;
+                font-family: $font-700;
                 color: $color-black;
                 text-align: center;
             }
@@ -141,7 +141,7 @@
             span {
                 font-size: 16px;
                 line-height: 21px;
-                font-weight: 300;
+                font-family: $font-300;
                 color: #939393;
             }
             
@@ -150,7 +150,7 @@
                 color: #39A367;
                 font-size: 26px;
                 line-height: 29px;
-                font-weight: 700;
+                font-family: $font-700;
             }
         }
 
@@ -198,7 +198,7 @@
         }
 
         &-outStcok-text {
-            font-weight: 400;
+            font-family: $font-300;
             font-size: 14px;
             color: $color-gray-8;
             width: 100%;

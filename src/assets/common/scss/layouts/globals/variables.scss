@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;300;400;600;700;800;900&display=swap');
 
-$font-main: 'MuseoModerno', cursive;
+$font-main: 'museo_sans_rounded300', cursive;
 $font-roboto: 'Roboto', sans-serif;
 
+$font-100: 'museo_sans_rounded100';
+$font-300: 'museo_sans_rounded300';
+$font-500: 'museo_sans_rounded500';
+$font-700: 'museo_sans_rounded700';
+$font-900: 'museo_sans_rounded900';
+$font-1000: 'museo_sans_rounded1000';
 
 $color-main: #F07F3C;
 $color-yellow: #F7EC00;

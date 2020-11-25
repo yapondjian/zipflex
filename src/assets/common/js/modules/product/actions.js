@@ -1,9 +1,39 @@
 const Methods = {
     init() {
+        Methods.productImages();
         Methods.btnQuantity();
         Methods.changeLabel();
 
         ShippingValue();
+
+        $('.y-product__variations ul .skuList span input').on('change', function(){
+            $('#ajaxBusy').show();
+            setTimeout(function(){
+                Methods.productImages();
+                $('#ajaxBusy').hide();
+            }, 236);
+        });
+    },
+
+    productImages() {
+        $('#image').html('<div class="y-images--slider"></div>');
+        var images = [];
+
+        $('.y-product__img #show .thumbs li').each(function(){
+            let $this   = $(this);
+            let img     = $this.find('img');
+            
+            let item = {
+                "alt"     : img[0].alt,
+                "title"   : img[0].title,
+                "src"     : img[0].src.replace('90-41/','680-435/')
+            }
+            images.push(item);
+        })
+
+        for( let y = 0; y < images.length; y++ ) {
+            $(`.y-images--slider`).append(`<img alt="${images[y].alt}" title="${images[y].title}" src="${images[y].src}" />`);
+        }
     },
 
     btnQuantity() {

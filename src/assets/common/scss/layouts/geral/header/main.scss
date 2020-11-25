@@ -130,9 +130,8 @@
                     height: 35px;
                     line-height: 35px;
 
-                    font-family: $font-main;
                     font-style: normal;
-                    font-weight: 400;
+                    font-family: $font-300;
                     font-size: 12px;
 
                     @include breakpoint('mobile') {
@@ -204,7 +203,7 @@
                     font-size: 14px;
                     line-height: 40px;
                     color: $color-black;
-                    font-weight: 500;
+                    font-family: $font-500;
                     margin-right: 5px;
                 }
             }
@@ -237,7 +236,7 @@
 
                 &:not(.icon) {
                     font-size: 14px;
-                    font-weight: 400;
+                    font-family: $font-300;
                     color: $color-gray-8;
                     margin-left: 9px;
                 }

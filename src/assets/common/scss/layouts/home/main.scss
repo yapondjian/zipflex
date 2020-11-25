@@ -31,7 +31,7 @@
 
         font-size: 20px;
         line-height: 22px;
-        font-weight: 700;
+        font-family: $font-700;
         color: $color-black;
 
         strong {
@@ -141,7 +141,7 @@
     &__title {
         font-size: 40px;
         line-height: 40px;
-        font-weight: 500;
+        font-family: $font-500;
         color: $color-white;
 
         @include breakpoint('mobile') {
@@ -167,7 +167,7 @@
                 color: $color-white;
                 font-size: 16px;
                 line-height: 40px;
-                font-weight: 300;
+                font-family: $font-300;
 
                 @include breakpoint('mobile') {
                     font-size: 21px;
@@ -186,7 +186,7 @@
         background-color: $color-white;
         text-align: center;
         font-size: 14px;
-        font-weight: 900;
+        font-family: $font-900;
         color: $color-main;
 
         @include breakpoint('mobile') {
@@ -218,7 +218,7 @@
             p {
                 font-size: 20px;
                 line-height: 22px;
-                font-weight: 500;
+                font-family: $font-500;
                 color: $color-main;
             }
         }
@@ -236,13 +236,13 @@
                 p {
                     font-size: 18px;
                     line-height: 22px;
-                    font-weight: 300;
+                    font-family: $font-300;
                     color: $color-gray-7;
                 }
                 span {
                     font-size: 18px;
                     line-height: 22px;
-                    font-weight: 700;
+                    font-family: $font-300;
                     color: $color-main;
                 }
             }
@@ -258,7 +258,7 @@
         background-color: $color-main;
         color: $color-white;
         font-size: 14px;
-        font-weight: 900;
+        font-family: $font-900;
         text-align: center;
         border-radius: 5px;
     }
@@ -342,14 +342,14 @@
                 &-title {
                     font-size: 20px;
                     line-height: 20px;
-                    font-weight: 300;
+                    font-family: $font-300;
                     margin: 20px 0 12px;
                     display: block;
                 }
                 &-text {
                     font-size: 12px;
                     line-height: 14px;
-                    font-weight: 300;
+                    font-family: $font-300;
                 }
             }
         }
@@ -365,7 +365,7 @@
         height: 50px;
         line-height: 50px;
         font-size: 14px;
-        font-weight: 900;
+        font-family: $font-900;
         text-align: center;
 
         @include breakpoint('mobile') {
@@ -405,11 +405,11 @@
     .y-title {
         font-size: 25px;
         line-height: 40px;
-        font-weight: 900;
+        font-family: $font-900;
 
         @include breakpoint('mobile') {
             font-size: 20px;
-            font-weight: 700;
+            font-family: $font-700;
             text-transform: lowercase;
 
             &::first-letter {
@@ -436,7 +436,7 @@
                 font-size: 16px;
                 line-height: 27px;
                 color: $color-black;
-                font-weight: 300;
+                font-family: $font-300;
 
                 @include breakpoint('mobile') {
                     font-size: 14px;
@@ -449,7 +449,7 @@
                 font-size: 20px;
                 line-height: 27px;
                 color: $color-black;
-                font-weight: 700;
+                font-family: $font-700;
             }
         }
     }

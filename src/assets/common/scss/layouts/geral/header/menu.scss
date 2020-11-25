@@ -52,7 +52,7 @@
                     display: block;
                     color: $color-white;
                     font-size: 40px;
-                    font-weight: 400;
+                    font-family: $font-300;
                     text-align: center;
                     transform: rotate(45deg);
                 }
@@ -137,7 +137,7 @@
             
             span {
                 font-size: 14px;
-                font-weight: 500;
+                font-family: $font-500;
                 color: $color-main;
     
                 &::after {

@@ -31,16 +31,14 @@
         p {
             strong {
                 display: block;
-                font-family: $font-main;
                 font-size: 14px;
-                font-weight: 900;
+                font-family: $font-900;
                 line-height: 16px;
             }
 
-            font-family: $font-main;
             margin-left: 10px;
             font-size: 14px;
-            font-weight: 500;
+            font-family: $font-500;
             line-height: 16px;
             color: $color-white;
         }
