@@ -117,6 +117,7 @@ div#vtex-callcenter {
     width: 100%;
     z-index: 99999999999999;
 }
+
 section#vtex-callcenter__toolbar {
     top: unset !important;
     bottom: 0;
@@ -138,7 +139,7 @@ section#vtex-callcenter__toolbar {
 		font-family: FontAwesome;
 		display: inline-block;
 		font-size: 31px;
-		color: $color-gray-8;
+		color: $color-main;
 	}
 
 	&.slick-next{

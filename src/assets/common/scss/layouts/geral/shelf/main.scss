@@ -1,7 +1,7 @@
 @import "../../common/scss/layouts/globals/fonts.scss";
 
 .y-shelf {
-    margin: 0 0 120px;
+    margin: 0 0 35px;
     
     >h2 {
         display: none;
@@ -26,10 +26,18 @@
         background-color: $color-white;
         margin: 40px auto;
         display: block;
-
+        position: relative;
+        
         &:hover {
-            .y-shelf__item--buy {
-                opacity: 1;
+            .y-shelf__item {
+                &-content {
+                    // padding-bottom: 0;
+                }
+                
+                &--buy {
+                    opacity: 1;
+                    bottom: 0;
+                }
             }
         }
 
@@ -48,10 +56,14 @@
             }
         }
 
+        &-content {
+            padding-bottom: 110px;
+        }
+
         &-name {
             overflow: hidden;
             height: 40px;
-            margin: 0 0 17px;
+            margin: 17px 0;
 
             a {
                 display: block;
@@ -155,9 +167,16 @@
             display: block;
             position: relative;
             transition: all .4s;
+            transform: none;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            
             
             @include breakpoint('desktop') {
                 opacity: 0;
+                bottom: 60px;
             }
             
             svg {

@@ -271,10 +271,22 @@
             top: -37px;
             left: -2.5%;
             width: 105%;
-            height: 90px;
+            height: 52px;
             display: block;
             transform: rotate(-2deg);
             background-color: $color-main;
+            position: absolute;
+        }
+
+        &::after {
+            content: "";
+            top: 15px;
+            right: -1px;
+            width: 100%;
+            height: 25px;
+            display: block;
+            transform: rotate(-2deg);
+            background-color: $color-gray-8;
             position: absolute;
         }
     }
@@ -285,6 +297,7 @@
         top: -105px;
         left: 50%;
         transform: translateX(-50%);
+        z-index: 99999999999;
     }
 
     &-top {

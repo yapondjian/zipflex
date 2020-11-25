@@ -171,3 +171,87 @@
         border-bottom: 1px solid $color-gray-2;
     }
 }
+
+.y-buybox {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 14px;
+    background-color: $color-white;
+    box-shadow: 3px -5px 6px rgba($color: #000000, $alpha: 0.16);
+
+    .container {
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+    }
+
+    .y-product {
+        &__name {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 22px;
+            line-height: 26px;
+            font-weight: 700;
+            color: $color-black;
+            width: 30%;
+        }
+
+        &__variations {
+            display: inline-block;
+            vertical-align: middle;
+            width: 37%;
+
+            ul {
+                margin: 0 auto;
+
+                .specification {
+                    color: $color-black;
+                    text-align: center;
+
+                    &::before {
+                        color: $color-black;
+                    }
+                }
+                
+                .skuList {
+                    span {
+                        justify-content: center;
+                        label {
+                            border: 1px solid $color-black;
+                        }
+                    }
+                }
+            }
+        }
+        
+        &__price {
+            display: inline-block;
+            vertical-align: middle;
+            width: 13.7%;
+            .productPrice {
+                .descricao-preco {
+                    .valor-por strong {
+                        color: $color-main;
+                        font-size: 32px;
+                        line-height: 38px;
+                        font-weight: 500;
+                    }
+                    .valor-dividido {
+                        color: $color-black;
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+                }
+            }
+        }
+
+        &__buy {
+            display: inline-block;
+            vertical-align: middle;
+            width: 15%;
+            margin-left: 20px;
+        }
+    }
+}
