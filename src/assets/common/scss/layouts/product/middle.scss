@@ -128,6 +128,10 @@
     &__medidas {
         background-color: #FAFAFA;
         padding: 80px 0 85px;
+
+        @include breakpoint('mobile') {
+            padding: 40px 0;
+        }
         
         h4 {
             margin-bottom: 25px;
@@ -210,12 +214,22 @@
         background: url("/arquivos/bg-certificado.png") no-repeat top center;
         text-align: center;
 
+        @include breakpoint('mobile') {
+            margin: 50px 0;
+            padding: 25px 0;
+        }
+
         h6 {
             color: $color-white;
             font-family: $font-roboto;
             font-size: 30px;
             font-weight: 500;
             line-height: 39px;
+
+            @include breakpoint('mobile') {
+                font-size: 24px;
+                line-height: 28px
+            }
 
             &::after {
                 display: none;

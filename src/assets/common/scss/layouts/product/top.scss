@@ -64,7 +64,101 @@
             }
         }
 
+        &--banner {
+            margin: 120px auto;
 
+            @include breakpoint('mobile') {
+                margin: 60px auto;
+            }
+        }
+
+        &--title {
+            font-family: $font-700;
+            font-size: 20px;
+            line-height: 22px;
+            color: $color-black;
+            text-align: center;
+            margin-bottom: 30px;
+
+            strong {
+                color: $color-main;
+            }
+        }
+
+        &--image {
+            text-align: center;
+            position: relative;
+
+            &:hover {
+                &::before {
+                    background-image: url('/arquivos/view-more-icon-hover.png');
+                }
+
+                .y-infos-product__list {
+                    opacity: 1;
+                }
+            }
+
+            &::before {
+                content: "";
+                width: 70px;
+                height: 70px;
+                display: block;
+                position: absolute;
+                top: 275px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: url('/arquivos/view-more-icon.png') no-repeat center center;
+
+                @include breakpoint('mobile') {
+                    display: none;
+                }
+            }
+        }
+
+        .y-infos-product__list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 40px;
+            transition: all .4s;
+            opacity: 0;
+
+            @include breakpoint('mobile') {
+                opacity: 1;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            li {
+                
+                margin: 0 41px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: left;
+
+                @include breakpoint('mobile') {
+                    margin: 20px auto;
+                }
+    
+                div {
+                    margin-left: 25px;
+                    p {
+                        font-size: 18px;
+                        line-height: 22px;
+                        font-family: $font-300;
+                        color: $color-gray-7;
+                    }
+                    span {
+                        font-size: 18px;
+                        line-height: 22px;
+                        font-family: $font-700;
+                        color: $color-main;
+                    }
+                }
+            }
+        }
     }
 
     &__img {
