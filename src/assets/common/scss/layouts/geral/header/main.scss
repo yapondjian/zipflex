@@ -102,8 +102,8 @@
 
                     @include breakpoint('mobile') {
                         color: $color-white;
-                        font-size: 25px;
-                        right: 25px;
+                        font-size: 18px;
+                        right: 5px;
                     }
 
                 }
@@ -133,7 +133,7 @@
                     font-family: $font-main;
                     font-style: normal;
                     font-weight: 400;
-                    font-size: 14px;
+                    font-size: 12px;
 
                     @include breakpoint('mobile') {
                         border-radius: 0;
@@ -160,7 +160,7 @@
                     transform: translateY(-50%);
 
                     @include breakpoint('mobile') {
-                        right: 25px;
+                        right: 5px;
                     }
                 }
             }

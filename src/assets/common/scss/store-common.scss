@@ -140,6 +140,10 @@ section#vtex-callcenter__toolbar {
 		display: inline-block;
 		font-size: 31px;
 		color: $color-main;
+
+		@include breakpoint('mobile') {
+			font-size: 20px;
+		}
 	}
 
 	&.slick-next{

@@ -35,6 +35,10 @@
             line-height: 16px;
             font-weight: 300;
             color: $color-white;
+
+            strong {
+                display: block;
+            }
         }
     }
 

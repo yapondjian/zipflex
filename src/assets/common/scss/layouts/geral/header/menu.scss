@@ -73,13 +73,35 @@
             li {
                 margin: 0 21px;
 
-                &:hover {
-                    &>a {
-                        color: $color-main;
-                    }
+                @include breakpoint('mobile') {
+                    margin: 0;
+                    padding: 0 21px;
 
-                    .y-header__submenu {
-                        display: block;
+                    &.is--active {
+                        padding: 0;
+                        background-color: $color-white;
+
+                        > a {
+                            padding: 0 21px;
+                            color: $color-main;
+                        }
+
+                        .y-header__submenu {
+                            display: block;
+                        }
+                    }
+                }
+
+                @include breakpoint('desktop') {
+    
+                    &:hover {
+                        &>a {
+                            color: $color-main;
+                        }
+    
+                        .y-header__submenu {
+                            display: block;
+                        }
                     }
                 }
 
@@ -99,14 +121,17 @@
     &__submenu {
         display: none;
 
-        position: absolute;
-        // top: 100%;
-        left: 0;
-        width: 730px;
+        @include breakpoint('desktop') {
+            position: absolute;
+            left: 0;
+            width: 730px;
+        }
+
         background-color: $color-white;
         z-index: 9999;
 
         padding: 22px 20px 25px;
+        width: 100%;
 
         &--title {
             
@@ -133,7 +158,16 @@
             justify-content: flex-start;
 
             &-item {
-                margin-right: 50px;
+
+                @include breakpoint('desktop') {
+                    margin-right: 50px;
+
+                    a {
+                        img {
+                            max-width: 200px;
+                        }
+                    }
+                }
 
                 &:hover {
                     a {
@@ -147,15 +181,15 @@
                     display: block;
                     text-align: center;
 
-                    img {
-                        max-width: 200px;
-                    }
-
                     p {
                         font-size: 12px;
                         line-height: 40px;
                         text-align: center;
                         color: $color-black;
+
+                        @include breakpoint('mobile') {
+                            line-height: 14px;
+                        }
                     }
                 }
             }
