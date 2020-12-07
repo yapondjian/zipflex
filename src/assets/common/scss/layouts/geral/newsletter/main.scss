@@ -90,6 +90,7 @@
             text-align: center;
             color: $color-main;
             font-size: 14px;
+            font-family: 'museo_sans_rounded900';
 
             @include breakpoint('mobile') {
                 display: block;

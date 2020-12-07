@@ -32,8 +32,11 @@
         }
 
         &--item {
-            width: 15%;
             display: block;
+
+            &:last-child {
+                width: 10%;
+            }
 
             @include breakpoint('mobile') {
                 width: 50%;
@@ -59,24 +62,27 @@
                     span {
                         font-size: 16px;
                         line-height: 40px;
-                        color: $color-black;
+                        color: #041E42;
+                        font-family: 'museo_sans_rounded300';
                     }
                     
                     strong {
                         font-size: 18px;
                         line-height: 40px;
-                        color: $color-black;
+                        color: #041E42;
                     }
 
                     a{
                         font-size: 16px;
                         line-height: 40px;
-                        color: $color-black;
+                        color: #041E42;
+                        font-family: 'museo_sans_rounded300';
+                        font-weight: 300;
                         
                         &+span {
-                            font-size: 14px;
+                            font-size: 13px;
                             line-height: 20px;
-                            color: $color-black;    
+                            color: #041E42;    
                             display: block;
                         }
 
@@ -92,6 +98,7 @@
                 align-items: center;
                 justify-content: flex-start;
                 margin: 0 0 15px;
+                color: #041E42;
 
                 .icon {
                     margin-right: 10px;

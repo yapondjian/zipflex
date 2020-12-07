@@ -51,11 +51,79 @@
             cursor: pointer;
             position: absolute;
             top: -35px;
+
+            &:hover {
+                .y-ideal-icon {
+                    &::after {
+                        content: "";
+                        width: 70px;
+                        height: 70px;
+                        background: url("/arquivos/view-more-icon-hover.png") no-repeat center center;
+                        display: block;
+                    }
+                    img {
+                        display: none;
+                    }
+                }
+                .y-ideal-list {
+                    // display: block;
+                    opacity: 1;
+                    right: -220px;
+                }
+            }
         }
     }
 
     &-list {
-        display: none;
+        // display: none;
+        opacity: 0;
+        transform: all .75s;
+        right: 0;
+
+        position: absolute;
+        top: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            margin: 40px 0;
+
+            @include breakpoint('mobile') {
+                margin: 20px auto;
+            }
+
+            .y-ideal-item__right {
+                margin-left: 20px;
+                span {
+                    font-size: 18px;
+                    line-height: 22px;
+                    font-family: $font-300;
+                    color: $color-gray-7;
+                }
+                strong {
+                    display: block;
+                    font-size: 18px;
+                    line-height: 22px;
+                    font-family: $font-700;
+                    color: $color-main;
+                }
+            }
+
+            a {
+                display: block;
+                width: 180px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 5px;
+                background-color: $color-main;
+                text-align: center;
+                color: $color-white;
+                font-size: 14px;
+                font-family: 'museo_sans_rounded900';
+            }
+        }
     }
 
     &-left {
@@ -99,12 +167,21 @@
             @include breakpoint('mobile') {
                 right: 87px;
             }
+
+            &:hover {
+                .y-ideal-list {
+                    // display: block;
+                    opacity: 1;
+                    right: 0;
+                    left: -220px;
+                }
+            }
         }
     }
 }
 
 .y-sleep {
-    background: url("/arquivos/bg-home-desk.jpg") no-repeat center center $color-main;
+    background: url("/arquivos/bg-home-desk.jpg") no-repeat center top $color-main;
     padding: 85px 0 80px;
 
     @include breakpoint('mobile') {
@@ -113,7 +190,7 @@
 
     &__content {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
 
         &>div {
@@ -127,6 +204,10 @@
                 width: 100%;
             }
         }
+    }
+
+    &__left {
+        margin: 35px 0;
     }
 
     &__right {
@@ -465,5 +546,6 @@
         text-align: center;
         color: $color-white;
         font-size: 14px;
+        font-family: 'museo_sans_rounded900';
     }
 }

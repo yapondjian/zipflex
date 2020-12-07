@@ -42,7 +42,6 @@
             @include breakpoint('desktop') {
                 width: 70%;
                 max-width: 836px;
-                margin: 0 65px;
             }
 
             .js--search-content {
@@ -167,12 +166,12 @@
 
         &--right {
             @include breakpoint('desktop') {
-                width: 20%;
+                width: 15%;
             }
 
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
 
             &>div {
                 padding: 0;
@@ -207,18 +206,13 @@
                     margin-right: 5px;
                 }
             }
-            
-            &-minicart {
-                @include breakpoint('desktop') {
-                    margin-left: 29px;
-                }
-            }
         }
     }
 
     &__account {
         cursor: pointer;
         position: relative;
+        margin: 0 36px;
 
         &-icon {
             display: flex;

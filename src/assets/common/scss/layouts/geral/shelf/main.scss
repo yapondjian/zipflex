@@ -69,6 +69,7 @@
                 display: block;
                 font-size: 18px;
                 font-family: $font-300;
+                font-weight: 300;
                 color: $color-gray-8;
                 line-height: 20px;
                 text-align: center;
@@ -172,6 +173,7 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
+            font-family: 'museo_sans_rounded700';
             
             
             @include breakpoint('desktop') {
