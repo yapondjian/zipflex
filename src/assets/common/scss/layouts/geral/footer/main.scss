@@ -17,7 +17,7 @@
 
         @include breakpoint('mobile') {
             flex-wrap: wrap;
-            padding: 0;
+            padding: 0 25px;
             position: relative;
 
             &::before {
@@ -27,7 +27,8 @@
                 background: $color-main;
                 display: block;
                 position: absolute;
-                top: 200px;
+                top: 205px;
+                left: 0;
             }
         }
 
@@ -39,17 +40,14 @@
             }
 
             @include breakpoint('mobile') {
-                width: 50%;
                 margin: 15px 0;
 
                 &:nth-child(3) {
                     margin-top: 50px;
-                    width: 65%;
                 }
                 
                 &:nth-child(4) {
                     margin-top: 50px;
-                    width: 35%;
                 }
 
                 &:last-child {
@@ -100,6 +98,10 @@
                 margin: 0 0 15px;
                 color: #041E42;
 
+                @include breakpoint('mobile') {
+                    font-size: 14px;
+                }
+
                 .icon {
                     margin-right: 10px;
                 }
@@ -112,6 +114,10 @@
                 justify-content: space-between;
                 max-width: 70%;
                 margin: 0 auto;
+
+                @include breakpoint('mobile') {
+                    max-width: 100%;
+                }
                 
                 img {
                     margin: 0 0 10px;

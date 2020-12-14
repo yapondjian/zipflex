@@ -39,7 +39,17 @@ const Methods = {
         $(".y-shelf > ul").slick({
             arrows: true,
             dots: false,
-            slidesToShow: 3
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1
+                    }
+                }
+            ]
         });
     }
 };

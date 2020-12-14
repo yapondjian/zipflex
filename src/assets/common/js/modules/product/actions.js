@@ -3,6 +3,7 @@ const Methods = {
         Methods.productImages();
         Methods.btnQuantity();
         Methods.changeLabel();
+        Methods.discountFlag();
 
         ShippingValue();
 
@@ -105,6 +106,19 @@ const Methods = {
                 txt = txt.split(":");
             $(this).text( txt[0] );
         })
+    },
+
+    discountFlag() {
+        let oldPrice = document.querySelector('.y-buybox .y-product__price .productPrice .descricao-preco .valor-de strong').innerHTML.split('R$')[1];
+        let newPrice = document.querySelector('.y-buybox .y-product__price .productPrice .descricao-preco .valor-por strong').innerHTML.split('R$')[1];
+
+        if(oldPrice != undefined){
+            oldPrice = parseFloat(oldPrice.replace(',','.'));
+            newPrice = parseFloat(newPrice.replace(',','.'));
+
+            let discount = ((oldPrice - newPrice) / (oldPrice/100));
+            $(`.y-product__flag`).html( `<span>${discount.toFixed(1)}% OFF no Boleto</span>` )
+        }
     }
 };
 

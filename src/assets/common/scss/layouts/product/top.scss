@@ -47,20 +47,20 @@
         &--description {
 
             @include breakpoint('desktop') {
-                margin-top: 116px;
+                margin-top: 175px;
             }
 
             text-align: center;
             font-size: 16px;
             font-family: $font-300;
             line-height: 19px;
-            color: $color-gray-8;
+            color: #666666;
 
             p {
                 font-size: 16px;
                 font-family: $font-300;
                 line-height: 19px;
-                color: $color-gray-8;
+                color: #666666;
             }
         }
 
@@ -549,6 +549,21 @@
         }
     }
 
+    &__flag {
+        span {
+            display: block;
+            background-color: $color-main;
+            color: $color-white;
+            text-align: center;
+            font-size: 12px;
+            height: 29px;
+            line-height: 16px;
+            border-radius: 50px;
+            padding: 6px 12px;
+            font-family: 'museo_sans_rounded500';
+        }
+    }
+
     &__variations {
         margin: 20px 0;
 
@@ -634,7 +649,7 @@
 
             cursor: pointer;
             
-            width: 100%;
+            width: 86%;
             height: 56px;
             line-height: 56px;
             border-radius: 50px;

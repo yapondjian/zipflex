@@ -66,9 +66,12 @@
                     }
                 }
                 .y-ideal-list {
-                    // display: block;
                     opacity: 1;
                     right: -220px;
+
+                    @include breakpoint('mobile') {
+                        right: -200px;
+                    }
                 }
             }
         }
@@ -174,6 +177,10 @@
                     opacity: 1;
                     right: 0;
                     left: -220px;
+
+                    @include breakpoint('mobile') {
+                        left: -200px;
+                    }
                 }
             }
         }
@@ -186,6 +193,7 @@
 
     @include breakpoint('mobile') {
         padding: 38px 0 47px;
+        background-image: url("/arquivos/bg-home-mobile.png");
     }
 
     &__content {
@@ -208,6 +216,10 @@
 
     &__left {
         margin: 35px 0;
+
+        @include breakpoint('mobile') {
+            margin: 15px 0;
+        }
     }
 
     &__right {
@@ -279,6 +291,10 @@
 
 .y-infos-product {
     margin: 105px 0 100px;
+
+    @include breakpoint('mobile') {
+        margin: 47px 0;
+    }
 
     &__flex {
         display: flex;
@@ -361,6 +377,13 @@
             transform: rotate(-2deg);
             background-color: $color-main;
             position: absolute;
+
+            @include breakpoint('mobile') {
+                height: 23px;
+                width: 100%;
+                left: 0;
+                top: -15px;
+            }
         }
 
         &::after {
@@ -373,6 +396,10 @@
             transform: rotate(-2deg);
             background-color: $color-gray-8;
             position: absolute;
+
+            @include breakpoint('mobile') {
+                display: none;
+            }
         }
     }
 
@@ -389,6 +416,10 @@
         padding-top: 115px;
         display: block;
         color: $color-white;
+
+        @include breakpoint('mobile') {
+            padding-top: 70px;
+        }
     }
 
     &-list {
@@ -402,6 +433,7 @@
         @include breakpoint('mobile') {
             flex-direction: column;
             justify-content: center;
+            margin: 20px 0 30px;
         }
 
         li {

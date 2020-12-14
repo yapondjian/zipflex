@@ -1,5 +1,5 @@
 
-@import "../../common/scss/layouts/globals/fonts.scss";
+@import "./../../globals/fonts.scss";
 
 
 .j-newsletter {
@@ -35,9 +35,10 @@
             line-height: 16px;
             font-family: $font-300;
             color: $color-white;
-
+            
             strong {
                 display: block;
+                font-family: $font-700;
             }
         }
     }

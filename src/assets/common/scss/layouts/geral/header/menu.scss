@@ -73,7 +73,7 @@
             li {
                 margin: 0 20px;
 
-                &:first-child {
+                &:nth-child(2) {
                     margin-left: 0;
                 }
 
@@ -113,7 +113,7 @@
                     }
                 }
 
-                a {
+                a, span {
                     font-size: 16px;
                     line-height: 40px;
                     color: $color-black;
@@ -123,6 +123,10 @@
                     @include breakpoint('mobile') {
                         color: $color-white;
                     }
+                }
+
+                span {
+                    text-transform: none;
                 }
             }
         }
