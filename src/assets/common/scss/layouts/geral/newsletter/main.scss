@@ -24,7 +24,10 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        margin-right: 30px;
+
+        @include breakpoint('desktop') {
+            margin-right: 30px;
+        }
 
         .icon {
             margin-right: 10px;
@@ -38,7 +41,7 @@
             
             strong {
                 display: block;
-                font-family: $font-700;
+                font-family: $font-900;
             }
         }
     }

@@ -31,6 +31,11 @@
                     right: 0;
                 }
 
+                .y-header__submenu--title {
+                    span {
+                        color: $color-black;
+                    }
+                }
             }
 
             .y-close {
@@ -127,6 +132,7 @@
 
                 span {
                     text-transform: none;
+                    font-family: $font-700;
                 }
             }
         }

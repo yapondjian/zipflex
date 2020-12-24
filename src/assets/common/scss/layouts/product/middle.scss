@@ -153,6 +153,10 @@
             line-height: 21px;
             font-weight: 400;
             text-align: center;
+            
+            @include breakpoint('desktop') {
+                padding: 0 130px;
+            }
         }
 
         h2 {
@@ -173,7 +177,7 @@
         &--slick {
 
             @include breakpoint('desktop') {
-                padding: 0 240px;
+                padding: 0 480px;
     
                 .slick-arrow {
                     &.slick-prev {
@@ -182,6 +186,10 @@
     
                     &.slick-next {
                         right: 242px;
+
+                        &::after {
+                            transform: rotate(135deg);
+                        }
                     }
                 }
             }
@@ -189,8 +197,13 @@
             .slick-arrow {
                 
                 &::after {
-                    color: #666666;
-                    font-size: 20px;
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    border-top: 1px solid;
+                    border-left: 1px solid;
+                    transform: rotate(-45deg);
+                    border-color: #ACACAC;
                 }
             }
 
@@ -242,6 +255,12 @@
             margin: 38px auto;
             color: $color-white;
             text-align: center;
+            font-family: $font-500;
+            font-size: 16px;
+
+            @include breakpoint('desktop') {
+                max-width: 580px;
+            }
         }
 
         ul {
@@ -311,10 +330,10 @@
         &__name {
             display: inline-block;
             vertical-align: middle;
-            font-size: 22px;
+            font-size: 14px;
             line-height: 26px;
             font-family: $font-700;
-            color: $color-black;
+            color: #575757;
             width: 30%;
         }
 
@@ -372,6 +391,11 @@
             vertical-align: middle;
             width: 15%;
             margin-left: 20px;
+
+            a {
+                background-color: #1CBD64;
+                border: 1px solid #CBCBCB;
+            }
         }
     }
 }

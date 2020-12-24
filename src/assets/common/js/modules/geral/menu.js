@@ -7,10 +7,13 @@ const Methods = {
     openMenu() {
         $('.js--menu').live('click', function(){
             $('.y-header__menu').toggleClass('is--active');
+            $('.y-minicart, .y-minicart__content').removeClass('is--active');
         });
         
-        $('.y-header__menu-list li:first-child').live('click', function(){
-            $(this).toggleClass('is--active');
+        $('.y-header__menu-list li').live('click', function(){
+            if( $(this).find('.y-header__submenu').length ) {
+                $(this).toggleClass('is--active');
+            }
         });
     },
 

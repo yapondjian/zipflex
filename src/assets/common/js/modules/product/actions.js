@@ -4,8 +4,9 @@ const Methods = {
         Methods.btnQuantity();
         Methods.changeLabel();
         Methods.discountFlag();
-
-        ShippingValue();
+        Methods.frete();
+        Methods.buybox();
+        
 
         $('.y-product__variations ul .skuList span input').on('change', function(){
             $('#ajaxBusy').show();
@@ -119,6 +120,21 @@ const Methods = {
             let discount = ((oldPrice - newPrice) / (oldPrice/100));
             $(`.y-product__flag`).html( `<span>${discount.toFixed(1)}% OFF no Boleto</span>` )
         }
+    },
+
+    frete() {
+        ShippingValue();
+
+        setTimeout(function(){
+            $('#txtCep').attr('placeholder', '00000-000')
+        }, 2306);
+    },
+
+    buybox() {
+        $('.y-buybox .y-product__variations ul .skuList span label').live('click', function(){
+            $('.y-buybox .y-product__variations ul .skuList span input').removeClass('checked');
+            $(this).prev().addClass('checked');
+        })
     }
 };
 

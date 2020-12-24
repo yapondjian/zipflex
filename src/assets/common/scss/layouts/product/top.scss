@@ -237,7 +237,7 @@
         margin: 25px 0 20px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 
     &__shortdescription {
@@ -487,6 +487,10 @@
 
     &__price {
 
+        @include breakpoint('desktop') {
+            margin-right: 32px;
+        }
+        
         .productPrice {
             display: block;
             
@@ -561,6 +565,11 @@
             border-radius: 50px;
             padding: 6px 12px;
             font-family: 'museo_sans_rounded500';
+            
+            @include breakpoint('mobile') {
+                font-size: 9px;
+                font-family: $font-300;
+            }
         }
     }
 

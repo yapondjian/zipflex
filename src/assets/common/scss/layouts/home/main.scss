@@ -54,20 +54,17 @@
 
             &:hover {
                 .y-ideal-icon {
-                    &::after {
-                        content: "";
-                        width: 70px;
-                        height: 70px;
-                        background: url("/arquivos/view-more-icon-hover.png") no-repeat center center;
-                        display: block;
-                    }
-                    img {
-                        display: none;
+                    svg {
+                        circle, g {
+                            fill: $color-main;
+                        }
                     }
                 }
                 .y-ideal-list {
                     opacity: 1;
-                    right: -220px;
+                    left: 70px;
+                    width: 200px;
+                    padding-left: 20px;
 
                     @include breakpoint('mobile') {
                         right: -200px;
@@ -84,7 +81,7 @@
         right: 0;
 
         position: absolute;
-        top: 0;
+        top: -35px;
 
         li {
             display: flex;
@@ -143,7 +140,7 @@
         }
 
         .y-ideal-content__right {
-            left: 640px;
+            right: 0;
 
             @include breakpoint('mobile') {
                 left: 87px;
@@ -175,8 +172,7 @@
                 .y-ideal-list {
                     // display: block;
                     opacity: 1;
-                    right: 0;
-                    left: -220px;
+                    left: -210px;
 
                     @include breakpoint('mobile') {
                         left: -200px;
@@ -358,6 +354,11 @@
         font-family: $font-900;
         text-align: center;
         border-radius: 5px;
+
+        @include breakpoint('mobile') {
+            font-size: 18px;
+            font-family: $font-500;
+        }
     }
 }
 
@@ -409,7 +410,47 @@
         top: -105px;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 99999999999;
+        z-index: 2001;
+
+        &::before {
+            content: "12";
+            display: block;
+            font-size: 30px;
+            font-family: $font-900;
+            line-height: 48px;
+            color: $color-main;
+            position: absolute;
+            top: 73px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include breakpoint('mobile') {
+                font-size: 23px;
+                line-height: 37px;
+                top: 62px;
+            }
+
+        }
+
+        &::after {
+            content: "Meses de Garantia";
+            display: block;
+            font-size: 10px;
+            font-family: $font-300;
+            line-height: 12px;
+            color: $color-main;
+            position: absolute;
+            width: 42px;
+            top: 113px;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            @include breakpoint('mobile') {
+                font-size: 7px;
+                line-height: 7px;
+                top: 97px;
+            }
+        }
     }
 
     &-top {

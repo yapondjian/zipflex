@@ -48,11 +48,13 @@ const Methods = {
         const btnOpen = document.querySelector('.js--open-minicart');
         const minicart = document.querySelector('.y-minicart__content');
         const minicartBox = document.querySelector('.y-minicart');
+        const menu = document.querySelector('.y-header__menu');
         
         btnOpen.addEventListener('click', () => {
                 // body.classList.add('no--scroll');
                 minicart.classList.toggle('is--active');
                 minicartBox.classList.toggle('is--active');
+                menu.classList.remove('is--active');
         });
     },
     

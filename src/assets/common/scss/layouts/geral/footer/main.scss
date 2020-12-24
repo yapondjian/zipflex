@@ -17,7 +17,7 @@
 
         @include breakpoint('mobile') {
             flex-wrap: wrap;
-            padding: 0 25px;
+            padding: 0 10px;
             position: relative;
 
             &::before {
@@ -133,14 +133,26 @@
         
         &--copy {
             text-align: center;
-            padding: 31px 0 36px;
-            border-top: 1px solid $color-main;
-
+            
             p {
+                padding: 0 0 36px;
+                display: inline-block;
+                margin: 0 auto;
                 color: $color-black;
                 font-size: 12px;
                 line-height: 20px;
                 font-family: $font-500;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    width: 100%;
+                    max-width: 710px;
+                    height: 1px;
+                    background-color: $color-main;
+                    display: block;
+                    margin: 0 auto 31px;
+                }
             }
         }
 
