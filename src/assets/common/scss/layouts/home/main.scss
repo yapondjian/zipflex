@@ -75,7 +75,6 @@
     }
 
     &-list {
-        // display: none;
         opacity: 0;
         transform: all .75s;
         right: 0;
@@ -127,7 +126,8 @@
     }
 
     &-left {
-        
+        width: 40%;
+
         @include breakpoint('mobile') {
             width: 100%;
             position: relative;
@@ -149,7 +149,9 @@
     }
 
     &-right {
-        
+        width: 40%;
+        text-align: right;
+
         @include breakpoint('mobile') {
             width: 100%;
             position: relative;
@@ -162,15 +164,15 @@
         }
 
         .y-ideal-content__right {
-            right: 640px;
+            left: 0;
 
             @include breakpoint('mobile') {
+                left: inherit;
                 right: 87px;
             }
 
             &:hover {
                 .y-ideal-list {
-                    // display: block;
                     opacity: 1;
                     left: -210px;
 
@@ -497,9 +499,11 @@
                     font-size: 20px;
                     line-height: 20px;
                     font-family: $font-300;
+                    font-weight: 300;
                     margin: 20px 0 12px;
                     display: block;
                 }
+
                 &-text {
                     font-size: 12px;
                     line-height: 14px;
