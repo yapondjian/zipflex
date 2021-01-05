@@ -182,8 +182,9 @@
         cursor: pointer;
 
         @include breakpoint('mobile') {
-            bottom: 30px;
-            right: 15px;
+            bottom: 20px;
+            right: inherit;
+            left: 15px;
         }
     }
 }
