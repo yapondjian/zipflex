@@ -176,6 +176,11 @@
                 display: block;
                 text-align: center;
                 max-width: 680px;
+
+                img {
+                    border-radius: 60px;
+                    overflow: hidden;
+                }
                 
                 &>img {
                     display: none;
