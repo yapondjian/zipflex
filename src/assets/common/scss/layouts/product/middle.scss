@@ -61,7 +61,7 @@
     }
 
     &__mosaico {
-        margin: 90px auto 100px;
+        margin: 45px auto 50px;
 
         @include breakpoint('mobile') {
             margin: 35px auto;
@@ -81,7 +81,7 @@
         &-image {
             width: 50%;
             text-align: center;
-            margin: 150px 0;
+            margin: 75px 0;
 
             @include breakpoint('mobile') {
                 width: 100%;

@@ -3,7 +3,7 @@
         display: block;
         width: 100%;
         background: url("/arquivos/topo.png") no-repeat top center $color-white;
-        padding: 62px 0 190px;
+        padding: 62px 0 90px;
 
         @include breakpoint('mobile') {
             padding: 40px 0;
@@ -232,6 +232,10 @@
         color: $color-white;
         font-family: $font-700;
 
+        @include breakpoint('desktop') {
+            margin: 0 -65px 0 0;
+        }
+
         @include breakpoint('mobile') {
             margin-top: 15px;
             font-size: 26px;
@@ -274,9 +278,9 @@
 
             p {
                 font-family: $font-roboto;
-                font-size: 10px;
+                font-size: 15px;
                 font-weight: 500;
-                line-height: 13px;
+                line-height: 17px;
                 color: $color-white;
                 margin-bottom: 7px;
 
@@ -347,9 +351,9 @@
             p {
                 color: $color-white;
                 font-family: $font-roboto;
-                font-size: 10px;
+                font-size: 15px;
                 font-weight: 500;
-                line-height: 13px;
+                line-height: 17px;
                 margin: 0 0 7px;
                 
                 @include breakpoint('mobile') {
@@ -596,15 +600,15 @@
         ul {
             .specification {
                 font-family: $font-roboto;
-                font-size: 10px;
-                line-height: 13px;
+                font-size: 15px;
+                line-height: 17px;
                 color: $color-white;
                 font-weight: 500;
                 margin-bottom: 7px;
 
                 @include breakpoint('mobile') {
                     color: $color-gray-8;
-                    font-size: 12px;
+                    // font-size: 12px;
                     line-height: 15px;
                 }
 
@@ -634,15 +638,16 @@
                     }
 
                     label {
-                        width: 80px;
+                        width: auto;
+                        min-width: 80px;
                         height: 40px;
-                        border: 2px solid $color-white;
+                        border: 3px solid $color-white;
                         border-radius: 50px;
                         background-color: $color-white;
                         overflow: hidden;
                         
                         margin: 0 10px 0 0;
-                        
+                        padding: 0 7px;
                         text-align: center;
                         font-size: 14px;
                         line-height: 40px;
