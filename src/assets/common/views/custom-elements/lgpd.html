@@ -1,0 +1,24 @@
+<div class="j-cookieAlert">
+    <p>Nosso site usa cookies e outros serviços para melhorar sua experiência de compra. <br>Ao continuar navegando nele, entendemos que está ciente e de acordo com seu uso e com nossas <a class="floating__cooking--more" href="">Políticas de Privacidade</a></p>
+    <button>Concordar e Fechar</button>
+</div>
+
+<script>
+    $('document').ready(function(){
+        verify();
+    });
+    var cookieEl = $('.j-cookieAlert');
+    var cookie = localStorage.getItem('acceptCookie');
+
+    function verify(){
+        if(cookie != null){
+            return false;
+        }else{
+            $(cookieEl).css('display', 'flex');
+            $('.j-cookieAlert button').on('click', function(){
+                $(cookieEl).hide();
+                localStorage.setItem('acceptCookie', 'true');
+            });
+        }
+    }    
+</script>

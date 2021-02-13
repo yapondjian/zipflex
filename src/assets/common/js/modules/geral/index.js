@@ -1,7 +1,7 @@
 import BackToTop from './backToTop';
 import Minicart from './minicart'
 import Menu from "./menu";
-import Newsletter from "./newsletter";
+import LGPD from "./lgpd";
 
 
 const Methods = {
@@ -9,7 +9,7 @@ const Methods = {
 		BackToTop.init();
 		Minicart.init();
 		Menu.init();
-		// Newsletter.init();
+		LGPD.init();
 		Methods.shelfPrice();
 	},
 

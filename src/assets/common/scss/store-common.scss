@@ -256,3 +256,48 @@ section#vtex-callcenter__toolbar {
 	height: 0;
 	display: none;
 }
+
+.j-cookieAlert {
+	display: none;
+	bottom: 0;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	z-index: 99999999999999;
+	padding: 26px 50px;
+	border-radius: 5px;
+	background: #FFF;
+	box-shadow: 0 0 20px rgba(0,0,0,.25);
+
+	p {
+		color: #000;
+		font-size: 14px;
+		line-height: 17px;
+		font-weight: 300;
+		font-family: 'Roboto', sans-serif;
+		z-index: 99999;
+		text-align: justify;
+	}
+
+	button {
+		width: 175px;
+		height: 36px;
+		color: #fff;
+		font-size: 14px;
+		font-weight: 100;
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px;
+		cursor: pointer;
+		margin-left: 10px;
+		z-index: 99999;
+		border-width: initial;
+		border-style: none;
+		border-color: initial;
+		border-image: initial;
+		background: #000;
+		border-radius: 30px;
+	}
+}
